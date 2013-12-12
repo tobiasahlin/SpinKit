@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Rotating Plane</title>
+    <style>
+    .spinner {
+      margin: 100px auto;
+      width: 32px;
+      height: 32px;
+      position: relative;
+    }
+
+    .cube1, .cube2 {
+      background-color: #333;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      -webkit-animation: cubemove 1.8s infinite ease-in-out;
+      -moz-animation: cubemove 1.8s infinite ease-in-out;
+      -ms-animation: cubemove 1.8s infinite ease-in-out;
+    }
+
+    .cube2 {
+      -webkit-animation-delay: -0.9s;
+      -moz-animation-delay: -0.9s;
+      -ms-animation-delay: -0.9s;
+    }
+
+    @-webkit-keyframes cubemove {
+      25% { -webkit-transform: translateX(22px) rotate(-90deg) scale(0.5) }
+      50% { -webkit-transform: translateX(22px) translateY(22px) rotate(-180deg) }
+      75% { -webkit-transform: translateX(0px) translateY(22px) rotate(-270deg) scale(0.5) }
+      100% { -webkit-transform: rotate(-360deg) }
+    }
+
+    @-moz-keyframes cubemove {
+      25% { -moz-transform: translateX(22px) scale(0.5) rotate(-90deg) }
+      /* Hack to make FF rotate in the right direction */
+      50% { -moz-transform: translateX(22px) translateY(22px) rotate(-179deg) }
+      51% { -moz-transform: translateX(22px) translateY(22px) rotate(-180deg) }
+      75% { -moz-transform: translateX(0px) translateY(22px) scale(0.5) rotate(-270deg) }
+      100% { -moz-transform: rotate(-360deg) }
+    }
+
+    @-ms-keyframes cubemove {
+      25% { -ms-transform: translateX(22px) rotate(-90deg) scale(0.5) }
+      50% { -ms-transform: translateX(22px) translateY(22px) rotate(-180deg) }
+      75% { -ms-transform: translateX(0px) translateY(22px) rotate(-270deg) scale(0.5) }
+      100% { -ms-transform: rotate(-360deg) }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="spinner">
+      <div class="cube1"></div>
+      <div class="cube2"></div>
+    </div>
+  </body>
+</html>

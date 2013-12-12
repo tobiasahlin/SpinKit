@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Pulse</title>
+    <style>
+    .spinner {
+      width: 40px;
+      height: 40px;
+      margin: 100px auto;
+      background-color: #333;
+
+      border-radius: 100%;
+      -webkit-animation: scaleout 1.0s infinite ease-in-out;
+      -moz-animation: scaleout 1.0s infinite ease-in-out;
+      -ms-animation: scaleout 1.0s infinite ease-in-out;
+    }
+
+    @-webkit-keyframes scaleout {
+      0% { -webkit-transform: scale(0.0) }
+      100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+
+    @-moz-keyframes scaleout {
+      0% { -moz-transform: scale(0.0) }
+      100% {
+        -moz-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+
+    @-ms-keyframes scaleout {
+      0% { -ms-transform: scale(0.0) }
+      100% {
+        -ms-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="spinner"></div>
+  </body>
+</html>

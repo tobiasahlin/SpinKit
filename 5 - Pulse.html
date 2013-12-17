@@ -10,8 +10,7 @@
 
       border-radius: 100%;
       -webkit-animation: scaleout 1.0s infinite ease-in-out;
-      -moz-animation: scaleout 1.0s infinite ease-in-out;
-      -ms-animation: scaleout 1.0s infinite ease-in-out;
+      animation: scaleout 1.0s infinite ease-in-out;
     }
 
     @-webkit-keyframes scaleout {
@@ -22,18 +21,10 @@
       }
     }
 
-    @-moz-keyframes scaleout {
-      0% { -moz-transform: scale(0.0) }
+    @keyframes scaleout {
+      0% { transform: scale(0.0) }
       100% {
-        -moz-transform: scale(1.0);
-        opacity: 0;
-      }
-    }
-
-    @-ms-keyframes scaleout {
-      0% { -ms-transform: scale(0.0) }
-      100% {
-        -ms-transform: scale(1.0);
+        transform: scale(1.0);
         opacity: 0;
       }
     }

@@ -21,14 +21,12 @@
       left: 0;
       
       -webkit-animation: bounce 2.0s infinite ease-in-out;
-      -moz-animation: bounce 2.0s infinite ease-in-out;
-      -ms-animation: bounce 2.0s infinite ease-in-out;
+      animation: bounce 2.0s infinite ease-in-out;
     }
 
     .double-bounce2 {
       -webkit-animation-delay: -1.0s;
-      -moz-animation-delay: -1.0s;
-      -ms-animation-delay: -1.0s;
+      animation-delay: -1.0s;
     }
 
     @-webkit-keyframes bounce {
@@ -36,14 +34,9 @@
       50% { -webkit-transform: scale(1.0) }
     }
 
-    @-moz-keyframes bounce {
-      0%, 100% { -moz-transform: scale(0.0) }
-      50% { -moz-transform: scale(1.0) }
-    }
-
-    @-ms-keyframes bounce {
-      0%, 100% { -ms-transform: scale(0.0) }
-      50% { -ms-transform: scale(1.0) }
+    @keyframes bounce {
+      0%, 100% { transform: scale(0.0) }
+      50% { transform: scale(1.0) }
     }
     </style>
   </head>

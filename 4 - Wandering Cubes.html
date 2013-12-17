@@ -18,14 +18,12 @@
       left: 0;
 
       -webkit-animation: cubemove 1.8s infinite ease-in-out;
-      -moz-animation: cubemove 1.8s infinite ease-in-out;
-      -ms-animation: cubemove 1.8s infinite ease-in-out;
+      animation: cubemove 1.8s infinite ease-in-out;
     }
 
     .cube2 {
       -webkit-animation-delay: -0.9s;
-      -moz-animation-delay: -0.9s;
-      -ms-animation-delay: -0.9s;
+      animation-delay: -0.9s;
     }
 
     @-webkit-keyframes cubemove {
@@ -35,21 +33,13 @@
       100% { -webkit-transform: rotate(-360deg) }
     }
 
-    @-moz-keyframes cubemove {
-      25% { -moz-transform: translateX(22px) scale(0.5) rotate(-90deg) }
+    @keyframes cubemove {
+      25% { transform: translateX(42px) rotate(-90deg) scale(0.5) }
       /* Hack to make FF rotate in the right direction */
-      50% { -moz-transform: translateX(22px) translateY(22px) rotate(-179deg) }
-      51% { -moz-transform: translateX(22px) translateY(22px) rotate(-180deg) }
-      75% { -moz-transform: translateX(0px) translateY(22px) scale(0.5) rotate(-270deg) }
-      100% { -moz-transform: rotate(-360deg) }
-    }
-
-    @-ms-keyframes cubemove {
-      25% { -ms-transform: translateX(42px) rotate(-90deg) scale(0.5) }
-      50% { -ms-transform: translateX(42px) translateY(42px) rotate(-179deg) }
-      50.1% { -ms-transform: translateX(42px) translateY(42px) rotate(-180deg) }
-      75% { -ms-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
-      100% { -ms-transform: rotate(-360deg) }
+      50% { transform: translateX(42px) translateY(42px) rotate(-179deg) }
+      50.1% { transform: translateX(42px) translateY(42px) rotate(-180deg) }
+      75% { transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+      100% { transform: rotate(-360deg) }
     }
     </style>
   </head>

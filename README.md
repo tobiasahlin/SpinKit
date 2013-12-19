@@ -7,7 +7,7 @@ SpinKit uses CSS animations to create smooth and easily customizable animations.
 
 ## Contribution
 
-If you're submitting a new animation, make sure that it looks identical in [all browsers that supports CSS animations](http://caniuse.com/css-animation).
+If you're submitting a new animation, make sure that it looks identical in [all browsers that support CSS animations](http://caniuse.com/css-animation).
 
 ## Licensing
 

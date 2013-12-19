@@ -1,4 +1,4 @@
-SpinKit
+[SpinKit](http://tobiasahlin.com/spinkit/)
 ============
 
 Simple CSS Spinners. See [demo](http://tobiasahlin.com/spinkit/).

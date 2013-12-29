@@ -58,6 +58,7 @@ function browserSupportsCSSFeatureNamed(featurename) {
   }
 
   return false;
+}
 ```
 
 Use it to check for `animation` support:

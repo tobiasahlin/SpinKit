@@ -16,17 +16,17 @@ Add a function that checks for CSS feature support:
 #### Coffeescript
 
 ```coffee
-browserSupportsCSSFeatureNamed: (featureName) ->
-  featureName = featureName.toLowerCase()
+browserSupportsCSSProperty: (propertyName) ->
   elm = document.createElement 'div'
+  propertyName = propertyName.toLowerCase()
 
-  return true if (elm.style[featureName] != undefined)
+  return true if (elm.style[propertyName] != undefined)
       
-  featureNameCapital = featureName.charAt(0).toUpperCase() + featureName.substr 1
+  propertyNameCapital = propertyName.charAt(0).toUpperCase() + propertyName.substr 1
   domPrefixes = 'Webkit Moz ms O'.split ' '
 
   for i in [0...domPrefixes.length]
-    if (elm.style[domPrefixes[i] + featureNameCapital] != undefined)
+    if (elm.style[domPrefixes[i] + propertyNameCapital] != undefined)
       return true
 
   false
@@ -35,25 +35,25 @@ browserSupportsCSSFeatureNamed: (featureName) ->
 Use it to check for `animation` support:
 
 ```coffee
-unless (@browserSupportsCSSFeatureNamed 'animation')
+unless (@browserSupportsCSSProperty 'animation')
 	# fallback…
 ```
 
 #### Javascript
 
 ```javascript
-function browserSupportsCSSFeatureNamed(featurename) {
+function browserSupportsCSSProperty(propertyName) {
   var elm = document.createElement('div');
-  featurename = featurename.toLowerCase();
+  propertyName = propertyName.toLowerCase();
 
-  if (elm.style[featurename] != undefined)
+  if (elm.style[propertyName] != undefined)
   	return true;
       
-  var featurenameCapital = featurename.charAt(0).toUpperCase() + featurename.substr(1),
+  var propertyNameCapital = propertyName.charAt(0).toUpperCase() + propertyName.substr(1),
   	domPrefixes = 'Webkit Moz ms O'.split(' ');
 
   for (var i = 0; i < domPrefixes.length; i++) {
-    if (elm.style[domPrefixes[i] + featurenameCapital] != undefined)
+    if (elm.style[domPrefixes[i] + propertyNameCapital] != undefined)
       return true;
   }
 
@@ -64,7 +64,7 @@ function browserSupportsCSSFeatureNamed(featurename) {
 Use it to check for `animation` support:
 
 ```javascript
-if (!browserSupportsCSSFeatureNamed('animation')) {
+if (!browserSupportsCSSProperty('animation')) {
 	// fallback…
 }
 ```

@@ -17,8 +17,8 @@ Add a function that checks for CSS feature support:
 
 ```coffee
 browserSupportsCSSFeatureNamed: (featureName) ->
-	elm = document.createElement 'div'
   featureName = featureName.toLowerCase()
+  elm = document.createElement 'div'
 
   return true if (elm.style[featureName] != undefined)
       

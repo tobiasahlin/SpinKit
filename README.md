@@ -69,6 +69,10 @@ if (!browserSupportsCSSProperty('animation')) {
 }
 ```
 
+## AngularJS directives
+Here is an implementation of the library as simple, easy to use, AngularJS directive (with bower support):
+https://github.com/Urigo/angular-spinkit
+
 ## Contribution
 
 If you're submitting a new animation, make sure that it looks identical in [all browsers that support CSS animations](http://caniuse.com/css-animation).

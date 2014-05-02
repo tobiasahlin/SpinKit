@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Sliding Cube</title>
+    <style>
+    .spinner {
+        width:200px;
+        height: 30px;
+        border:2px solid #333;
+        margin: 100px auto;
+    }
+    .container {
+    }
+    .cube {
+        width:30px;
+        height:30px;
+        background:#333;
+        -webkit-animation: cube 2.5s infinite linear;
+        animation: cube 2.5s infinite linear;
+    }
+    @-webkit-keyframes cube {
+        0% {
+            -webkit-transform:translate(0, 0);
+        }
+        50% {
+            -webkit-transform:translate(170px, 0);
+        }
+        100% {
+            -webkit-transform:translate(0, 0);
+        }
+    }
+    @keyframes cube {
+        0% {
+            transform:translate(0, 0);
+        }
+        50% {
+            transform:translate(170px, 0);
+        }
+        100% {
+            transform:translate(0, 0);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="spinner">
+        <div class="container">
+            <div class="cube"></div>
+        </div>
+    </div>
+</body>
+
+</html>

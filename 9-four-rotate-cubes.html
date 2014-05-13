@@ -17,155 +17,100 @@
     }
     .spinner .cube {
         float:left;
+        -webkit-animation-duration:1.3s;
+        animation-duration:1.3s;
+        -webkit-animation-timing-function:ease-in-out;
+        animation-timing-function:ease-in-out;
+        -webkit-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
     }
     .spinner .cube:nth-child(1) {
-        -webkit-animation:cube_l_t 1.3s ease-in-out infinite ;
-        animation:cube_l_t 1.3s ease-in-out infinite ;
+        -webkit-animation-name:cube_l_t;
+        animation-name:cube_l_t;
     }
     .spinner .cube:nth-child(2) {
-        -webkit-animation:cube_r_t 1.3s ease-in-out infinite;
-        animation:cube_r_t 1.3s ease-in-out infinite;
+        -webkit-animation-name:cube_r_t;
+        animation-name:cube_r_t;
     }
     .spinner .cube:nth-child(3) {
-        -webkit-animation:cube_l_b 1.3s ease-in-out infinite;
-        animation:cube_l_b 1.3s ease-in-out infinite;
+        -webkit-animation-name:cube_l_b;
+        animation-name:cube_l_b;
     }
     .spinner .cube:nth-child(4) {
-        -webkit-animation:cube_r_b 1.3s ease-in-out infinite;
-        animation:cube_r_b 1.3s ease-in-out infinite;
+        -webkit-animation-name:cube_r_b;
+        animation-name:cube_r_b;
     }
         
     @-webkit-keyframes cube_l_t {
-        33% {
+        33%{
             -webkit-transform:translate(-10px, -10px);
-        }
-        66% {
+        }66%{
             -webkit-transform:translate(-10px, -10px) rotate(-90deg);
-        }
-        100%{
+        }100%{
             -webkit-transform:translate(0px, 0px) rotate(-90deg);
         }
     }
     @-webkit-keyframes cube_r_t {
-        33% {
+        33%{
             -webkit-transform:translate(10px, -10px);
-        }
-        66% {
+        }66%{
             -webkit-transform:translate(10px, -10px) rotate(90deg);
-        }
-        100%{
+        }100%{
             -webkit-transform:translate(0px, 0px) rotate(90deg);
         }
     }
     @-webkit-keyframes cube_l_b {
-        33% {
+        33%{
             -webkit-transform:translate(-10px, 10px);
-        }
-        66% {
+        }66%{
             -webkit-transform:translate(-10px, 10px) rotate(90deg);
-        }
-        100%{
+        }100%{
             -webkit-transform:translate(0px, 0px) rotate(90deg);
         }
     }
     @-webkit-keyframes cube_r_b {
-        33% {
+        33%{
             -webkit-transform:translate(10px, 10px);
-        }
-        66% {
+        }66%{
             -webkit-transform:translate(10px, 10px) rotate(-90deg);
-        }
-        100%{
+        }100%{
             -webkit-transform:translate(0px, 0px) rotate(-90deg);
         }
     }
         
-    @-moz-keyframes cube_l_t {
-        33% {
-            -moz-transform:translate(-10px, -10px);
-        }
-        66% {
-            -moz-transform:translate(-10px, -10px) rotate(-90deg);
-        }
-        100%{
-            -moz-transform:translate(0px, 0px) rotate(-90deg);
-        }
-    }
-    @-moz-keyframes cube_r_t {
-        33% {
-            -moz-transform:translate(10px, -10px);
-        }
-        66% {
-            -moz-transform:translate(10px, -10px) rotate(90deg);
-        }
-        100%{
-            -moz-transform:translate(0px, 0px) rotate(90deg);
-        }
-    }
-    @-moz-keyframes cube_l_b {
-        33% {
-            -moz-transform:translate(-10px, 10px);
-        }
-        66% {
-            -moz-transform:translate(-10px, 10px) rotate(90deg);
-        }
-        100%{
-            -moz-transform:translate(0px, 0px) rotate(90deg);
-        }
-    }
-    @-moz-keyframes cube_r_b {
-        33% {
-            -moz-transform:translate(10px, 10px);
-        }
-        66% {
-            -moz-transform:translate(10px, 10px) rotate(-90deg);
-        }
-        100%{
-            -moz-transform:translate(0px, 0px) rotate(-90deg);
-        }
-    }
-        
     @keyframes cube_l_t {
-        33% {
+        33%{
             transform:translate(-10px, -10px);
-        }
-        66% {
+        }66%{
             transform:translate(-10px, -10px) rotate(-90deg);
-        }
-        100%{
+        }100%{
             transform:translate(0px, 0px) rotate(-90deg);
         }
     }
     @keyframes cube_r_t {
-        33% {
+        33%{
             transform:translate(10px, -10px);
-        }
-        66% {
+        }66%{
             transform:translate(10px, -10px) rotate(90deg);
-        }
-        100%{
+        }100%{
             transform:translate(0px, 0px) rotate(90deg);
         }
     }
     @keyframes cube_l_b {
-        33% {
+        33%{
             transform:translate(-10px, 10px);
-        }
-        66% {
+        }66%{
             transform:translate(-10px, 10px) rotate(90deg);
-        }
-        100%{
+        }100%{
             transform:translate(0px, 0px) rotate(90deg);
         }
     }
     @keyframes cube_r_b {
-        33% {
+        33%{
             transform:translate(10px, 10px);
-        }
-        66% {
+        }66%{
             transform:translate(10px, 10px) rotate(-90deg);
-        }
-        100%{
+        }100%{
             transform:translate(0px, 0px) rotate(-90deg);
         }
     }

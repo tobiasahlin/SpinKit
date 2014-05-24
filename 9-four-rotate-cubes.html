@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Four rotate cubes</title>
+    <style>
+    .cube {
+        width:25px;
+        height:25px;
+        background:#333;
+    }
+    .spinner {
+        width:50px;
+        height:50px;
+        margin:100px auto;
+    }
+    .spinner .cube {
+        float:left;
+        -webkit-animation-duration:1.3s;
+        animation-duration:1.3s;
+        -webkit-animation-timing-function:ease-in-out;
+        animation-timing-function:ease-in-out;
+        -webkit-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+    }
+    .spinner .cube:nth-child(1) {
+        -webkit-animation-name:cube_l_t;
+        animation-name:cube_l_t;
+    }
+    .spinner .cube:nth-child(2) {
+        -webkit-animation-name:cube_r_t;
+        animation-name:cube_r_t;
+    }
+    .spinner .cube:nth-child(3) {
+        -webkit-animation-name:cube_l_b;
+        animation-name:cube_l_b;
+    }
+    .spinner .cube:nth-child(4) {
+        -webkit-animation-name:cube_r_b;
+        animation-name:cube_r_b;
+    }
+        
+    @-webkit-keyframes cube_l_t {
+        33%{
+            -webkit-transform:translate(-10px, -10px);
+        }66%{
+            -webkit-transform:translate(-10px, -10px) rotate(-90deg);
+        }100%{
+            -webkit-transform:translate(0px, 0px) rotate(-90deg);
+        }
+    }
+    @-webkit-keyframes cube_r_t {
+        33%{
+            -webkit-transform:translate(10px, -10px);
+        }66%{
+            -webkit-transform:translate(10px, -10px) rotate(90deg);
+        }100%{
+            -webkit-transform:translate(0px, 0px) rotate(90deg);
+        }
+    }
+    @-webkit-keyframes cube_l_b {
+        33%{
+            -webkit-transform:translate(-10px, 10px);
+        }66%{
+            -webkit-transform:translate(-10px, 10px) rotate(90deg);
+        }100%{
+            -webkit-transform:translate(0px, 0px) rotate(90deg);
+        }
+    }
+    @-webkit-keyframes cube_r_b {
+        33%{
+            -webkit-transform:translate(10px, 10px);
+        }66%{
+            -webkit-transform:translate(10px, 10px) rotate(-90deg);
+        }100%{
+            -webkit-transform:translate(0px, 0px) rotate(-90deg);
+        }
+    }
+        
+    @keyframes cube_l_t {
+        33%{
+            transform:translate(-10px, -10px);
+        }66%{
+            transform:translate(-10px, -10px) rotate(-90deg);
+        }100%{
+            transform:translate(0px, 0px) rotate(-90deg);
+        }
+    }
+    @keyframes cube_r_t {
+        33%{
+            transform:translate(10px, -10px);
+        }66%{
+            transform:translate(10px, -10px) rotate(90deg);
+        }100%{
+            transform:translate(0px, 0px) rotate(90deg);
+        }
+    }
+    @keyframes cube_l_b {
+        33%{
+            transform:translate(-10px, 10px);
+        }66%{
+            transform:translate(-10px, 10px) rotate(90deg);
+        }100%{
+            transform:translate(0px, 0px) rotate(90deg);
+        }
+    }
+    @keyframes cube_r_b {
+        33%{
+            transform:translate(10px, 10px);
+        }66%{
+            transform:translate(10px, 10px) rotate(-90deg);
+        }100%{
+            transform:translate(0px, 0px) rotate(-90deg);
+        }
+    }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="spinner">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </div>
+
+</body>
+
+</html>

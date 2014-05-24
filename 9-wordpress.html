@@ -15,8 +15,6 @@
       width: 1em;
       height: 1em;
       display: inline-block;
-      -webkit-border-radius: 1em;
-      -moz-border-radius: 1em;
       border-radius: 1em;
       position: relative;
       -webkit-animation: wordpress_loader 1s linear infinite;
@@ -29,31 +27,26 @@
     .wordpress_loader:before {
       content: '';
       display: block;
-      background: #aaa;
+      background: #fff;
       width: 0.25em;
       height: 0.25em;
       position: absolute;
-      -webkit-border-radius: 0.25em;
-      -moz-border-radius: 0.25em;
       border-radius: 0.25em;
       top: 0.15em;
       left: 0.15em;
     }
     
     @-webkit-keyframes wordpress_loader {
+      0% { transform: rotate(0); }
       100% { transform:rotate(360deg); }
     }
     @-moz-keyframes wordpress_loader {
-      100% { transform:rotate(360deg); }
-    }
-    @-o-keyframes wordpress_loader {
-      100% { transform:rotate(360deg); }
-    }
-    @-ms-keyframes wordpress_loader {
+      0% { transform: rotate(0); }
       100% { transform:rotate(360deg); }
     }
     @keyframes wordpress_loader {
-      100% { transform:rotate(360deg); }
+      0% { transform: rotate(0); -webkit-transform:rotate(0); }
+      100% { transform:rotate(360deg); -webkit-transform:rotate(360deg); }
     }
     </style>
   </head>

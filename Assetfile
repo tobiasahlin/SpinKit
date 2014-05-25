@@ -1,0 +1,15 @@
+require "rake-pipeline-web-filters"
+require "rake-pipeline-web-filters/helpers"
+
+build_path = "build"
+src_path = "src"
+
+# compile and concat all LESS files...
+output "#{build_path}"
+input "#{src_path}" do
+  match "less/application.less" do
+    less :paths => ["#{src_path}/less"]
+      copy "spinkit.css"
+      #yui_css
+  end
+end

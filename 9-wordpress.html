@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Circle</title>
+    <style>
+    .spinner {
+      background: #333;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      border-radius: 30px;
+      position: relative;
+      -webkit-animation: inner-circle 1s linear infinite;
+      animation: inner-circle 1s linear infinite;
+    }
+
+    .inner-circle {
+      display: block;
+      background: #fff;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      border-radius: 8px;
+      top: 5px;
+      left: 5px;
+    }
+    
+    @-webkit-keyframes inner-circle {
+      0% { -webkit-transform: rotate(0); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes inner-circle {
+      0% { transform: rotate(0); -webkit-transform:rotate(0); }
+      100% { transform: rotate(360deg); -webkit-transform:rotate(360deg); }
+    }
+    </style>
+  </head>
+  <body>
+  <div class="spinner">
+    <span class="inner-circle"></span>
+  </div>
+  </body>
+</html>

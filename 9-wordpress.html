@@ -3,56 +3,40 @@
     <title>Circle</title>
     <style>
     .spinner {
-      margin: 100px auto;
-      width: 20px;
-      height: 20px;
+      background: #333;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      border-radius: 30px;
       position: relative;
-      font-size: 30px;
+      -webkit-animation: inner-circle 1s linear infinite;
+      animation: inner-circle 1s linear infinite;
     }
 
-    .wordpress_loader {
-      background: #333;
-      width: 1em;
-      height: 1em;
-      display: inline-block;
-      border-radius: 1em;
-      position: relative;
-      -webkit-animation: wordpress_loader 1s linear infinite;
-      -moz-animation: wordpress_loader 1s linear infinite;
-      -ms-animation: wordpress_loader 1s linear infinite;
-      -o-animation: wordpress_loader 1s linear infinite;
-      animation: wordpress_loader 1s linear infinite;
-    }
-    
-    .wordpress_loader:before {
-      content: '';
+    .inner-circle {
       display: block;
       background: #fff;
-      width: 0.25em;
-      height: 0.25em;
+      width: 8px;
+      height: 8px;
       position: absolute;
-      border-radius: 0.25em;
-      top: 0.15em;
-      left: 0.15em;
+      border-radius: 8px;
+      top: 5px;
+      left: 5px;
     }
     
-    @-webkit-keyframes wordpress_loader {
-      0% { transform: rotate(0); }
-      100% { transform:rotate(360deg); }
+    @-webkit-keyframes inner-circle {
+      0% { -webkit-transform: rotate(0); }
+      100% { -webkit-transform: rotate(360deg); }
     }
-    @-moz-keyframes wordpress_loader {
-      0% { transform: rotate(0); }
-      100% { transform:rotate(360deg); }
-    }
-    @keyframes wordpress_loader {
+    @keyframes inner-circle {
       0% { transform: rotate(0); -webkit-transform:rotate(0); }
-      100% { transform:rotate(360deg); -webkit-transform:rotate(360deg); }
+      100% { transform: rotate(360deg); -webkit-transform:rotate(360deg); }
     }
     </style>
   </head>
   <body>
   <div class="spinner">
-    <span class="wordpress_loader"></span>
+    <span class="inner-circle"></span>
   </div>
   </body>
 </html>

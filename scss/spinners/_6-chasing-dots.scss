@@ -1,0 +1,65 @@
+/*
+ *  Usage:
+ *
+ *    <div class="spinner spinner-chasing-dots">
+ *      <div class="dot1"></div>
+ *      <div class="dot2"></div>
+ *    </div>
+ *
+ */
+
+.spinner-chasing-dots {
+  &.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+
+    -webkit-animation: chasingDotsRotate 2.0s infinite linear;
+    animation: chasingDotsRotate 2.0s infinite linear;
+  }
+
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    border-radius: 100%;
+
+    -webkit-animation: chasingDotsBounce 2.0s infinite ease-in-out;
+    animation: chasingDotsBounce 2.0s infinite ease-in-out;
+  }
+
+  .dot2 {
+    top: auto;
+    bottom: 0px;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+}
+
+@-webkit-keyframes chasingDotsRotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes chasingDotsRotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes chasingDotsBounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes chasingDotsBounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

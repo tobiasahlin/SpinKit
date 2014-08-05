@@ -9,30 +9,19 @@
   &.spinner {
     width: 40px;
     height: 40px;
-    margin: 100px auto;
-    background-color: #333;
+    margin: $spinkit-spinner-margin;
+    background-color: $spinkit-spinner-color;
 
     border-radius: 100%;
-    -webkit-animation: pulseScaleOut 1.0s infinite ease-in-out;
     animation: pulseScaleOut 1.0s infinite ease-in-out;
-  }
-}
-
-@-webkit-keyframes pulseScaleOut {
-  0% { -webkit-transform: scale(0.0) }
-  100% {
-    -webkit-transform: scale(1.0);
-    opacity: 0;
   }
 }
 
 @keyframes pulseScaleOut {
   0% {
     transform: scale(0.0);
-    -webkit-transform: scale(0.0);
   } 100% {
     transform: scale(1.0);
-    -webkit-transform: scale(1.0);
     opacity: 0;
   }
 }

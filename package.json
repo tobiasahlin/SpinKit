@@ -18,6 +18,7 @@
   "homepage": "https://github.com/tobiasahlin/SpinKit",
   "devDependencies": {
     "gulp": "^3.8.7",
+    "gulp-autoprefixer": "0.0.8",
     "gulp-rimraf": "^0.1.0",
     "gulp-sass": "0.7.1",
     "lodash": "^2.4.1",

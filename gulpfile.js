@@ -3,6 +3,7 @@ var _ = require('lodash');
 var fs = require('fs');
 var Q = require('q');
 var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
 var rimraf = require('gulp-rimraf');
 
@@ -27,6 +28,7 @@ gulp.task('clean-styles', function() {
 gulp.task('styles', ['clean-styles'], function() {
   return gulp.src('./scss/spinkit.scss')
              .pipe(sass({errLogToConsole: true}))
+             .pipe(autoprefixer('last 2 versions', {map: false}))
              .pipe(gulp.dest('./css'));
 });
 
@@ -79,3 +81,8 @@ gulp.task('build', ['html', 'styles']);
 
 
 gulp.task('default', ['build']);
+
+
+gulp.task('watch', ['build'], function() {
+  gulp.watch('./scss/**/*.scss', ['build']);
+});

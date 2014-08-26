@@ -9,7 +9,8 @@
       position: relative;
     }
 
-    .cube1, .cube2 {
+    .spinner:before, .spinner:after {
+      content: '';
       background-color: #333;
       width: 10px;
       height: 10px;
@@ -21,7 +22,7 @@
       animation: cubemove 1.8s infinite ease-in-out;
     }
 
-    .cube2 {
+    .spinner:after {
       -webkit-animation-delay: -0.9s;
       animation-delay: -0.9s;
     }
@@ -55,9 +56,6 @@
     </style>
   </head>
   <body>
-    <div class="spinner">
-      <div class="cube1"></div>
-      <div class="cube2"></div>
-    </div>
+    <div class="spinner"></div>
   </body>
 </html>

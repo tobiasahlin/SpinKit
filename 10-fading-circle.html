@@ -26,11 +26,8 @@
       background-color: #333;
       
       border-radius: 100%;
-      -webkit-animation: fadedelay 1.2s infinite ease-in-out;
-      animation: fadedelay 1.2s infinite ease-in-out;
-      /* Prevent first frame from flickering when animation starts */
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
+      -webkit-animation: fadedelay 1.2s infinite ease-in-out both;
+      animation: fadedelay 1.2s infinite ease-in-out both;
     }
 
     .circle2  { transform: rotate(30deg);  -webkit-transform: rotate(30deg)  }

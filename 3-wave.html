@@ -2,7 +2,7 @@
   <head>
     <title>Wave</title>
     <style>
-    .spinner {
+    .sk-spinner {
       margin: 100px auto;
       width: 50px;
       height: 30px;
@@ -10,42 +10,42 @@
       font-size: 10px;
     }
 
-    .spinner > div {
+    .sk-rect {
       background-color: #333;
       height: 100%;
       width: 6px;
       display: inline-block;
       
-      -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
-      animation: stretchdelay 1.2s infinite ease-in-out;
+      -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+      animation: sk-stretchdelay 1.2s infinite ease-in-out;
     }
 
-    .spinner .rect2 {
+    .sk-rect2 {
       -webkit-animation-delay: -1.1s;
       animation-delay: -1.1s;
     }
 
-    .spinner .rect3 {
+    .sk-rect3 {
       -webkit-animation-delay: -1.0s;
       animation-delay: -1.0s;
     }
 
-    .spinner .rect4 {
+    .sk-rect4 {
       -webkit-animation-delay: -0.9s;
       animation-delay: -0.9s;
     }
 
-    .spinner .rect5 {
+    .sk-rect5 {
       -webkit-animation-delay: -0.8s;
       animation-delay: -0.8s;
     }
 
-    @-webkit-keyframes stretchdelay {
+    @-webkit-keyframes sk-stretchdelay {
       0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
       20% { -webkit-transform: scaleY(1.0) }
     }
 
-    @keyframes stretchdelay {
+    @keyframes sk-stretchdelay {
       0%, 40%, 100% { 
         transform: scaleY(0.4);
         -webkit-transform: scaleY(0.4);
@@ -57,12 +57,12 @@
     </style>
   </head>
   <body>
-    <div class="spinner">
-      <div class="rect1"></div>
-      <div class="rect2"></div>
-      <div class="rect3"></div>
-      <div class="rect4"></div>
-      <div class="rect5"></div>
+    <div class="sk-spinner">
+      <div class="sk-rect1 sk-rect"></div>
+      <div class="sk-rect2 sk-rect"></div>
+      <div class="sk-rect3 sk-rect"></div>
+      <div class="sk-rect4 sk-rect"></div>
+      <div class="sk-rect5 sk-rect"></div>
     </div>
   </body>
 </html>

@@ -2,23 +2,23 @@
   <head>
     <title>Rotating Plane</title>
     <style>
-    .spinner {
+    .sk-spinner {
       width: 30px;
       height: 30px;
       background-color: #333;
 
       margin: 100px auto;
-      -webkit-animation: rotateplane 1.2s infinite ease-in-out;
-      animation: rotateplane 1.2s infinite ease-in-out;
+      -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+      animation: sk-rotateplane 1.2s infinite ease-in-out;
     }
 
-    @-webkit-keyframes rotateplane {
+    @-webkit-keyframes sk-rotateplane {
       0% { -webkit-transform: perspective(120px) }
       50% { -webkit-transform: perspective(120px) rotateY(180deg) }
       100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
     }
 
-    @keyframes rotateplane {
+    @keyframes sk-rotateplane {
       0% {
         transform: perspective(120px) rotateX(0deg) rotateY(0deg);
         -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
@@ -33,6 +33,6 @@
     </style>
   </head>
   <body>
-    <div class="spinner"></div>
+    <div class="sk-spinner"></div>
   </body>
 </html>

@@ -2,19 +2,19 @@
   <head>
     <title>Cube grid</title>
     <style>
-    .spinner {
+    .sk-spinner {
       width:30px;
       height:30px;
       margin:100px auto;
     }
 
-    .cube {
+    .sk-cube {
       width:33%;
       height:33%;
       background:#333;
       float:left;
-      -webkit-animation: scaleDelay 1.3s infinite ease-in-out;
-      animation: scaleDelay 1.3s infinite ease-in-out;
+      -webkit-animation: sk-scaleDelay 1.3s infinite ease-in-out;
+      animation: sk-scaleDelay 1.3s infinite ease-in-out;
     }
 
     /* 
@@ -24,22 +24,22 @@
      * 7 8 9
      */
 
-    .spinner .cube:nth-child(1) { -webkit-animation-delay: 0.2s; animation-delay: 0.2s  }
-    .spinner .cube:nth-child(2) { -webkit-animation-delay: 0.3s; animation-delay: 0.3s  }
-    .spinner .cube:nth-child(3) { -webkit-animation-delay: 0.4s; animation-delay: 0.4s  }
-    .spinner .cube:nth-child(4) { -webkit-animation-delay: 0.1s; animation-delay: 0.1s  }
-    .spinner .cube:nth-child(5) { -webkit-animation-delay: 0.2s; animation-delay: 0.2s  }
-    .spinner .cube:nth-child(6) { -webkit-animation-delay: 0.3s; animation-delay: 0.3s  }
-    .spinner .cube:nth-child(7) { -webkit-animation-delay: 0.0s; animation-delay: 0.0s  }
-    .spinner .cube:nth-child(8) { -webkit-animation-delay: 0.1s; animation-delay: 0.1s  }
-    .spinner .cube:nth-child(9) { -webkit-animation-delay: 0.2s; animation-delay: 0.2s  }
+    .sk-cube1 { -webkit-animation-delay: 0.2s; animation-delay: 0.2s  }
+    .sk-cube2 { -webkit-animation-delay: 0.3s; animation-delay: 0.3s  }
+    .sk-cube3 { -webkit-animation-delay: 0.4s; animation-delay: 0.4s  }
+    .sk-cube4 { -webkit-animation-delay: 0.1s; animation-delay: 0.1s  }
+    .sk-cube5 { -webkit-animation-delay: 0.2s; animation-delay: 0.2s  }
+    .sk-cube6 { -webkit-animation-delay: 0.3s; animation-delay: 0.3s  }
+    .sk-cube7 { -webkit-animation-delay: 0.0s; animation-delay: 0.0s  }
+    .sk-cube8 { -webkit-animation-delay: 0.1s; animation-delay: 0.1s  }
+    .sk-cube9 { -webkit-animation-delay: 0.2s; animation-delay: 0.2s  }
         
-    @-webkit-keyframes scaleDelay {
+    @-webkit-keyframes sk-scaleDelay {
       0%, 70%, 100% { -webkit-transform:scale3D(1.0, 1.0, 1.0) }
       35%           { -webkit-transform:scale3D(0.0, 0.0, 1.0) }
     }
         
-    @keyframes scaleDelay {
+    @keyframes sk-scaleDelay {
       0%, 70%, 100% { -webkit-transform:scale3D(1.0, 1.0, 1.0); transform:scale3D(1.0, 1.0, 1.0) }
       35%           { -webkit-transform:scale3D(1.0, 1.0, 1.0); transform:scale3D(0.0, 0.0, 1.0) }
     }
@@ -47,16 +47,16 @@
   </head>
   <body>
 
-  <div class="spinner">
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
+  <div class="sk-spinner">
+    <div class="sk-cube1 sk-cube"></div>
+    <div class="sk-cube2 sk-cube"></div>
+    <div class="sk-cube3 sk-cube"></div>
+    <div class="sk-cube4 sk-cube"></div>
+    <div class="sk-cube5 sk-cube"></div>
+    <div class="sk-cube6 sk-cube"></div>
+    <div class="sk-cube7 sk-cube"></div>
+    <div class="sk-cube8 sk-cube"></div>
+    <div class="sk-cube9 sk-cube"></div>
   </div>
 
 </body>

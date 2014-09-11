@@ -2,7 +2,7 @@
   <head>
     <title>Chasing Dots</title>
     <style>
-    .spinner {
+    .sk-spinner {
       margin: 100px auto;
       width: 40px;
       height: 40px;
@@ -13,7 +13,7 @@
       animation: rotate 2.0s infinite linear;
     }
 
-    .dot1, .dot2 {
+    .sk-dot1, .sk-dot2 {
       width: 60%;
       height: 60%;
       display: inline-block;
@@ -26,27 +26,27 @@
       animation: bounce 2.0s infinite ease-in-out;
     }
 
-    .dot2 {
+    .sk-dot2 {
       top: auto;
       bottom: 0px;
       -webkit-animation-delay: -1.0s;
       animation-delay: -1.0s;
     }
 
-    @-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg) }}
-    @keyframes rotate { 
+    @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+    @keyframes sk-rotate { 
       100% {
         transform: rotate(360deg);
         -webkit-transform: rotate(360deg);
       }
     }
 
-    @-webkit-keyframes bounce {
+    @-webkit-keyframes sk-bounce {
       0%, 100% { -webkit-transform: scale(0.0) }
       50% { -webkit-transform: scale(1.0) }
     }
 
-    @keyframes bounce {
+    @keyframes sk-bounce {
       0%, 100% {
         transform: scale(0.0);
         -webkit-transform: scale(0.0);
@@ -58,9 +58,9 @@
     </style>
   </head>
   <body>
-    <div class="spinner">
-      <div class="dot1"></div>
-      <div class="dot2"></div>
+    <div class="sk-spinner">
+      <div class="sk-dot1"></div>
+      <div class="sk-dot2"></div>
     </div>
   </body>
 </html>

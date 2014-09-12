@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/tobiasahlin/SpinKit",
   "devDependencies": {
-    "gulp": "^3.8.7",
-    "gulp-autoprefixer": "0.0.8",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "^1.0.0",
     "gulp-rimraf": "^0.1.0",
-    "gulp-sass": "0.7.1",
+    "gulp-sass": "0.7.3",
     "lodash": "^2.4.1",
     "q": "^1.0.1"
   }

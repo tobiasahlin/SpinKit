@@ -12,22 +12,22 @@
 
       .spinner > div {
         background-color: #333;
-        width: 25px;
-        height: 25px;
-        margin-right: 20px;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
         display: inline-block;
-        -webkit-animation: stretchdelay 1s infinite cubic-bezier(0.595, 0.14, 0, 1.145);
-        animation: stretchdelay 1s infinite cubic-bezier(0.595, 0.14, 0, 1.145);
+        -webkit-animation: stretchdelay 1s infinite ease-in-out;
+        animation: stretchdelay 1s infinite ease-in-out;
       }
 
-      .spinner .circ1, .spinner .circ5 {
-        -webkit-animation-delay: 0.3s;
-        animation-delay: 0.3s;
+     .spinner .circ1, .spinner .circ5 {
+        -webkit-animation-delay: .18s;
+        animation-delay: .18s;
       }
 
       .spinner .circ2, .spinner .circ4 {
-        -webkit-animation-delay: 0.1s;
-        animation-delay: 0.1s;
+        -webkit-animation-delay: .09s;
+        animation-delay: .09s;
       }
 
       @-webkit-keyframes stretchdelay {

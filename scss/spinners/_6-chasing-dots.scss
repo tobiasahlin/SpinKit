@@ -1,25 +1,25 @@
 /*
  *  Usage:
  *
- *    <div class="spinner spinner-chasing-dots">
- *      <div class="dot1"></div>
- *      <div class="dot2"></div>
+ *    <div class="sk-spinner sk-spinner-chasing-dots">
+ *      <div class="sk-dot1"></div>
+ *      <div class="sk-dot2"></div>
  *    </div>
  *
  */
 
-.spinner-chasing-dots {
-  &.spinner {
+.sk-spinner-chasing-dots {
+  &.sk-spinner {
     margin: $spinkit-spinner-margin;
     width: 40px;
     height: 40px;
     position: relative;
     text-align: center;
 
-    animation: chasingDotsRotate 2.0s infinite linear;
+    animation: sk-chasingDotsRotate 2.0s infinite linear;
   }
 
-  .dot1, .dot2 {
+  .sk-dot1, .sk-dot2 {
     width: 60%;
     height: 60%;
     display: inline-block;
@@ -28,23 +28,23 @@
     background-color: $spinkit-spinner-color;
     border-radius: 100%;
 
-    animation: chasingDotsBounce 2.0s infinite ease-in-out;
+    animation: sk-chasingDotsBounce 2.0s infinite ease-in-out;
   }
 
-  .dot2 {
+  .sk-dot2 {
     top: auto;
     bottom: 0px;
     animation-delay: -1.0s;
   }
 }
 
-@keyframes chasingDotsRotate {
+@keyframes sk-chasingDotsRotate {
   100% {
     transform: rotate(360deg);
   }
 }
 
-@keyframes chasingDotsBounce {
+@keyframes sk-chasingDotsBounce {
   0%, 100% {
     transform: scale(0.0);
   } 50% {

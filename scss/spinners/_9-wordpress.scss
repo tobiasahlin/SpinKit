@@ -1,24 +1,24 @@
 /*
  *  Usage:
  *
- *    <div class="spinner spinner-wordpress">
- *      <span class="inner-circle"></span>
+ *    <div class="sk-spinner sk-spinner-wordpress">
+ *      <span class="sk-inner-circle"></span>
  *    </div>
  *
  */
 
-.spinner-wordpress {
-  &.spinner {
+.sk-spinner-wordpress {
+  &.sk-spinner {
     background: #333;
     width: 30px;
     height: 30px;
     border-radius: 30px;
     position: relative;
     margin: $spinkit-spinner-margin;
-    animation: innerCircle 1s linear infinite;
+    animation: sk-innerCircle 1s linear infinite;
   }
 
-  .inner-circle {
+  .sk-inner-circle {
     display: block;
     background: #fff;
     width: 8px;
@@ -30,7 +30,7 @@
   }
 }
 
-@keyframes innerCircle {
+@keyframes sk-innerCircle {
   0% { transform: rotate(0) }
   100% { transform: rotate(360deg) }
 }

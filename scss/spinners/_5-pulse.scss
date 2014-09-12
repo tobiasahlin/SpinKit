@@ -1,23 +1,23 @@
 /*
  *  Usage:
  *
- *    <div class="spinner spinner-pulse"></div>
+ *    <div class="sk-spinner sk-spinner-pulse"></div>
  *
  */
 
-.spinner-pulse {
-  &.spinner {
+.sk-spinner-pulse {
+  &.sk-spinner {
     width: 40px;
     height: 40px;
     margin: $spinkit-spinner-margin;
     background-color: $spinkit-spinner-color;
 
     border-radius: 100%;
-    animation: pulseScaleOut 1.0s infinite ease-in-out;
+    animation: sk-pulseScaleOut 1.0s infinite ease-in-out;
   }
 }
 
-@keyframes pulseScaleOut {
+@keyframes sk-pulseScaleOut {
   0% {
     transform: scale(0.0);
   } 100% {

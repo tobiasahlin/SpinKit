@@ -1,22 +1,22 @@
 /*
  *  Usage:
  *
- *    <div class="spinner spinner-rotating-plane"></div>
+ *    <div class="sk-spinner sk-spinner-rotating-plane"></div>
  *
  */
 
-.spinner-rotating-plane {
-  &.spinner {
+.sk-spinner-rotating-plane {
+  &.sk-spinner {
     width: 30px;
     height: 30px;
     background-color: $spinkit-spinner-color;
 
     margin: $spinkit-spinner-margin;
-    animation: rotatePlane 1.2s infinite ease-in-out;
+    animation: sk-rotatePlane 1.2s infinite ease-in-out;
   }
 }
 
-@keyframes rotatePlane {
+@keyframes sk-rotatePlane {
   0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
   } 50% {

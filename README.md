@@ -12,8 +12,6 @@ Grab the HTML and CSS for a spinner and include it in your project. Note that a 
 
 An easy way to provide a fallback animation is to check for support for the `animation` property, and replace the spinner with a GIF if it's not supported.
 
-#### Javascript
-
 ```javascript
 function browserSupportsCSSProperty(propertyName) {
   var elm = document.createElement('div');

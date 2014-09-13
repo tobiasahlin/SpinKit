@@ -1,5 +1,4 @@
-[SpinKit](http://tobiasahlin.com/spinkit/)
-============
+# [SpinKit](http://tobiasahlin.com/spinkit/)
 
 Simple loading spinners animated with CSS. See [demo](http://tobiasahlin.com/spinkit/).
 

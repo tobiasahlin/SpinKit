@@ -1,10 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>4 wandering cubes</title>
-  <style type="text/css">
-    /*
+/*
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-wandering-cubes">
@@ -74,15 +68,3 @@
   100% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }
-
-  </style>
-</head>
-<body>
- 
-
-    <div class="sk-spinner sk-spinner-wandering-cubes">
-      <div class="sk-cube1"></div>
-      <div class="sk-cube2"></div>
-    </div>
-</body>
-</html>

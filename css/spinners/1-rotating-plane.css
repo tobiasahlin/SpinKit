@@ -1,10 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>1 rotating plane</title>
-  <style type="text/css">
-    /*
+/*
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-rotating-plane"></div>
@@ -43,12 +37,3 @@
   100% {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
-
-  </style>
-</head>
-<body>
- 
-
-    <div class="sk-spinner sk-spinner-rotating-plane"></div>
-</body>
-</html>

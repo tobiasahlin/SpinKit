@@ -1,10 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>2 double bounce</title>
-  <style type="text/css">
-    /*
+/*
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-double-bounce">
@@ -50,15 +44,3 @@
   50% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
-
-  </style>
-</head>
-<body>
- 
-
-    <div class="sk-spinner sk-spinner-double-bounce">
-      <div class="sk-double-bounce1"></div>
-      <div class="sk-double-bounce2"></div>
-    </div>
-</body>
-</html>

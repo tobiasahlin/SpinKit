@@ -1,10 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>9 wordpress</title>
-  <style type="text/css">
-    /*
+/*
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-wordpress">
@@ -48,14 +42,3 @@
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
-
-  </style>
-</head>
-<body>
- 
-
-    <div class="sk-spinner sk-spinner-wordpress">
-      <span class="sk-inner-circle"></span>
-    </div>
-</body>
-</html>

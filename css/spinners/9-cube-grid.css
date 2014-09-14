@@ -1,10 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>9 cube grid</title>
-  <style type="text/css">
-    /*
+/*
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-cube-grid">
@@ -83,22 +77,3 @@
   35% {
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1); } }
-
-  </style>
-</head>
-<body>
- 
-
-    <div class="sk-spinner sk-spinner-cube-grid">
-      <div class="sk-cube"></div>
-      <div class="sk-cube"></div>
-      <div class="sk-cube"></div>
-      <div class="sk-cube"></div>
-      <div class="sk-cube"></div>
-      <div class="sk-cube"></div>
-      <div class="sk-cube"></div>
-      <div class="sk-cube"></div>
-      <div class="sk-cube"></div>
-    </div>
-</body>
-</html>

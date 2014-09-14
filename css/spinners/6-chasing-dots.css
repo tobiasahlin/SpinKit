@@ -1,10 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>6 chasing dots</title>
-  <style type="text/css">
-    /*
+/*
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-chasing-dots">
@@ -64,15 +58,3 @@
   50% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
-
-  </style>
-</head>
-<body>
- 
-
-    <div class="sk-spinner sk-spinner-chasing-dots">
-      <div class="sk-dot1"></div>
-      <div class="sk-dot2"></div>
-    </div>
-</body>
-</html>

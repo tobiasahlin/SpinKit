@@ -7,8 +7,10 @@ var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
 var rimraf = require('gulp-rimraf');
 
-var htmlTmpl = '\n\
-<!DOCTYPE html>\n\
+var htmlDir = './examples',
+    cssDir = './css',
+    scssDir = './scss',
+    htmlTmpl = '<!DOCTYPE html>\n\
 <html>\n\
 <head>\n\
   <title><%= title %></title>\n\
@@ -26,36 +28,36 @@ var getHtmlUsageExample = function(cssContent) {
 };
 
 gulp.task('clean-styles', function() {
-  return gulp.src('./css', {read: false}).pipe(rimraf());
+  return gulp.src(cssDir, {read: false}).pipe(rimraf());
 });
 
 
 gulp.task('styles', ['clean-styles'], function() {
-  return gulp.src('./scss/**/*.scss')
+  return gulp.src(scssDir + '/**/*.scss')
              .pipe(sass({errLogToConsole: true}))
              .pipe(autoprefixer('last 2 versions', {map: false}))
-             .pipe(gulp.dest('./css'));
+             .pipe(gulp.dest(cssDir));
 });
 
 
 gulp.task('clean-html', function() {
-  return gulp.src('./html', {read: false}).pipe(rimraf());
+  return gulp.src(htmlDir, {read: false}).pipe(rimraf());
 });
 
 
 // Generates HTML files from the usage examples found in the CSS files
 gulp.task('html', ['styles', 'clean-html'], function() {
-  var cssDirName = './css/spinners/';
+  var spinnersDir = cssDir + '/spinners/';
   var allDeferred = Q.defer();
 
-  fs.mkdirSync('./html');
+  fs.mkdirSync(htmlDir);
 
-  fs.readdir(cssDirName, function(err, filenames) {
+  fs.readdir(spinnersDir, function(err, filenames) {
     var promises = filenames.map(function(filename) {
       if (filename.indexOf('.css') === -1) { return; }
       var deferred = Q.defer();
       var title = filename.replace('.css', '').replace(/-/g, ' ');
-      var cssFilepath = cssDirName + filename;
+      var cssFilepath = spinnersDir + filename;
       var htmlFilename = filename.replace('.css', '.html');
 
       var readCssFile = function(err, cssContent) {
@@ -66,7 +68,7 @@ gulp.task('html', ['styles', 'clean-html'], function() {
           title: title,
           bodyContent: bodyContent
         });
-        fs.writeFile('./html/' + htmlFilename, html, function(err, data) {
+        fs.writeFile(htmlDir + '/' + htmlFilename, html, function(err, data) {
           if (err) { console.log(err); deferred.reject(err); }
           deferred.resolve();
         });
@@ -90,5 +92,5 @@ gulp.task('default', ['build']);
 
 
 gulp.task('watch', ['build'], function() {
-  gulp.watch('./scss/**/*.scss', ['build']);
+  gulp.watch(scssDir + '/**/*.scss', ['build']);
 });

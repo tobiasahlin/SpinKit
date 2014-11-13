@@ -1,0 +1,69 @@
+<html>
+
+<head>
+	<title>Three Pulsars</title>
+	<style>
+		.pulsar {
+			background: rgba(255, 0, 0, 0.4);
+			position: relative;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			margin: 0 auto;
+			
+			/*animation*/
+			animation: pulse 1s 0s infinite alternate;
+			-webkit-animation: pulse 1s 0s infinite alternate;
+		}
+		.pulsar:before {
+			content: "";
+			position: absolute;
+			background: inherit;
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			
+			/*animation*/
+			animation: pulse 1s 0.5s infinite alternate;
+			-webkit-animation: pulse 1s 0.5s infinite alternate;
+		}
+		.pulsar:after {
+			content: "";
+			
+			position: absolute;
+			background: inherit;
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			
+			/*animation*/
+			animation: pulse 1s 0.75s infinite alternate;
+			-webkit-animation: pulse 1s 0.75s infinite alternate;
+		}
+
+		@-webkit-keyframes pulse {
+			0% {
+				-webkit-transform: scale(.33);
+			}
+			100% {
+				-webkit-transform: scale(1);
+			}
+		}
+		@keyframes pulse {
+			0% {
+				-webkit-transform: scale(.33);
+				transform: scale(.33);
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="pulsar"></div>
+</body>
+
+</html>

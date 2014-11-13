@@ -13,7 +13,8 @@
       animation: inner-circle 1s linear infinite;
     }
 
-    .inner-circle {
+    .spinner:after {
+			content: '';
       display: block;
       background: #fff;
       width: 8px;
@@ -35,8 +36,6 @@
     </style>
   </head>
   <body>
-  <div class="spinner">
-    <span class="inner-circle"></span>
-  </div>
+  <div class="spinner"></div>
   </body>
 </html>

@@ -1,0 +1,37 @@
+/*
+ *  Usage:
+ *
+ *    <div class="sk-spinner sk-spinner-wordpress">
+ *      <span class="sk-inner-circle"></span>
+ *    </div>
+ *
+ */
+@import "../variables";
+
+.sk-spinner-wordpress {
+  &.sk-spinner {
+    background: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    position: relative;
+    margin: $spinkit-spinner-margin;
+    animation: sk-innerCircle 1s linear infinite;
+  }
+
+  .sk-inner-circle {
+    display: block;
+    background: #fff;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 8px;
+    top: 5px;
+    left: 5px;
+  }
+}
+
+@keyframes sk-innerCircle {
+  0% { transform: rotate(0) }
+  100% { transform: rotate(360deg) }
+}

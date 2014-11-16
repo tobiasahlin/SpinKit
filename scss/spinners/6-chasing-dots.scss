@@ -1,0 +1,54 @@
+/*
+ *  Usage:
+ *
+ *    <div class="sk-spinner sk-spinner-chasing-dots">
+ *      <div class="sk-dot1"></div>
+ *      <div class="sk-dot2"></div>
+ *    </div>
+ *
+ */
+@import "../variables";
+
+.sk-spinner-chasing-dots {
+  &.sk-spinner {
+    margin: $spinkit-spinner-margin;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+
+    animation: sk-chasingDotsRotate 2.0s infinite linear;
+  }
+
+  .sk-dot1, .sk-dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: $spinkit-spinner-color;
+    border-radius: 100%;
+
+    animation: sk-chasingDotsBounce 2.0s infinite ease-in-out;
+  }
+
+  .sk-dot2 {
+    top: auto;
+    bottom: 0px;
+    animation-delay: -1.0s;
+  }
+}
+
+@keyframes sk-chasingDotsRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-chasingDotsBounce {
+  0%, 100% {
+    transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+  }
+}

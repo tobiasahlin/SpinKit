@@ -1,0 +1,47 @@
+/*
+ *  Usage:
+ *
+ *    <div class="sk-spinner sk-spinner-three-bounce">
+ *      <div class="sk-bounce1"></div>
+ *      <div class="sk-bounce2"></div>
+ *      <div class="sk-bounce3"></div>
+ *    </div>
+ *
+ */
+ @import "../variables";
+
+.sk-spinner-three-bounce {
+  &.sk-spinner {
+    margin: $spinkit-spinner-margin;
+    width: 70px;
+    text-align: center;
+  }
+
+  div {
+    width: 18px;
+    height: 18px;
+    background-color: $spinkit-spinner-color;
+
+    border-radius: 100%;
+    display: inline-block;
+    animation: sk-threeBounceDelay 1.4s infinite ease-in-out;
+    /* Prevent first frame from flickering when animation starts */
+    animation-fill-mode: both;
+  }
+
+  .sk-bounce1 {
+    animation-delay: -0.32s;
+  }
+
+  .sk-bounce2 {
+    animation-delay: -0.16s;
+  }
+}
+
+@keyframes sk-threeBounceDelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+  }
+}

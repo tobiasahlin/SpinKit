@@ -1,0 +1,49 @@
+/*
+ *  Usage:
+ *
+ *    <div class="sk-spinner sk-spinner-wandering-cubes">
+ *      <div class="sk-cube1"></div>
+ *      <div class="sk-cube2"></div>
+ *    </div>
+ *
+ */
+@import "../variables";
+
+.sk-spinner-wandering-cubes {
+  &.sk-spinner {
+    margin: $spinkit-spinner-margin;
+    width: 32px;
+    height: 32px;
+    position: relative;
+  }
+
+  .sk-cube1, .sk-cube2 {
+    background-color: $spinkit-spinner-color;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    animation: sk-wanderingCubeMove 1.8s infinite ease-in-out;
+  }
+
+  .sk-cube2 {
+    animation-delay: -0.9s;
+  }
+}
+
+@keyframes sk-wanderingCubeMove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% {
+    /* Hack to make FF rotate in the right direction */
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+  } 50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+  } 75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% {
+    transform: rotate(-360deg);
+  }
+}

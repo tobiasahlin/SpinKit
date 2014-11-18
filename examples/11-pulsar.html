@@ -1,8 +1,14 @@
 <html>
 
 <head>
-	<title>11 Pulsars</title>
+	<title>11 Pulsar</title>
 	<style>
+		/*
+		 *  Usage:
+		 *
+		 *    <div class="sk-spinner sk-pulsar"></div>
+		 *
+		 */
 		.sk-spinner.sk-pulsar {
 			background: rgba(255, 0, 0, 0.4);
 			position: relative;
@@ -10,12 +16,11 @@
 			width: 50px;
 			border-radius: 50%;
 			margin: 0 auto;
-			
 			/*animation*/
 			animation: sk-pulse 1s 0s infinite alternate;
 			-webkit-animation: sk-pulse 1s 0s infinite alternate;
 		}
-		.sk-spinner.sk-pulsar:before,.sk-spinner.sk-pulsar:after {
+		.sk-spinner.sk-pulsar:before, .sk-spinner.sk-pulsar:after {
 			content: "";
 			position: absolute;
 			background: inherit;
@@ -25,7 +30,6 @@
 			animation: sk-pulse 1s infinite alternate;
 			-webkit-animation: sk-pulse 1s infinite alternate;
 		}
-		
 		.sk-spinner.sk-pulsar:before {
 			/*animation-delay*/
 			animation-delay: 0.5s;
@@ -39,8 +43,8 @@
 
 		@-webkit-keyframes sk-pulse {
 			0% {
-				-webkit-transform: scale(.33);
-				transform: scale(.33);
+				-webkit-transform: scale(0.33);
+				transform: scale(0.33);
 			}
 			100% {
 				-webkit-transform: scale(1);
@@ -49,8 +53,8 @@
 		}
 		@keyframes sk-pulse {
 			0% {
-				-webkit-transform: scale(.33);
-				transform: scale(.33);
+				-webkit-transform: scale(0.33);
+				transform: scale(0.33);
 			}
 			100% {
 				-webkit-transform: scale(1);

@@ -1,9 +1,9 @@
 <html>
 
 <head>
-	<title>Three Pulsars</title>
+	<title>11 Pulsars</title>
 	<style>
-		.pulsar {
+		.sk-spinner.sk-pulsar {
 			background: rgba(255, 0, 0, 0.4);
 			position: relative;
 			height: 50px;
@@ -12,44 +12,42 @@
 			margin: 0 auto;
 			
 			/*animation*/
-			animation: pulse 1s 0s infinite alternate;
-			-webkit-animation: pulse 1s 0s infinite alternate;
+			animation: sk-pulse 1s 0s infinite alternate;
+			-webkit-animation: sk-pulse 1s 0s infinite alternate;
 		}
-		.pulsar:before {
+		.sk-spinner.sk-pulsar:before,.sk-spinner.sk-pulsar:after {
 			content: "";
 			position: absolute;
 			background: inherit;
 			height: 100%;
 			width: 100%;
 			border-radius: 50%;
-			
-			/*animation*/
-			animation: pulse 1s 0.5s infinite alternate;
-			-webkit-animation: pulse 1s 0.5s infinite alternate;
+			animation: sk-pulse 1s infinite alternate;
+			-webkit-animation: sk-pulse 1s infinite alternate;
 		}
-		.pulsar:after {
-			content: "";
-			
-			position: absolute;
-			background: inherit;
-			height: 100%;
-			width: 100%;
-			border-radius: 50%;
-			
-			/*animation*/
-			animation: pulse 1s 0.75s infinite alternate;
-			-webkit-animation: pulse 1s 0.75s infinite alternate;
+		
+		.sk-spinner.sk-pulsar:before {
+			/*animation-delay*/
+			animation-delay: 0.5s;
+			-webkit-animation-delay: 0.5s;
+		}
+		.sk-spinner.sk-pulsar:after {
+			/*animation-delay*/
+			animation-delay: 0.75s;
+			-webkit-animation-delay: 0.75s;
 		}
 
-		@-webkit-keyframes pulse {
+		@-webkit-keyframes sk-pulse {
 			0% {
 				-webkit-transform: scale(.33);
+				transform: scale(.33);
 			}
 			100% {
 				-webkit-transform: scale(1);
+				transform: scale(1);
 			}
 		}
-		@keyframes pulse {
+		@keyframes sk-pulse {
 			0% {
 				-webkit-transform: scale(.33);
 				transform: scale(.33);
@@ -63,7 +61,7 @@
 </head>
 
 <body>
-	<div class="pulsar"></div>
+	<div class="sk-spinner sk-pulsar"></div>
 </body>
 
 </html>

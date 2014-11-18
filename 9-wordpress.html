@@ -1,19 +1,25 @@
 <html>
   <head>
-    <title>Circle</title>
+    <title>9 Wordpress</title>
     <style>
-    .spinner {
+    /*
+		 *  Usage:
+		 *
+		 *    <div class="sk-spinner sk-spinner-wordpress"></div>
+		 *
+		 */
+    .sk-spinner.sk-spinner-wordpress {
       background: #333;
       width: 30px;
       height: 30px;
       display: inline-block;
       border-radius: 30px;
       position: relative;
-      -webkit-animation: inner-circle 1s linear infinite;
-      animation: inner-circle 1s linear infinite;
+      -webkit-animation: sk-innerCircle 1s linear infinite;
+      animation: sk-innerCircle 1s linear infinite;
     }
 
-    .spinner:after {
+    .sk-spinner.sk-spinner-wordpress:after {
 			content: '';
       display: block;
       background: #fff;
@@ -25,17 +31,29 @@
       left: 5px;
     }
     
-    @-webkit-keyframes inner-circle {
-      0% { -webkit-transform: rotate(0); }
-      100% { -webkit-transform: rotate(360deg); }
-    }
-    @keyframes inner-circle {
-      0% { transform: rotate(0); -webkit-transform:rotate(0); }
-      100% { transform: rotate(360deg); -webkit-transform:rotate(360deg); }
-    }
+    @-webkit-keyframes sk-innerCircle {
+			0% {
+				-webkit-transform: rotate(0);
+								transform: rotate(0); 
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+								transform: rotate(360deg); 
+			} 
+		}
+		@keyframes sk-innerCircle {
+			0% {
+				-webkit-transform: rotate(0);
+								transform: rotate(0); 
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+								transform: rotate(360deg); 
+			} 
+		}
     </style>
   </head>
   <body>
-  <div class="spinner"></div>
+  <div class="sk-spinner sk-spinner-wordpress"></div>
   </body>
 </html>

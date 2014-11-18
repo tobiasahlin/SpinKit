@@ -1,0 +1,59 @@
+/*
+ *  Usage:
+ *
+ *    <div class="sk-spinner sk-pulsar"></div>
+ *
+ */
+
+.sk-spinner.sk-pulsar {
+	background: rgba(255, 0, 0, 0.4);
+	position: relative;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	margin: 0 auto;
+	/*animation*/
+	animation: sk-pulse 1s 0s infinite alternate;
+	-webkit-animation: sk-pulse 1s 0s infinite alternate;
+}
+.sk-spinner.sk-pulsar:before, .sk-spinner.sk-pulsar:after {
+	content: "";
+	position: absolute;
+	background: inherit;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	animation: sk-pulse 1s infinite alternate;
+	-webkit-animation: sk-pulse 1s infinite alternate;
+}
+.sk-spinner.sk-pulsar:before {
+	/*animation-delay*/
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+.sk-spinner.sk-pulsar:after {
+	/*animation-delay*/
+	animation-delay: 0.75s;
+	-webkit-animation-delay: 0.75s;
+}
+
+@-webkit-keyframes sk-pulse {
+	0% {
+		-webkit-transform: scale(0.33);
+		transform: scale(0.33);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@keyframes sk-pulse {
+	0% {
+		-webkit-transform: scale(0.33);
+		transform: scale(0.33);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}

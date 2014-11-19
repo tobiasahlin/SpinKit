@@ -54,3 +54,7 @@ if (!browserSupportsCSSProperty('animation')) {
   // fallback…
 }
 ```
+
+## Contributing
+
+See [CONTRIBUTING.md](https://github.com/tobiasahlin/SpinKit/blob/master/CONTRIBUTING.md) for details.

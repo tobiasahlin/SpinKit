@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>4 wandering cubes</title>
+  <style type="text/css">
+    /*
+ *  Usage:
+ *
+ *    <div class="sk-spinner sk-spinner-wandering-cubes">
+ *      <div class="sk-cube1"></div>
+ *      <div class="sk-cube2"></div>
+ *    </div>
+ *
+ */
+.sk-spinner-wandering-cubes.sk-spinner {
+  margin: 0 auto;
+  width: 32px;
+  height: 32px;
+  position: relative; }
+.sk-spinner-wandering-cubes .sk-cube1, .sk-spinner-wandering-cubes .sk-cube2 {
+  background-color: #333;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-wanderingCubeMove 1.8s infinite ease-in-out;
+          animation: sk-wanderingCubeMove 1.8s infinite ease-in-out; }
+.sk-spinner-wandering-cubes .sk-cube2 {
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s; }
+
+@-webkit-keyframes sk-wanderingCubeMove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+            transform: translateX(42px) rotate(-90deg) scale(0.5); }
+
+  50% {
+    /* Hack to make FF rotate in the right direction */
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+            transform: translateX(42px) translateY(42px) rotate(-179deg); }
+
+  50.1% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+            transform: translateX(42px) translateY(42px) rotate(-180deg); }
+
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+            transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+@keyframes sk-wanderingCubeMove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+            transform: translateX(42px) rotate(-90deg) scale(0.5); }
+
+  50% {
+    /* Hack to make FF rotate in the right direction */
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+            transform: translateX(42px) translateY(42px) rotate(-179deg); }
+
+  50.1% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+            transform: translateX(42px) translateY(42px) rotate(-180deg); }
+
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+            transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+  </style>
+</head>
+<body>
+ 
+
+    <div class="sk-spinner sk-spinner-wandering-cubes">
+      <div class="sk-cube1"></div>
+      <div class="sk-cube2"></div>
+    </div>
+</body>
+</html>

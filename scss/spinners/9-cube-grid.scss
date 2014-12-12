@@ -1,0 +1,55 @@
+/*
+ *  Usage:
+ *
+ *    <div class="sk-spinner sk-spinner-cube-grid">
+ *      <div class="sk-cube"></div>
+ *      <div class="sk-cube"></div>
+ *      <div class="sk-cube"></div>
+ *      <div class="sk-cube"></div>
+ *      <div class="sk-cube"></div>
+ *      <div class="sk-cube"></div>
+ *      <div class="sk-cube"></div>
+ *      <div class="sk-cube"></div>
+ *      <div class="sk-cube"></div>
+ *    </div>
+ *
+ */
+@import "../variables";
+
+.sk-spinner-cube-grid {
+  &.sk-spinner {
+    width: 30px;
+    height: 30px;
+    margin: $spinkit-spinner-margin;
+  }
+
+  .sk-cube {
+    width: 33%;
+    height: 33%;
+    background: #333;
+    float: left;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  }
+
+  /*
+   * Spinner positions
+   * 1 2 3
+   * 4 5 6
+   * 7 8 9
+   */
+
+  .sk-cube:nth-child(1) { animation-delay: 0.2s }
+  .sk-cube:nth-child(2) { animation-delay: 0.3s }
+  .sk-cube:nth-child(3) { animation-delay: 0.4s }
+  .sk-cube:nth-child(4) { animation-delay: 0.1s }
+  .sk-cube:nth-child(5) { animation-delay: 0.2s }
+  .sk-cube:nth-child(6) { animation-delay: 0.3s }
+  .sk-cube:nth-child(7) { animation-delay: 0.0s }
+  .sk-cube:nth-child(8) { animation-delay: 0.1s }
+  .sk-cube:nth-child(9) { animation-delay: 0.2s }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% { transform:scale3D(1.0, 1.0, 1.0) }
+  35%           { transform:scale3D(0.0, 0.0, 1.0) }
+}

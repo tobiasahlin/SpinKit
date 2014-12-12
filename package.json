@@ -1,0 +1,27 @@
+{
+  "name": "SpinKit",
+  "version": "1.0.0",
+  "description": "A collection of loading indicators animated with CSS",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tobiasahlin/SpinKit.git"
+  },
+  "author": "Tobias Ahlin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tobiasahlin/SpinKit/issues"
+  },
+  "homepage": "https://github.com/tobiasahlin/SpinKit",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "^1.0.0",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-sass": "0.7.3",
+    "lodash": "^2.4.1",
+    "q": "^1.0.1"
+  }
+}

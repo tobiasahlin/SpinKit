@@ -10,7 +10,7 @@
 
 .sk-spinner-wordpress {
   &.sk-spinner {
-    background: #333;
+    background-color: $spinkit-spinner-color;
     width: 30px;
     height: 30px;
     border-radius: 30px;
@@ -21,7 +21,7 @@
 
   .sk-inner-circle {
     display: block;
-    background: #fff;
+    background-color: #fff;
     width: 8px;
     height: 8px;
     position: absolute;

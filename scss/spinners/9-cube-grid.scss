@@ -26,7 +26,7 @@
   .sk-cube {
     width: 33%;
     height: 33%;
-    background: #333;
+    background: $spinkit-spinner-color;
     float: left;
     animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
   }

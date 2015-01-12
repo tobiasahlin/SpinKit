@@ -7,7 +7,7 @@
  *
  */
 .sk-spinner-wordpress.sk-spinner {
-  background: #333;
+  background-color: #333;
   width: 30px;
   height: 30px;
   border-radius: 30px;
@@ -17,7 +17,7 @@
           animation: sk-innerCircle 1s linear infinite; }
 .sk-spinner-wordpress .sk-inner-circle {
   display: block;
-  background: #fff;
+  background-color: #fff;
   width: 8px;
   height: 8px;
   position: absolute;

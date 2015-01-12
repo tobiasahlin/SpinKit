@@ -1,6 +1,6 @@
 {
   "name": "SpinKit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of loading indicators animated with CSS",
   "main": "gulpfile.js",
   "scripts": {
@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/tobiasahlin/SpinKit",
   "devDependencies": {
+    "del": "^1.1.1",
     "gulp": "^3.8.8",
-    "gulp-autoprefixer": "^1.0.0",
-    "gulp-rimraf": "^0.1.0",
-    "gulp-sass": "0.7.3",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-sass": "^1.2.4",
     "lodash": "^2.4.1",
     "q": "^1.0.1"
   }

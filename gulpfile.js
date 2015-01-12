@@ -5,7 +5,7 @@ var Q = require('q');
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
-var rimraf = require('gulp-rimraf');
+var del = require('del');
 
 var htmlDir = './examples',
     cssDir = './css',
@@ -27,8 +27,8 @@ var getHtmlUsageExample = function(cssContent) {
   return cssContent.match(/Usage:([\s\S]+\*.+\>)/)[1].replace(/ \*/g, '');
 };
 
-gulp.task('clean-styles', function() {
-  return gulp.src(cssDir, {read: false}).pipe(rimraf());
+gulp.task('clean-styles', function(cb) {
+  del([cssDir], cb);
 });
 
 
@@ -40,8 +40,8 @@ gulp.task('styles', ['clean-styles'], function() {
 });
 
 
-gulp.task('clean-html', function() {
-  return gulp.src(htmlDir, {read: false}).pipe(rimraf());
+gulp.task('clean-html', function(cb) {
+  del([htmlDir], cb);
 });
 
 

@@ -1,0 +1,7 @@
+.*.swp
+test/a/
+node_modules/*
+benchmark-fixture
+oh-my-glob.gif
+v8.log
+profile.txt

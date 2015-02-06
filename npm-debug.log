@@ -1,0 +1,17 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 error install Couldn't read dependencies
+5 error package.json ENOENT, open '/Users/Mehrdad/Desktop/GitHub Projects/SpinKit/package.json'
+5 error package.json This is most likely not a problem with npm itself.
+5 error package.json npm can't find a package.json file in your current directory.
+6 error System Darwin 14.0.0
+7 error command "node" "/usr/local/bin/npm" "install"
+8 error cwd /Users/Mehrdad/Desktop/GitHub Projects/SpinKit
+9 error node -v v0.10.33
+10 error npm -v 1.4.28
+11 error path /Users/Mehrdad/Desktop/GitHub Projects/SpinKit/package.json
+12 error code ENOPACKAGEJSON
+13 error errno 34
+14 verbose exit [ 34, true ]

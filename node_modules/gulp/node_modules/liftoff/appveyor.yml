@@ -1,0 +1,28 @@
+init:
+  - git config --global core.autocrlf input
+
+environment:
+  matrix:
+    - nodejs_version: "0.10"
+    - nodejs_version: "0.8"
+    - nodejs_version: "0.11"
+
+matrix:
+  allow_failures:
+    - nodejs_version: "0.11"
+
+install:
+  - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version)
+  - npm install
+
+test_script:
+  - node --version
+  - npm --version
+  # power shell
+  - ps: "npm test # PowerShell"
+  # standard command line
+  - cmd: npm test
+
+build: off
+
+version: "{build}"

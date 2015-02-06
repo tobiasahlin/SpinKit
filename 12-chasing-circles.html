@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <title>Chasing Circules</title>
+    <style>
+    /* ============================================================
+  CORE
+============================================================ */
+h1.demo-title {
+  font-family: "Roboto Slab", serif;
+}
+
+/* ============================================================
+  SPINNER CONTAINER
+============================================================ */
+.spinner-container {
+  padding: 20px 0;
+}
+
+/* ============================================================
+  SPINNER - COMMON
+============================================================ */
+[class*="cmn-spinner"] {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  color: rgba(0, 0, 0, 0);
+  font-size: 0;
+  text-indent: -99999px;
+}
+
+/* ============================================================
+  CMN-SPINNER__RADAR
+============================================================ */
+.cmn-spinner__radar {
+  border-top: solid 1px transparent;
+  border-right: solid 1px transparent;
+  border-bottom: solid 1px transparent;
+  border-left: solid 1px transparent;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-animation: cmn-spinner--animation__radar 1.5s infinite linear;
+  -moz-animation: cmn-spinner--animation__radar 1.5s infinite linear;
+  -ms-animation: cmn-spinner--animation__radar 1.5s infinite linear;
+  -o-animation: cmn-spinner--animation__radar 1.5s infinite linear;
+  animation: cmn-spinner--animation__radar 1.5s infinite linear;
+}
+.cmn-spinner__radar::before, .cmn-spinner__radar::after {
+  display: block;
+  position: absolute;
+  border-right: solid 2px transparent;
+  border-bottom: solid 2px transparent;
+  border-left: solid 2px transparent;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  content: "";
+}
+.cmn-spinner__radar::before {
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  border-top: solid 3px black;
+  -webkit-animation: cmn-spinner--animation__radar 1.75s infinite linear;
+  -moz-animation: cmn-spinner--animation__radar 1.75s infinite linear;
+  -ms-animation: cmn-spinner--animation__radar 1.75s infinite linear;
+  -o-animation: cmn-spinner--animation__radar 1.75s infinite linear;
+  animation: cmn-spinner--animation__radar 1.75s infinite linear;
+}
+.cmn-spinner__radar::after {
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  border-top: solid 3px black ;
+  -webkit-animation: cmn-spinner--animation__radar 2s infinite linear;
+  -moz-animation: cmn-spinner--animation__radar 2s infinite linear;
+  -ms-animation: cmn-spinner--animation__radar 2s infinite linear;
+  -o-animation: cmn-spinner--animation__radar 2s infinite linear;
+  animation: cmn-spinner--animation__radar 2s infinite linear;
+}
+
+/* animation keyframes */
+@-webkit-keyframes cmn-spinner--animation__radar {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes cmn-spinner--animation__radar {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes cmn-spinner--animation__radar {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes cmn-spinner--animation__radar {
+  from {
+    -o-transform: rotate(0deg);
+  }
+
+  to {
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes cmn-spinner--animation__radar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+      </style>
+  </head>
+  <body>
+    <div class="spinner-container">
+    <div class="cmn-spinner__radar">Loading..
+      </div>
+  </body>
+</html>

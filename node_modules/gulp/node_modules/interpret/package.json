@@ -1,0 +1,62 @@
+{
+  "name": "interpret",
+  "description": "A dictionary of file extensions and associated module loaders.",
+  "version": "0.3.7",
+  "homepage": "https://github.com/tkellen/node-interpret",
+  "author": {
+    "name": "Tyler Kellen",
+    "url": "http://goingslowly.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tkellen/node-interpret.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tkellen/node-interpret/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tkellen/node-interpret/blob/master/LICENSE"
+    }
+  ],
+  "main": "index.js",
+  "keywords": [
+    "coco",
+    "coffee-script",
+    "csv",
+    "iced-coffee-script",
+    "ini",
+    "jsx",
+    "livescript",
+    "react",
+    "toml",
+    "typescript",
+    "xml",
+    "yaml",
+    "yml"
+  ],
+  "gitHead": "df5960ce9d1bedb1fdf8163c96f70d92df6903fb",
+  "_id": "interpret@0.3.7",
+  "scripts": {},
+  "_shasum": "18727eda04d50632ffa4b5eafb342b7ff398b36e",
+  "_from": "interpret@^0.3.2",
+  "_npmVersion": "1.4.23",
+  "_npmUser": {
+    "name": "tkellen",
+    "email": "tyler@sleekcode.net"
+  },
+  "maintainers": [
+    {
+      "name": "tkellen",
+      "email": "tyler@sleekcode.net"
+    }
+  ],
+  "dist": {
+    "shasum": "18727eda04d50632ffa4b5eafb342b7ff398b36e",
+    "tarball": "http://registry.npmjs.org/interpret/-/interpret-0.3.7.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/interpret/-/interpret-0.3.7.tgz",
+  "readme": "ERROR: No README data found!"
+}

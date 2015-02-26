@@ -1,0 +1,44 @@
+/*
+ *
+ *  Usage:
+ *
+ *  <div class="sk-spinner">
+ *    <div class="sk-layer"></div>
+ *  </div>
+ *
+ */
+
+ @import "../variables.scss";
+
+body {
+  background-color: white;
+}
+
+.sk-spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $spinkit-spinner-color;
+  margin: $spinkit-spinner-margin;
+
+  > .sk-layer {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    left: 1px;
+    top: 1px;
+    animation: sk-rotation 0.6s linear infinite;
+    transform-origin: 51% 50%;
+  }
+}
+
+@keyframes sk-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -24,9 +24,7 @@
 
     border-radius: 100%;
     display: inline-block;
-    animation: sk-threeBounceDelay 1.4s infinite ease-in-out;
-    /* Prevent first frame from flickering when animation starts */
-    animation-fill-mode: both;
+    animation: sk-threeBounceDelay 1.4s infinite ease-in-out both;
   }
 
   .sk-bounce1 {

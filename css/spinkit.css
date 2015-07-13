@@ -42,8 +42,8 @@
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-double-bounce">
- *      <div class="sk-double-bounce1"></div>
- *      <div class="sk-double-bounce2"></div>
+ *      <div class="sk-child sk-double-bounce1"></div>
+ *      <div class="sk-child sk-double-bounce2"></div>
  *    </div>
  *
  */
@@ -52,7 +52,7 @@
   height: 40px;
   position: relative;
   margin: 0 auto; }
-.sk-spinner-double-bounce .sk-double-bounce1, .sk-spinner-double-bounce .sk-double-bounce2 {
+.sk-spinner-double-bounce .sk-child {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -251,8 +251,8 @@
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-chasing-dots">
- *      <div class="sk-dot1"></div>
- *      <div class="sk-dot2"></div>
+ *      <div class="sk-child sk-dot1"></div>
+ *      <div class="sk-child sk-dot2"></div>
  *    </div>
  *
  */
@@ -264,7 +264,7 @@
   text-align: center;
   -webkit-animation: sk-chasingDotsRotate 2s infinite linear;
           animation: sk-chasingDotsRotate 2s infinite linear; }
-.sk-spinner-chasing-dots .sk-dot1, .sk-spinner-chasing-dots .sk-dot2 {
+.sk-spinner-chasing-dots .sk-child {
   width: 60%;
   height: 60%;
   display: inline-block;
@@ -312,9 +312,9 @@
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-three-bounce">
- *      <div class="sk-bounce1"></div>
- *      <div class="sk-bounce2"></div>
- *      <div class="sk-bounce3"></div>
+ *      <div class="sk-child sk-bounce1"></div>
+ *      <div class="sk-child sk-bounce2"></div>
+ *      <div class="sk-child sk-bounce3"></div>
  *    </div>
  *
  */
@@ -322,7 +322,7 @@
   margin: 0 auto;
   width: 70px;
   text-align: center; }
-.sk-spinner-three-bounce div {
+.sk-spinner-three-bounce .sk-child {
   width: 18px;
   height: 18px;
   background-color: #333;

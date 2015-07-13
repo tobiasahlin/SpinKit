@@ -2,8 +2,8 @@
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-double-bounce">
- *      <div class="sk-double-bounce1"></div>
- *      <div class="sk-double-bounce2"></div>
+ *      <div class="sk-child sk-double-bounce1"></div>
+ *      <div class="sk-child sk-double-bounce2"></div>
  *    </div>
  *
  */
@@ -12,7 +12,7 @@
   height: 40px;
   position: relative;
   margin: 0 auto; }
-.sk-spinner-double-bounce .sk-double-bounce1, .sk-spinner-double-bounce .sk-double-bounce2 {
+.sk-spinner-double-bounce .sk-child {
   width: 100%;
   height: 100%;
   border-radius: 50%;

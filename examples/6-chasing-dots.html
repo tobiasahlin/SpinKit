@@ -7,8 +7,8 @@
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-chasing-dots">
- *      <div class="sk-dot1"></div>
- *      <div class="sk-dot2"></div>
+ *      <div class="sk-child sk-dot1"></div>
+ *      <div class="sk-child sk-dot2"></div>
  *    </div>
  *
  */
@@ -20,7 +20,7 @@
   text-align: center;
   -webkit-animation: sk-chasingDotsRotate 2s infinite linear;
           animation: sk-chasingDotsRotate 2s infinite linear; }
-.sk-spinner-chasing-dots .sk-dot1, .sk-spinner-chasing-dots .sk-dot2 {
+.sk-spinner-chasing-dots .sk-child {
   width: 60%;
   height: 60%;
   display: inline-block;
@@ -70,8 +70,8 @@
  
 
     <div class="sk-spinner sk-spinner-chasing-dots">
-      <div class="sk-dot1"></div>
-      <div class="sk-dot2"></div>
+      <div class="sk-child sk-dot1"></div>
+      <div class="sk-child sk-dot2"></div>
     </div>
 </body>
 </html>

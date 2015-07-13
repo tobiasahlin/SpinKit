@@ -2,8 +2,8 @@
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-double-bounce">
- *      <div class="sk-double-bounce1"></div>
- *      <div class="sk-double-bounce2"></div>
+ *      <div class="sk-child sk-double-bounce1"></div>
+ *      <div class="sk-child sk-double-bounce2"></div>
  *    </div>
  *
  */
@@ -17,7 +17,7 @@
     margin: $spinkit-spinner-margin;
   }
 
-  .sk-double-bounce1, .sk-double-bounce2 {
+  .sk-child {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -26,7 +26,6 @@
     position: absolute;
     top: 0;
     left: 0;
-
     animation: sk-doubleBounce 2.0s infinite ease-in-out;
   }
 

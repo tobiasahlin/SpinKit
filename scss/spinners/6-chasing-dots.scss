@@ -2,8 +2,8 @@
  *  Usage:
  *
  *    <div class="sk-spinner sk-spinner-chasing-dots">
- *      <div class="sk-dot1"></div>
- *      <div class="sk-dot2"></div>
+ *      <div class="sk-child sk-dot1"></div>
+ *      <div class="sk-child sk-dot2"></div>
  *    </div>
  *
  */
@@ -19,7 +19,7 @@
     animation: sk-chasingDotsRotate 2.0s infinite linear;
   }
 
-  .sk-dot1, .sk-dot2 {
+  .sk-child {
     width: 60%;
     height: 60%;
     display: inline-block;
@@ -27,7 +27,6 @@
     top: 0;
     background-color: $spinkit-spinner-color;
     border-radius: 100%;
-
     animation: sk-chasingDotsBounce 2.0s infinite ease-in-out;
   }
 

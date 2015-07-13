@@ -44,9 +44,7 @@
     background-color: $spinkit-spinner-color;
 
     border-radius: 100%;
-    animation: sk-circleBounceDelay 1.2s infinite ease-in-out;
-    /* Prevent first frame from flickering when animation starts */
-    animation-fill-mode: both;
+    animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
   }
 
   .sk-circle2  { transform: rotate(30deg)  }

@@ -6,13 +6,13 @@
     /*
  *  Usage:
  *
- *    <div class="sk-spinner sk-spinner-chasing-dots">
+ *    <div class="sk-chasing-dots">
  *      <div class="sk-child sk-dot1"></div>
  *      <div class="sk-child sk-dot2"></div>
  *    </div>
  *
  */
-.sk-spinner-chasing-dots.sk-spinner {
+.sk-chasing-dots {
   margin: 0 auto;
   width: 40px;
   height: 40px;
@@ -20,21 +20,21 @@
   text-align: center;
   -webkit-animation: sk-chasingDotsRotate 2s infinite linear;
           animation: sk-chasingDotsRotate 2s infinite linear; }
-.sk-spinner-chasing-dots .sk-child {
-  width: 60%;
-  height: 60%;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  background-color: #333;
-  border-radius: 100%;
-  -webkit-animation: sk-chasingDotsBounce 2s infinite ease-in-out;
-          animation: sk-chasingDotsBounce 2s infinite ease-in-out; }
-.sk-spinner-chasing-dots .sk-dot2 {
-  top: auto;
-  bottom: 0px;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s; }
+  .sk-chasing-dots .sk-child {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    border-radius: 100%;
+    -webkit-animation: sk-chasingDotsBounce 2s infinite ease-in-out;
+            animation: sk-chasingDotsBounce 2s infinite ease-in-out; }
+  .sk-chasing-dots .sk-dot2 {
+    top: auto;
+    bottom: 0px;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; }
 
 @-webkit-keyframes sk-chasingDotsRotate {
   100% {
@@ -69,7 +69,7 @@
 <body>
  
 
-    <div class="sk-spinner sk-spinner-chasing-dots">
+    <div class="sk-chasing-dots">
       <div class="sk-child sk-dot1"></div>
       <div class="sk-child sk-dot2"></div>
     </div>

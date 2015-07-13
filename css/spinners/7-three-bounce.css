@@ -1,31 +1,31 @@
 /*
  *  Usage:
  *
- *    <div class="sk-spinner sk-spinner-three-bounce">
+ *    <div class="sk-three-bounce">
  *      <div class="sk-child sk-bounce1"></div>
  *      <div class="sk-child sk-bounce2"></div>
  *      <div class="sk-child sk-bounce3"></div>
  *    </div>
  *
  */
-.sk-spinner-three-bounce.sk-spinner {
+.sk-three-bounce {
   margin: 0 auto;
   width: 70px;
   text-align: center; }
-.sk-spinner-three-bounce .sk-child {
-  width: 18px;
-  height: 18px;
-  background-color: #333;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-threeBounceDelay 1.4s infinite ease-in-out both;
-          animation: sk-threeBounceDelay 1.4s infinite ease-in-out both; }
-.sk-spinner-three-bounce .sk-bounce1 {
-  -webkit-animation-delay: -0.32s;
-          animation-delay: -0.32s; }
-.sk-spinner-three-bounce .sk-bounce2 {
-  -webkit-animation-delay: -0.16s;
-          animation-delay: -0.16s; }
+  .sk-three-bounce .sk-child {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-threeBounceDelay 1.4s infinite ease-in-out both;
+            animation: sk-threeBounceDelay 1.4s infinite ease-in-out both; }
+  .sk-three-bounce .sk-bounce1 {
+    -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s; }
+  .sk-three-bounce .sk-bounce2 {
+    -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s; }
 
 @-webkit-keyframes sk-threeBounceDelay {
   0%, 80%, 100% {

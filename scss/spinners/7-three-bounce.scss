@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
- *    <div class="sk-spinner sk-spinner-three-bounce">
+ *    <div class="sk-three-bounce">
  *      <div class="sk-child sk-bounce1"></div>
  *      <div class="sk-child sk-bounce2"></div>
  *      <div class="sk-child sk-bounce3"></div>
@@ -10,12 +10,10 @@
  */
  @import "../variables";
 
-.sk-spinner-three-bounce {
-  &.sk-spinner {
-    margin: $spinkit-spinner-margin;
-    width: 70px;
-    text-align: center;
-  }
+.sk-three-bounce {
+  margin: $spinkit-spinner-margin;
+  width: 70px;
+  text-align: center;
 
   .sk-child {
     width: 18px;

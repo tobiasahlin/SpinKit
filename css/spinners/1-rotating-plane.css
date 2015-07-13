@@ -1,10 +1,10 @@
 /*
  *  Usage:
  *
- *    <div class="sk-spinner sk-spinner-rotating-plane"></div>
+ *    <div class="sk-rotating-plane"></div>
  *
  */
-.sk-spinner-rotating-plane.sk-spinner {
+.sk-rotating-plane {
   width: 30px;
   height: 30px;
   background-color: #333;

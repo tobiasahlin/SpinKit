@@ -7,14 +7,12 @@
 @import "../variables";
 
 .sk-spinner-pulse {
-  &.sk-spinner {
-    width: 40px;
-    height: 40px;
-    margin: $spinkit-spinner-margin;
-    background-color: $spinkit-spinner-color;
-    border-radius: 100%;
-    animation: sk-pulseScaleOut 1.0s infinite ease-in-out;
-  }
+  width: 40px;
+  height: 40px;
+  margin: $spinkit-spinner-margin;
+  background-color: $spinkit-spinner-color;
+  border-radius: 100%;
+  animation: sk-pulseScaleOut 1.0s infinite ease-in-out;
 }
 
 @keyframes sk-pulseScaleOut {

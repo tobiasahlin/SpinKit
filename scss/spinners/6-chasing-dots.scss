@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
- *    <div class="sk-spinner sk-spinner-chasing-dots">
+ *    <div class="sk-chasing-dots">
  *      <div class="sk-child sk-dot1"></div>
  *      <div class="sk-child sk-dot2"></div>
  *    </div>
@@ -9,15 +9,13 @@
  */
 @import "../variables";
 
-.sk-spinner-chasing-dots {
-  &.sk-spinner {
-    margin: $spinkit-spinner-margin;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    text-align: center;
-    animation: sk-chasingDotsRotate 2.0s infinite linear;
-  }
+.sk-chasing-dots {
+  margin: $spinkit-spinner-margin;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  animation: sk-chasingDotsRotate 2.0s infinite linear;
 
   .sk-child {
     width: 60%;

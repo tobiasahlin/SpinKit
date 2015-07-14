@@ -63,7 +63,7 @@ gulp.task('html', ['styles', 'clean-html'], function() {
       var readCssFile = function(err, cssContent) {
         if (err) { console.log(err); deferred.reject(err); }
         var bodyContent = getHtmlUsageExample(cssContent);
-        var html = _.template(htmlTmpl, {
+        var html = _.template(htmlTmpl)({
           css: cssContent,
           title: title,
           bodyContent: bodyContent

@@ -28,8 +28,8 @@
   .sk-chasing-dots .sk-dot2 {
     top: auto;
     bottom: 0px;
-    -webkit-animation-delay: -1s;
-            animation-delay: -1s; }
+    -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s; }
 
 @-webkit-keyframes sk-chasingDotsRotate {
   100% {
@@ -45,7 +45,6 @@
   0%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   50% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -54,7 +53,6 @@
   0%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   50% {
     -webkit-transform: scale(1);
             transform: scale(1); } }

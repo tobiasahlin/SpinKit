@@ -21,8 +21,8 @@
 
 .sk-fading-circle {
   margin: $spinkit-spinner-margin;
-  width: 22px;
-  height: 22px;
+  width: 40px;
+  height: 40px;
   position: relative;
 
   .sk-circle {
@@ -37,8 +37,8 @@
     content: '';
     display: block;
     margin: 0 auto;
-    width: 18%;
-    height: 18%;
+    width: 15%;
+    height: 15%;
     background-color: $spinkit-spinner-color;
     border-radius: 100%;
     animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;

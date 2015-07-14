@@ -10,8 +10,8 @@
  *    </div>
  *
  */
-  margin: 0 auto;
 .sk-wave {
+  margin: 20px auto;
   width: 50px;
   height: 30px;
   text-align: center;
@@ -40,6 +40,7 @@
   0%, 40%, 100% {
     -webkit-transform: scaleY(0.4);
             transform: scaleY(0.4); }
+
   20% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1); } }
@@ -48,6 +49,7 @@
   0%, 40%, 100% {
     -webkit-transform: scaleY(0.4);
             transform: scaleY(0.4); }
+
   20% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1); } }

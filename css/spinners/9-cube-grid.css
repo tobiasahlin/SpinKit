@@ -15,9 +15,9 @@
  *
  */
 .sk-cube-grid {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
   /*
    * Spinner positions
    * 1 2 3
@@ -50,8 +50,8 @@
     -webkit-animation-delay: 0.3s;
             animation-delay: 0.3s; }
   .sk-cube-grid .sk-cube:nth-child(7) {
-    -webkit-animation-delay: 0.0s;
-            animation-delay: 0.0s; }
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
   .sk-cube-grid .sk-cube:nth-child(8) {
     -webkit-animation-delay: 0.1s;
             animation-delay: 0.1s; }
@@ -63,6 +63,7 @@
   0%, 70%, 100% {
     -webkit-transform: scale3D(1, 1, 1);
             transform: scale3D(1, 1, 1); }
+
   35% {
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1); } }
@@ -71,6 +72,7 @@
   0%, 70%, 100% {
     -webkit-transform: scale3D(1, 1, 1);
             transform: scale3D(1, 1, 1); }
+
   35% {
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1); } }

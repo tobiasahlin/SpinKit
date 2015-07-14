@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
- *    <div class="sk-spinner-wave">
+ *    <div class="sk-wave">
  *      <div class="sk-rect sk-rect1"></div>
  *      <div class="sk-rect sk-rect2"></div>
  *      <div class="sk-rect sk-rect3"></div>
@@ -12,7 +12,7 @@
  */
 @import "../variables";
 
-.sk-spinner-wave {
+.sk-wave {
   margin: $spinkit-spinner-margin;
   width: 50px;
   height: 30px;

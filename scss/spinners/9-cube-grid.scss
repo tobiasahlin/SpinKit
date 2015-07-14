@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
- *    <div class="sk-spinner sk-spinner-cube-grid">
+ *    <div class="sk-cube-grid">
  *      <div class="sk-cube"></div>
  *      <div class="sk-cube"></div>
  *      <div class="sk-cube"></div>
@@ -16,12 +16,10 @@
  */
 @import "../variables";
 
-.sk-spinner-cube-grid {
-  &.sk-spinner {
-    width: 30px;
-    height: 30px;
-    margin: $spinkit-spinner-margin;
-  }
+.sk-cube-grid {
+  width: 30px;
+  height: 30px;
+  margin: $spinkit-spinner-margin;
 
   .sk-cube {
     width: 33%;

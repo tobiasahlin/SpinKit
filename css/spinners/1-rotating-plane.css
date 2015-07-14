@@ -1,10 +1,10 @@
 /*
  *  Usage:
  *
- *    <div class="sk-spinner sk-spinner-rotating-plane"></div>
+ *    <div class="sk-rotating-plane"></div>
  *
  */
-.sk-spinner-rotating-plane.sk-spinner {
+.sk-rotating-plane {
   width: 30px;
   height: 30px;
   background-color: #333;
@@ -16,11 +16,9 @@
   0% {
     -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
             transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
-
   50% {
     -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
             transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
-
   100% {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
@@ -29,11 +27,9 @@
   0% {
     -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
             transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
-
   50% {
     -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
             transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
-
   100% {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }

@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
- *    <div class="sk-spinner sk-spinner-fading-circle">
+ *    <div class="sk-fading-circle">
  *      <div class="sk-circle1 sk-circle"></div>
  *      <div class="sk-circle2 sk-circle"></div>
  *      <div class="sk-circle3 sk-circle"></div>
@@ -19,14 +19,11 @@
  */
 @import "../variables";
 
-.sk-spinner-fading-circle {
-
-  &.sk-spinner {
-    margin: $spinkit-spinner-margin;
-    width: 22px;
-    height: 22px;
-    position: relative;
-  }
+.sk-fading-circle {
+  margin: $spinkit-spinner-margin;
+  width: 22px;
+  height: 22px;
+  position: relative;
 
   .sk-circle {
     width: 100%;
@@ -43,11 +40,8 @@
     width: 18%;
     height: 18%;
     background-color: $spinkit-spinner-color;
-
     border-radius: 100%;
-    animation: sk-circleFadeDelay 1.2s infinite ease-in-out;
-    /* Prevent first frame from flickering when animation starts */
-    animation-fill-mode: both;
+    animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
   }
 
   .sk-circle2  { transform: rotate(30deg) }

@@ -16,11 +16,9 @@
   0% {
     -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
             transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
-
   50% {
     -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
             transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
-
   100% {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
@@ -29,11 +27,9 @@
   0% {
     -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
             transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
-
   50% {
     -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
             transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
-
   100% {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
@@ -64,14 +60,13 @@
     -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
             animation: sk-doubleBounce 2s infinite ease-in-out; }
   .sk-double-bounce .sk-double-bounce2 {
-    -webkit-animation-delay: -1s;
-            animation-delay: -1s; }
+    -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s; }
 
 @-webkit-keyframes sk-doubleBounce {
   0%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   50% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -80,7 +75,6 @@
   0%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   50% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -130,7 +124,6 @@
   0%, 40%, 100% {
     -webkit-transform: scaleY(0.4);
             transform: scaleY(0.4); }
-
   20% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1); } }
@@ -139,7 +132,6 @@
   0%, 40%, 100% {
     -webkit-transform: scaleY(0.4);
             transform: scaleY(0.4); }
-
   20% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1); } }
@@ -175,20 +167,16 @@
   25% {
     -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
             transform: translateX(30px) rotate(-90deg) scale(0.5); }
-
   50% {
     /* Hack to make FF rotate in the right direction */
     -webkit-transform: translateX(30px) translateY(30px) rotate(-179deg);
             transform: translateX(30px) translateY(30px) rotate(-179deg); }
-
   50.1% {
     -webkit-transform: translateX(30px) translateY(30px) rotate(-180deg);
             transform: translateX(30px) translateY(30px) rotate(-180deg); }
-
   75% {
     -webkit-transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
             transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5); }
-
   100% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }
@@ -197,20 +185,16 @@
   25% {
     -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
             transform: translateX(30px) rotate(-90deg) scale(0.5); }
-
   50% {
     /* Hack to make FF rotate in the right direction */
     -webkit-transform: translateX(30px) translateY(30px) rotate(-179deg);
             transform: translateX(30px) translateY(30px) rotate(-179deg); }
-
   50.1% {
     -webkit-transform: translateX(30px) translateY(30px) rotate(-180deg);
             transform: translateX(30px) translateY(30px) rotate(-180deg); }
-
   75% {
     -webkit-transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
             transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5); }
-
   100% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }
@@ -234,7 +218,6 @@
   0% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -244,7 +227,6 @@
   0% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -297,7 +279,6 @@
   0%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   50% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -306,7 +287,6 @@
   0%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   50% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -344,7 +324,6 @@
   0%, 80%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   40% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -353,7 +332,6 @@
   0%, 80%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   40% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -480,7 +458,6 @@
   0%, 80%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   40% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -489,7 +466,6 @@
   0%, 80%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0); }
-
   40% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -546,8 +522,8 @@
     -webkit-animation-delay: 0.3s;
             animation-delay: 0.3s; }
   .sk-cube-grid .sk-cube7 {
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s; }
+    -webkit-animation-delay: 0.0s;
+            animation-delay: 0.0s; }
   .sk-cube-grid .sk-cube8 {
     -webkit-animation-delay: 0.1s;
             animation-delay: 0.1s; }
@@ -559,7 +535,6 @@
   0%, 70%, 100% {
     -webkit-transform: scale3D(1, 1, 1);
             transform: scale3D(1, 1, 1); }
-
   35% {
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1); } }
@@ -568,7 +543,6 @@
   0%, 70%, 100% {
     -webkit-transform: scale3D(1, 1, 1);
             transform: scale3D(1, 1, 1); }
-
   35% {
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1); } }
@@ -694,13 +668,11 @@
 @-webkit-keyframes sk-circleFadeDelay {
   0%, 39%, 100% {
     opacity: 0; }
-
   40% {
     opacity: 1; } }
 
 @keyframes sk-circleFadeDelay {
   0%, 39%, 100% {
     opacity: 0; }
-
   40% {
     opacity: 1; } }

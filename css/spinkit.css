@@ -279,7 +279,7 @@
             animation: sk-chasingDotsBounce 2s infinite ease-in-out; }
   .sk-chasing-dots .sk-dot2 {
     top: auto;
-    bottom: 0px;
+    bottom: 0;
     -webkit-animation-delay: -1s;
             animation-delay: -1s; }
 

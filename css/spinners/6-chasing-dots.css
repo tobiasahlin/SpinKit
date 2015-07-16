@@ -8,7 +8,7 @@
  *
  */
 .sk-chasing-dots {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 40px;
   height: 40px;
   position: relative;
@@ -27,9 +27,9 @@
             animation: sk-chasingDotsBounce 2s infinite ease-in-out; }
   .sk-chasing-dots .sk-dot2 {
     top: auto;
-    bottom: 0px;
-    -webkit-animation-delay: -1.0s;
-            animation-delay: -1.0s; }
+    bottom: 0;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; }
 
 @-webkit-keyframes sk-chasingDotsRotate {
   100% {

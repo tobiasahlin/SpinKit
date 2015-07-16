@@ -9,10 +9,12 @@
  */
 @import "../variables";
 
+$cubeDistance: 30px;
+
 .sk-wandering-cubes {
   margin: $spinkit-spinner-margin;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   position: relative;
 
   .sk-cube {
@@ -32,14 +34,14 @@
 
 @keyframes sk-wanderingCubeMove {
   25% {
-    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    transform: translateX($cubeDistance) rotate(-90deg) scale(0.5);
   } 50% {
     /* Hack to make FF rotate in the right direction */
-    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    transform: translateX($cubeDistance) translateY($cubeDistance) rotate(-179deg);
   } 50.1% {
-    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    transform: translateX($cubeDistance) translateY($cubeDistance) rotate(-180deg);
   } 75% {
-    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    transform: translateX(0) translateY($cubeDistance) rotate(-270deg) scale(0.5);
   } 100% {
     transform: rotate(-360deg);
   }

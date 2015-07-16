@@ -6,7 +6,7 @@
     /*
  *  Usage:
  *
- *    <div class="sk-spinner-wave">
+ *    <div class="sk-wave">
  *      <div class="sk-rect sk-rect1"></div>
  *      <div class="sk-rect sk-rect2"></div>
  *      <div class="sk-rect sk-rect3"></div>
@@ -15,29 +15,32 @@
  *    </div>
  *
  */
-.sk-spinner-wave {
-  margin: 0 auto;
+.sk-wave {
+  margin: 20px auto;
   width: 50px;
-  height: 30px;
+  height: 40px;
   text-align: center;
   font-size: 10px; }
-  .sk-spinner-wave .sk-rect {
+  .sk-wave .sk-rect {
     background-color: #333;
     height: 100%;
     width: 6px;
     display: inline-block;
     -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
             animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }
-  .sk-spinner-wave .sk-rect2 {
+  .sk-wave .sk-rect1 {
+    -webkit-animation-delay: -1.2s;
+            animation-delay: -1.2s; }
+  .sk-wave .sk-rect2 {
     -webkit-animation-delay: -1.1s;
             animation-delay: -1.1s; }
-  .sk-spinner-wave .sk-rect3 {
-    -webkit-animation-delay: -1.0s;
-            animation-delay: -1.0s; }
-  .sk-spinner-wave .sk-rect4 {
+  .sk-wave .sk-rect3 {
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; }
+  .sk-wave .sk-rect4 {
     -webkit-animation-delay: -0.9s;
             animation-delay: -0.9s; }
-  .sk-spinner-wave .sk-rect5 {
+  .sk-wave .sk-rect5 {
     -webkit-animation-delay: -0.8s;
             animation-delay: -0.8s; }
 
@@ -62,7 +65,7 @@
 <body>
  
 
-    <div class="sk-spinner-wave">
+    <div class="sk-wave">
       <div class="sk-rect sk-rect1"></div>
       <div class="sk-rect sk-rect2"></div>
       <div class="sk-rect sk-rect3"></div>

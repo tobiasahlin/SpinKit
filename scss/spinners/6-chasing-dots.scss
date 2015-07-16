@@ -10,12 +10,14 @@
 @import "../variables";
 
 .sk-chasing-dots {
+  $animationDuration: 2.0s;
+
   margin: $spinkit-spinner-margin;
   width: 40px;
   height: 40px;
   position: relative;
   text-align: center;
-  animation: sk-chasingDotsRotate 2.0s infinite linear;
+  animation: sk-chasingDotsRotate $animationDuration infinite linear;
 
   .sk-child {
     width: 60%;
@@ -25,13 +27,13 @@
     top: 0;
     background-color: $spinkit-spinner-color;
     border-radius: 100%;
-    animation: sk-chasingDotsBounce 2.0s infinite ease-in-out;
+    animation: sk-chasingDotsBounce $animationDuration infinite ease-in-out;
   }
 
   .sk-dot2 {
     top: auto;
-    bottom: 0px;
-    animation-delay: -1.0s;
+    bottom: 0;
+    animation-delay: - $animationDuration/2;
   }
 }
 

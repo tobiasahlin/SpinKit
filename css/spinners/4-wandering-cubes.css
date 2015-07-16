@@ -8,9 +8,9 @@
  *
  */
 .sk-wandering-cubes {
-  margin: 0 auto;
-  width: 32px;
-  height: 32px;
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
   position: relative; }
   .sk-wandering-cubes .sk-cube {
     background-color: #333;
@@ -27,36 +27,36 @@
 
 @-webkit-keyframes sk-wanderingCubeMove {
   25% {
-    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
-            transform: translateX(42px) rotate(-90deg) scale(0.5); }
+    -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
+            transform: translateX(30px) rotate(-90deg) scale(0.5); }
   50% {
     /* Hack to make FF rotate in the right direction */
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
-            transform: translateX(42px) translateY(42px) rotate(-179deg); }
+    -webkit-transform: translateX(30px) translateY(30px) rotate(-179deg);
+            transform: translateX(30px) translateY(30px) rotate(-179deg); }
   50.1% {
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
-            transform: translateX(42px) translateY(42px) rotate(-180deg); }
+    -webkit-transform: translateX(30px) translateY(30px) rotate(-180deg);
+            transform: translateX(30px) translateY(30px) rotate(-180deg); }
   75% {
-    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-            transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); }
+    -webkit-transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
+            transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5); }
   100% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }
 
 @keyframes sk-wanderingCubeMove {
   25% {
-    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
-            transform: translateX(42px) rotate(-90deg) scale(0.5); }
+    -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
+            transform: translateX(30px) rotate(-90deg) scale(0.5); }
   50% {
     /* Hack to make FF rotate in the right direction */
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
-            transform: translateX(42px) translateY(42px) rotate(-179deg); }
+    -webkit-transform: translateX(30px) translateY(30px) rotate(-179deg);
+            transform: translateX(30px) translateY(30px) rotate(-179deg); }
   50.1% {
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
-            transform: translateX(42px) translateY(42px) rotate(-180deg); }
+    -webkit-transform: translateX(30px) translateY(30px) rotate(-180deg);
+            transform: translateX(30px) translateY(30px) rotate(-180deg); }
   75% {
-    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-            transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); }
+    -webkit-transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
+            transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5); }
   100% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }

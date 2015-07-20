@@ -1,6 +1,6 @@
 # 1.1.0
 
-* Removed two spinners (not polished enough)
+* Removed one spinner (circle with rotating circle, not polished enough)
 * Cleaned up the CSS
 * Added more SCSS variables to more easily customize spinners
 * Introduced SCSS `@for` loops to more easily change timing of spinners

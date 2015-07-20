@@ -1,3 +1,8 @@
+# 1.2.0
+
+* Added: Folding cube spinner
+* Fixed: Lowercase in package name
+
 # 1.1.0
 
 * Removed one spinner (circle with rotating circle, not polished enough)

@@ -1,6 +1,6 @@
 {
   "name": "spinkit",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A collection of loading indicators animated with CSS",
   "main": "gulpfile.js",
   "scripts": {

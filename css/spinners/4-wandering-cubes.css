@@ -19,8 +19,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-animation: sk-wanderingCubeMove 1.8s infinite ease-in-out;
-            animation: sk-wanderingCubeMove 1.8s infinite ease-in-out; }
+    -webkit-animation: sk-wanderingCubeMove 1.8s ease-in-out -1.8s infinite both;
+            animation: sk-wanderingCubeMove 1.8s ease-in-out -1.8s infinite both; }
   .sk-wandering-cubes .sk-cube2 {
     -webkit-animation-delay: -0.9s;
             animation-delay: -0.9s; }

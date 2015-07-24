@@ -24,7 +24,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    animation: sk-wanderingCubeMove $animationDuration ease-in-out #{-$animationDuration} infinite both;
+    animation: sk-wanderingCube $animationDuration ease-in-out #{-$animationDuration} infinite both;
   }
 
   .sk-cube2 {
@@ -32,10 +32,11 @@
   }
 }
 
-@keyframes sk-wanderingCubeMove {
+@keyframes sk-wanderingCube {
   $cubeDistance: 30px;
-
-  25% {
+  0% {
+    transform: rotate(0deg);
+  } 25% {
     transform: translateX($cubeDistance) rotate(-90deg) scale(0.5);
   } 50% {
     /* Hack to make FF rotate in the right direction */

@@ -157,13 +157,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-animation: sk-wanderingCubeMove 1.8s ease-in-out -1.8s infinite both;
-            animation: sk-wanderingCubeMove 1.8s ease-in-out -1.8s infinite both; }
+    -webkit-animation: sk-wanderingCube 1.8s ease-in-out -1.8s infinite both;
+            animation: sk-wanderingCube 1.8s ease-in-out -1.8s infinite both; }
   .sk-wandering-cubes .sk-cube2 {
     -webkit-animation-delay: -0.9s;
             animation-delay: -0.9s; }
 
-@-webkit-keyframes sk-wanderingCubeMove {
+@-webkit-keyframes sk-wanderingCube {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   25% {
     -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
             transform: translateX(30px) rotate(-90deg) scale(0.5); }
@@ -181,7 +184,10 @@
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }
 
-@keyframes sk-wanderingCubeMove {
+@keyframes sk-wanderingCube {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   25% {
     -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
             transform: translateX(30px) rotate(-90deg) scale(0.5); }

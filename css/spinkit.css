@@ -8,7 +8,7 @@
   width: 40px;
   height: 40px;
   background-color: #333;
-  margin: 20px auto;
+  margin: 40px auto;
   -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
           animation: sk-rotatePlane 1.2s infinite ease-in-out; }
 
@@ -47,7 +47,7 @@
   width: 40px;
   height: 40px;
   position: relative;
-  margin: 20px auto; }
+  margin: 40px auto; }
   .sk-double-bounce .sk-child {
     width: 100%;
     height: 100%;
@@ -92,7 +92,7 @@
  *
  */
 .sk-wave {
-  margin: 20px auto;
+  margin: 40px auto;
   width: 50px;
   height: 40px;
   text-align: center;
@@ -146,7 +146,7 @@
  *
  */
 .sk-wandering-cubes {
-  margin: 20px auto;
+  margin: 40px auto;
   width: 40px;
   height: 40px;
   position: relative; }
@@ -214,7 +214,7 @@
 .sk-spinner-pulse {
   width: 40px;
   height: 40px;
-  margin: 20px auto;
+  margin: 40px auto;
   background-color: #333;
   border-radius: 100%;
   -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
@@ -248,7 +248,7 @@
  *
  */
 .sk-chasing-dots {
-  margin: 20px auto;
+  margin: 40px auto;
   width: 40px;
   height: 40px;
   position: relative;
@@ -308,7 +308,7 @@
  *
  */
 .sk-three-bounce {
-  margin: 20px auto;
+  margin: 40px auto;
   width: 70px;
   text-align: center; }
   .sk-three-bounce .sk-child {
@@ -362,7 +362,7 @@
  *
  */
 .sk-circle {
-  margin: 20px auto;
+  margin: 40px auto;
   width: 40px;
   height: 40px;
   position: relative; }
@@ -495,7 +495,7 @@
 .sk-cube-grid {
   width: 40px;
   height: 40px;
-  margin: 20px auto;
+  margin: 40px auto;
   /*
    * Spinner positions
    * 1 2 3
@@ -573,7 +573,7 @@
  *
  */
 .sk-fading-circle {
-  margin: 20px auto;
+  margin: 40px auto;
   width: 40px;
   height: 40px;
   position: relative; }

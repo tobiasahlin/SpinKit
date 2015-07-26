@@ -39,7 +39,7 @@ With support for CSS animations in every current browser and [almost 90% of all 
 
 ### Implementing a fallback spinner
 
-An easy way to provide a fallback animation is to check for support for the `animation` property, and replace the spinner with a GIF if it's not supported.
+How do you know if you need to provide a fallback? You can easily check for animation support with [Modernizr](http://modernizr.com), or manually check for the `animation` property, and replace the spinner with a GIF if it's not supported:
 
 ```javascript
 function browserSupportsCSSProperty(propertyName) {

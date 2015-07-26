@@ -8,12 +8,16 @@ SpinKit uses CSS animations to create smooth and easily customizable animations.
 
 ### Regular CSS
 
-Grab the HTML and CSS for a spinner and include it in your project. Note that a hidden spinner (`opacity: 0`, or `visibility: hidden`) will still animate. After hiding a spinner, it's recommended to remove it from the DOM, set `display: none` or pause the animation by setting `animation-play-state: paused`.
-
-SpinKit can also be installed to your project with `bower`:
+Grab the HTML and CSS for a spinner from the example files, or add SpinKit directly to your project with `bower`:
 
 ```bash
 $ bower install spinkit
+```
+
+or npm:
+
+```bash
+$ npm install spinkit
 ```
 
 ### SCSS

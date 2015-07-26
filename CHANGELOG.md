@@ -1,3 +1,8 @@
+# 1.2.1
+
+* Fixed: Two spinners didn't look the same on Android
+* Changed: Bumped default top and bottom margin to 40px
+
 # 1.2.0
 
 * Added: Folding cube spinner

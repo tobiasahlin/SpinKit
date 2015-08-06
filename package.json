@@ -2,6 +2,13 @@
   "name": "spinkit",
   "version": "1.2.1",
   "description": "A collection of loading indicators animated with CSS",
+  "keywords": [
+    "css",
+    "spinkit",
+    "spinner",
+    "loading",
+    "ui"
+  ],
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

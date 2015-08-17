@@ -19,8 +19,8 @@
 .sk-cube-grid {
   $delayRange: 0.4s;
 
-  width: 40px;
-  height: 40px;
+  width: $spinkit-size;
+  height: $spinkit-size;
   margin: $spinkit-spinner-margin;
 
   .sk-cube {

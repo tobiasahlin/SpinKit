@@ -7,8 +7,8 @@
 @import "../variables";
 
 .sk-spinner-pulse {
-  width: 40px;
-  height: 40px;
+  width: $spinkit-size;
+  height: $spinkit-size;
   margin: $spinkit-spinner-margin;
   background-color: $spinkit-spinner-color;
   border-radius: 100%;

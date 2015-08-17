@@ -309,11 +309,11 @@
  */
 .sk-three-bounce {
   margin: 40px auto;
-  width: 70px;
+  width: 80px;
   text-align: center; }
   .sk-three-bounce .sk-child {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     background-color: #333;
     border-radius: 100%;
     display: inline-block;

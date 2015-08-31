@@ -24,8 +24,8 @@
   $animationDuration: 1.2s;
 
   margin: $spinkit-spinner-margin;
-  width: 40px;
-  height: 40px;
+  width: $spinkit-size;
+  height: $spinkit-size;
   position: relative;
 
   .sk-child {

@@ -10,8 +10,8 @@
 @import "../variables";
 
 .sk-double-bounce {
-  width: 40px;
-  height: 40px;
+  width: $spinkit-size;
+  height: $spinkit-size;
   position: relative;
   margin: $spinkit-spinner-margin;
 

@@ -7,8 +7,8 @@
 @import "../variables";
 
 .sk-rotating-plane {
-  width: 40px;
-  height: 40px;
+  width: $spinkit-size;
+  height: $spinkit-size;
   background-color: $spinkit-spinner-color;
   margin: $spinkit-spinner-margin;
   animation: sk-rotatePlane 1.2s infinite ease-in-out;

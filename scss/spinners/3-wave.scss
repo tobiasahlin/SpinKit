@@ -18,8 +18,8 @@
   $delayRange: 0.4s;
 
   margin: $spinkit-spinner-margin;
-  width: 50px;
-  height: 40px;
+  width: $spinkit-size * 1.25;
+  height: $spinkit-size;
   text-align: center;
   font-size: 10px;
 

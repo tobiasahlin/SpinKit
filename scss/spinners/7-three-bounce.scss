@@ -14,12 +14,12 @@
   $animationDuration: 1.4s;
   $delayRange: 0.32s;
   margin: $spinkit-spinner-margin;
-  width: 70px;
+  width: $spinkit-size * 2;
   text-align: center;
 
   .sk-child {
-    width: 18px;
-    height: 18px;
+    width: $spinkit-size / 2;
+    height: $spinkit-size / 2;
     background-color: $spinkit-spinner-color;
 
     border-radius: 100%;

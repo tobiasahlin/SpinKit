@@ -1,6 +1,10 @@
+# 1.2.2
+
+* Fixed: Use variable for spinner size (defaults to 40px)
+
 # 1.2.1
 
-* Fixed: Two spinners didn't look the same on Android
+* Fixed: Two spinners were slightly broken on Android
 * Changed: Bumped default top and bottom margin to 40px
 
 # 1.2.0

@@ -1,12 +1,12 @@
 /*
  *  Usage:
  *
- *    <div class="sk-folding-cube">
- *      <div class="sk-cube1 sk-cube"></div>
- *      <div class="sk-cube2 sk-cube"></div>
- *      <div class="sk-cube4 sk-cube"></div>
- *      <div class="sk-cube3 sk-cube"></div>
- *    </div>
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
  *
  */
 @import "../variables";
@@ -44,13 +44,13 @@
 
   // Rotation / angle
   @for $i from 2 through $cubeCount {
-    .sk-cube#{$i} { 
-      transform: scale(1.1) rotateZ(90deg * ($i - 1)); 
+    .sk-cube#{$i} {
+      transform: scale(1.1) rotateZ(90deg * ($i - 1));
     }
   }
 
   @for $i from 2 through $cubeCount {
-    .sk-cube#{$i}:before { 
+    .sk-cube#{$i}:before {
       animation-delay: $delayRange / $cubeCount * ($i - 1);
     }
   }

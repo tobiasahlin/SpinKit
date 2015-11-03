@@ -1,0 +1,40 @@
+/*
+ *  Usage:
+ *
+      <div class="sk-three-bounce-up">
+        <div class="sk-child sk-bounce-up1"></div>
+        <div class="sk-child sk-bounce-up2"></div>
+        <div class="sk-child sk-bounce-up3"></div>
+      </div>
+ *
+ */
+ @import "../variables";
+
+.sk-three-bounce-up {
+  $animationDuration: 1.4s;
+  $delayRange: 0.32s;
+  margin: $spinkit-spinner-margin;
+  width: $spinkit-size * 2;
+  text-align: center;
+
+  .sk-child {
+    width: $spinkit-size / 2;
+    height: $spinkit-size / 2;
+    background-color: $spinkit-spinner-color;
+
+    border-radius: 100%;
+    display: inline-block;
+    animation: sk-three-bounce-up $animationDuration ease-in-out 0s infinite both;
+  }
+
+  .sk-bounce-up1 { animation-delay: -$delayRange; }
+  .sk-bounce-up2 { animation-delay: -$delayRange / 2; }
+}
+
+@keyframes sk-three-bounce-up {
+  0%, 70%, 100% {
+    transform: translateY(0);
+  } 30% {
+    transform: translateY(-15px);
+  }
+}

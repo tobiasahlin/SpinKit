@@ -24,7 +24,8 @@ var htmlDir = './examples',
 </html>';
 
 var getHtmlUsageExample = function(cssContent) {
-  return cssContent.match(/Usage:([\s\S]+\*.+\>)/)[1].replace(/ \*/g, '');
+  var match = cssContent.match(/Usage:([\s\S]+\*[.\s\S]+\>)/);
+  return match && match.length > 1 ? match[1].replace(/ \*/g, '') : '';
 };
 
 gulp.task('clean-styles', function(cb) {

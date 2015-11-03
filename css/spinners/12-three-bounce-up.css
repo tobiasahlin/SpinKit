@@ -1,0 +1,44 @@
+/*
+ *  Usage:
+ *
+      <div class="sk-three-bounce-up">
+        <div class="sk-child sk-bounce-up1"></div>
+        <div class="sk-child sk-bounce-up2"></div>
+        <div class="sk-child sk-bounce-up3"></div>
+      </div>
+ *
+ */
+.sk-three-bounce-up {
+  margin: 40px auto;
+  width: 80px;
+  text-align: center; }
+  .sk-three-bounce-up .sk-child {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-three-bounce-up 1.4s ease-in-out 0s infinite both;
+            animation: sk-three-bounce-up 1.4s ease-in-out 0s infinite both; }
+  .sk-three-bounce-up .sk-bounce-up1 {
+    -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s; }
+  .sk-three-bounce-up .sk-bounce-up2 {
+    -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s; }
+
+@-webkit-keyframes sk-three-bounce-up {
+  0%, 70%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  30% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); } }
+
+@keyframes sk-three-bounce-up {
+  0%, 70%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  30% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); } }

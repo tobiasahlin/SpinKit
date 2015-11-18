@@ -1,3 +1,8 @@
+# 1.2.3
+
+* Fixed: More exact (33% -> 33.33%) cube dimensions for cube grid spinner
+* Fixed: Comment format for HTML inside CSS, for easier copy and pasting (removed * at the beginning of each row)
+
 # 1.2.2
 
 * Fixed: Use variable for spinner size (defaults to 40px)

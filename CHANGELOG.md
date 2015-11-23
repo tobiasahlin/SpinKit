@@ -1,3 +1,7 @@
+# 1.2.5
+
+* Fixed: Add folding cube spinner (11) to combined CSS file
+
 # 1.2.4
 
 * Fixed: Borked gulp script (#106)

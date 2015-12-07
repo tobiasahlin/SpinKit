@@ -768,3 +768,100 @@
     -webkit-transform: perspective(140px) rotateY(180deg);
             transform: perspective(140px) rotateY(180deg);
     opacity: 0; } }
+
+/*
+ *  Usage:
+ *
+      <div class="sk-four-circles">
+        <div class="sk-circle1 sk-circle sk-still"></div>
+        <div class="sk-circle2 sk-circle sk-still"></div>
+        <div class="sk-circle3 sk-circle sk-still"></div>
+        <div class="sk-circle4 sk-circle sk-still"></div>
+        <div class="sk-circle5 sk-circle sk-rotate"></div>
+        <div class="sk-circle6 sk-circle sk-rotate"></div>
+      </div>
+*
+ */
+
+.sk-four-circles {
+  margin: 40px auto;
+  width: 40px;
+  height: 40px;
+  position: relative; }
+  .sk-four-circles .sk-circle {
+    background-color: #333;
+    width: 35%;
+    height: 35%;
+    border-radius: 100%;
+    display: inline-block;
+    position: absolute; }
+  .sk-four-circles .sk-still {
+    -webkit-animation: sk-disappear 1s infinite ease-in-out;
+            animation: sk-disappear 1s infinite ease-in-out; }
+  .sk-four-circles .sk-rotate {
+    -webkit-animation: sk-rotate 2s infinite ease-in-out;
+            animation: sk-rotate 2s infinite ease-in-out; }
+  .sk-four-circles .sk-circle1 {
+    left: 0;
+    top: 0; }
+  .sk-four-circles .sk-circle2 {
+    -webkit-animation-delay: -.5s;
+            animation-delay: -.5s;
+    right: 0;
+    top: 0; }
+  .sk-four-circles .sk-circle3 {
+    right: 0;
+    bottom: 0; }
+  .sk-four-circles .sk-circle4 {
+    -webkit-animation-delay: -.5s;
+            animation-delay: -.5s;
+    left: 0;
+    bottom: 0; }
+  .sk-four-circles .sk-circle5 {
+    left: 0;
+    top: 0; }
+  .sk-four-circles .sk-circle6 {
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+    right: 0;
+    bottom: 0; }
+
+@-webkit-keyframes sk-rotate {
+  0%, 100% {
+    left: 0;
+    top: 0; }
+  25% {
+    left: 65%;
+    top: 0; }
+  50% {
+    left: 65%;
+    top: 65%; }
+  75% {
+    left: 0;
+    top: 65%; } }
+
+@keyframes sk-rotate {
+  0%, 100% {
+    left: 0;
+    top: 0; }
+  25% {
+    left: 65%;
+    top: 0; }
+  50% {
+    left: 65%;
+    top: 65%; }
+  75% {
+    left: 0;
+    top: 65%; } }
+
+@-webkit-keyframes sk-disappear {
+  0%, 25%, 75%, 100% {
+    opacity: 0; }
+  45%, 55% {
+    opacity: 1; } }
+
+@keyframes sk-disappear {
+  0%, 25%, 75%, 100% {
+    opacity: 0; }
+  45%, 55% {
+    opacity: 1; } }

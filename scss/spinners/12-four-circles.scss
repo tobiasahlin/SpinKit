@@ -1,0 +1,98 @@
+/*
+ *  Usage:
+ *
+      <div class="sk-four-circles">
+        <div class="sk-circle1 sk-circle sk-still"></div>
+        <div class="sk-circle2 sk-circle sk-still"></div>
+        <div class="sk-circle3 sk-circle sk-still"></div>
+        <div class="sk-circle4 sk-circle sk-still"></div>
+        <div class="sk-circle5 sk-circle sk-rotate"></div>
+        <div class="sk-circle6 sk-circle sk-rotate"></div>
+      </div>
+*
+ */
+@import "../variables";
+
+
+.sk-four-circles  {
+  margin: $spinkit-spinner-margin;
+  width: $spinkit-size;
+  height: $spinkit-size;
+  position: relative;
+
+  .sk-circle {
+    background-color: $spinkit-spinner-color;
+    width: 35%;
+    height: 35%;
+    border-radius: 100%;
+    display: inline-block;
+    position: absolute;
+  }
+
+  .sk-still {
+    animation: sk-disappear 1s infinite ease-in-out;
+  }
+
+  .sk-rotate {
+    animation: sk-rotate 2s infinite ease-in-out;
+  }
+  
+  .sk-circle1 {
+    left: 0;
+    top: 0;
+  }
+
+  .sk-circle2 {
+    animation-delay: -.5s;
+    right: 0;
+    top: 0;
+  }
+
+  .sk-circle3 {
+    right: 0;
+    bottom: 0;
+  }
+
+  .sk-circle4 {
+    animation-delay: -.5s;
+    left: 0;
+    bottom: 0;
+  }
+
+  .sk-circle5 {
+    left: 0;
+    top: 0;
+  } 
+
+  .sk-circle6 {
+    animation-delay: -1s;
+    right: 0;
+    bottom: 0;
+  }
+  
+}
+
+
+@keyframes sk-rotate {
+  0%, 100% {
+    left: 0;
+    top: 0;
+  } 25% {
+    left: 65%;
+    top: 0;
+  } 50% {
+    left: 65%;
+    top: 65%;
+  } 75% {
+    left: 0;
+    top: 65%;
+  }
+}
+
+@keyframes sk-disappear {
+  0%, 25%, 75%, 100% {
+    opacity: 0;
+  } 45%, 55% {
+    opacity: 1;
+  } 
+}

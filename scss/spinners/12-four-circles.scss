@@ -65,9 +65,9 @@
   } 
 
   .sk-circle6 {
-    animation-delay: -1s;
-    right: 0;
-    bottom: 0;
+    animation-delay: -3s;
+    left: 0;
+    top: 0;
   }
   
 }
@@ -75,24 +75,20 @@
 
 @keyframes sk-rotate {
   0%, 100% {
-    left: 0;
-    top: 0;
+    transform: translate(0, 0); 
   } 25% {
-    left: 65%;
-    top: 0;
+    transform: translate(190%, 0); 
   } 50% {
-    left: 65%;
-    top: 65%;
+    transform: translate(190%, 190%); 
   } 75% {
-    left: 0;
-    top: 65%;
+    transform: translate(0, 190%); 
   }
 }
 
 @keyframes sk-disappear {
   0%, 25%, 75%, 100% {
-    opacity: 0;
+    transform: scale(0);
   } 45%, 55% {
-    opacity: 1;
+    transform: scale(1);
   } 
 }

@@ -5,10 +5,10 @@
  *
  */
 .sk-rotating-plane {
-  width: 40px;
-  height: 40px;
-  background-color: #333;
-  margin: 40px auto;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: currentColor;
+  margin: 2.5em auto;
   -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
           animation: sk-rotatePlane 1.2s infinite ease-in-out; }
 
@@ -44,21 +44,21 @@
  *
  */
 .sk-double-bounce {
-  width: 40px;
-  height: 40px;
+  width: 2.5em;
+  height: 2.5em;
   position: relative;
-  margin: 40px auto; }
+  margin: 2.5em auto; }
   .sk-double-bounce .sk-child {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #333;
+    background-color: currentColor;
     opacity: 0.6;
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
-            animation: sk-doubleBounce 2s infinite ease-in-out; }
+    -webkit-animation: sk-doubleBounce 2.0s infinite ease-in-out;
+            animation: sk-doubleBounce 2.0s infinite ease-in-out; }
   .sk-double-bounce .sk-double-bounce2 {
     -webkit-animation-delay: -1.0s;
             animation-delay: -1.0s; }
@@ -92,13 +92,13 @@
  *
  */
 .sk-wave {
-  margin: 40px auto;
-  width: 50px;
-  height: 40px;
+  margin: 2.5em auto;
+  width: 3.125em;
+  height: 2.5em;
   text-align: center;
   font-size: 10px; }
   .sk-wave .sk-rect {
-    background-color: #333;
+    background-color: currentColor;
     height: 100%;
     width: 6px;
     display: inline-block;
@@ -146,12 +146,12 @@
  *
  */
 .sk-wandering-cubes {
-  margin: 40px auto;
-  width: 40px;
-  height: 40px;
+  margin: 2.5em auto;
+  width: 2.5em;
+  height: 2.5em;
   position: relative; }
   .sk-wandering-cubes .sk-cube {
-    background-color: #333;
+    background-color: currentColor;
     width: 10px;
     height: 10px;
     position: absolute;
@@ -212,13 +212,13 @@
  *
  */
 .sk-spinner-pulse {
-  width: 40px;
-  height: 40px;
-  margin: 40px auto;
-  background-color: #333;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 2.5em auto;
+  background-color: currentColor;
   border-radius: 100%;
-  -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
-          animation: sk-pulseScaleOut 1s infinite ease-in-out; }
+  -webkit-animation: sk-pulseScaleOut 1.0s infinite ease-in-out;
+          animation: sk-pulseScaleOut 1.0s infinite ease-in-out; }
 
 @-webkit-keyframes sk-pulseScaleOut {
   0% {
@@ -248,9 +248,9 @@
  *
  */
 .sk-chasing-dots {
-  margin: 40px auto;
-  width: 40px;
-  height: 40px;
+  margin: 2.5em auto;
+  width: 2.5em;
+  height: 2.5em;
   position: relative;
   text-align: center;
   -webkit-animation: sk-chasingDotsRotate 2s infinite linear;
@@ -261,7 +261,7 @@
     display: inline-block;
     position: absolute;
     top: 0;
-    background-color: #333;
+    background-color: currentColor;
     border-radius: 100%;
     -webkit-animation: sk-chasingDotsBounce 2s infinite ease-in-out;
             animation: sk-chasingDotsBounce 2s infinite ease-in-out; }
@@ -308,13 +308,13 @@
  *
  */
 .sk-three-bounce {
-  margin: 40px auto;
-  width: 80px;
+  margin: 2.5em auto;
+  width: 5em;
   text-align: center; }
   .sk-three-bounce .sk-child {
-    width: 20px;
-    height: 20px;
-    background-color: #333;
+    width: 1.25em;
+    height: 1.25em;
+    background-color: currentColor;
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
@@ -362,9 +362,9 @@
  *
  */
 .sk-circle {
-  margin: 40px auto;
-  width: 40px;
-  height: 40px;
+  margin: 2.5em auto;
+  width: 2.5em;
+  height: 2.5em;
   position: relative; }
   .sk-circle .sk-child {
     width: 100%;
@@ -378,53 +378,42 @@
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: #333;
+    background-color: currentColor;
     border-radius: 100%;
     -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
             animation: sk-circleBounceDelay 1.2s infinite ease-in-out both; }
   .sk-circle .sk-circle2 {
     -webkit-transform: rotate(30deg);
-        -ms-transform: rotate(30deg);
             transform: rotate(30deg); }
   .sk-circle .sk-circle3 {
     -webkit-transform: rotate(60deg);
-        -ms-transform: rotate(60deg);
             transform: rotate(60deg); }
   .sk-circle .sk-circle4 {
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
             transform: rotate(90deg); }
   .sk-circle .sk-circle5 {
     -webkit-transform: rotate(120deg);
-        -ms-transform: rotate(120deg);
             transform: rotate(120deg); }
   .sk-circle .sk-circle6 {
     -webkit-transform: rotate(150deg);
-        -ms-transform: rotate(150deg);
             transform: rotate(150deg); }
   .sk-circle .sk-circle7 {
     -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
   .sk-circle .sk-circle8 {
     -webkit-transform: rotate(210deg);
-        -ms-transform: rotate(210deg);
             transform: rotate(210deg); }
   .sk-circle .sk-circle9 {
     -webkit-transform: rotate(240deg);
-        -ms-transform: rotate(240deg);
             transform: rotate(240deg); }
   .sk-circle .sk-circle10 {
     -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
             transform: rotate(270deg); }
   .sk-circle .sk-circle11 {
     -webkit-transform: rotate(300deg);
-        -ms-transform: rotate(300deg);
             transform: rotate(300deg); }
   .sk-circle .sk-circle12 {
     -webkit-transform: rotate(330deg);
-        -ms-transform: rotate(330deg);
             transform: rotate(330deg); }
   .sk-circle .sk-circle2:before {
     -webkit-animation-delay: -1.1s;
@@ -493,9 +482,9 @@
  *
  */
 .sk-cube-grid {
-  width: 40px;
-  height: 40px;
-  margin: 40px auto;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 2.5em auto;
   /*
    * Spinner positions
    * 1 2 3
@@ -505,7 +494,7 @@
   .sk-cube-grid .sk-cube {
     width: 33.33%;
     height: 33.33%;
-    background-color: #333;
+    background-color: currentColor;
     float: left;
     -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
             animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; }
@@ -573,9 +562,9 @@
  *
  */
 .sk-fading-circle {
-  margin: 40px auto;
-  width: 40px;
-  height: 40px;
+  margin: 2.5em auto;
+  width: 2.5em;
+  height: 2.5em;
   position: relative; }
   .sk-fading-circle .sk-circle {
     width: 100%;
@@ -589,53 +578,42 @@
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: #333;
+    background-color: currentColor;
     border-radius: 100%;
     -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
             animation: sk-circleFadeDelay 1.2s infinite ease-in-out both; }
   .sk-fading-circle .sk-circle2 {
     -webkit-transform: rotate(30deg);
-        -ms-transform: rotate(30deg);
             transform: rotate(30deg); }
   .sk-fading-circle .sk-circle3 {
     -webkit-transform: rotate(60deg);
-        -ms-transform: rotate(60deg);
             transform: rotate(60deg); }
   .sk-fading-circle .sk-circle4 {
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
             transform: rotate(90deg); }
   .sk-fading-circle .sk-circle5 {
     -webkit-transform: rotate(120deg);
-        -ms-transform: rotate(120deg);
             transform: rotate(120deg); }
   .sk-fading-circle .sk-circle6 {
     -webkit-transform: rotate(150deg);
-        -ms-transform: rotate(150deg);
             transform: rotate(150deg); }
   .sk-fading-circle .sk-circle7 {
     -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
   .sk-fading-circle .sk-circle8 {
     -webkit-transform: rotate(210deg);
-        -ms-transform: rotate(210deg);
             transform: rotate(210deg); }
   .sk-fading-circle .sk-circle9 {
     -webkit-transform: rotate(240deg);
-        -ms-transform: rotate(240deg);
             transform: rotate(240deg); }
   .sk-fading-circle .sk-circle10 {
     -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
             transform: rotate(270deg); }
   .sk-fading-circle .sk-circle11 {
     -webkit-transform: rotate(300deg);
-        -ms-transform: rotate(300deg);
             transform: rotate(300deg); }
   .sk-fading-circle .sk-circle12 {
     -webkit-transform: rotate(330deg);
-        -ms-transform: rotate(330deg);
             transform: rotate(330deg); }
   .sk-fading-circle .sk-circle2:before {
     -webkit-animation-delay: -1.1s;
@@ -695,9 +673,9 @@
  *
  */
 .sk-folding-cube {
-  margin: 40px auto;
-  width: 40px;
-  height: 40px;
+  margin: 2.5em auto;
+  width: 2.5em;
+  height: 2.5em;
   position: relative;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg); }
@@ -707,7 +685,6 @@
     height: 50%;
     position: relative;
     -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
             transform: scale(1.1); }
   .sk-folding-cube .sk-cube:before {
     content: '';
@@ -716,11 +693,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: currentColor;
     -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
             animation: sk-foldCubeAngle 2.4s infinite linear both;
     -webkit-transform-origin: 100% 100%;
-        -ms-transform-origin: 100% 100%;
             transform-origin: 100% 100%; }
   .sk-folding-cube .sk-cube2 {
     -webkit-transform: scale(1.1) rotateZ(90deg);

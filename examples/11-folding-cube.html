@@ -15,9 +15,9 @@
  *
  */
 .sk-folding-cube {
-  margin: 40px auto;
-  width: 40px;
-  height: 40px;
+  margin: 2.5em auto;
+  width: 2.5em;
+  height: 2.5em;
   position: relative;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg); }
@@ -27,7 +27,6 @@
     height: 50%;
     position: relative;
     -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
             transform: scale(1.1); }
   .sk-folding-cube .sk-cube:before {
     content: '';
@@ -36,11 +35,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: currentColor;
     -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
             animation: sk-foldCubeAngle 2.4s infinite linear both;
     -webkit-transform-origin: 100% 100%;
-        -ms-transform-origin: 100% 100%;
             transform-origin: 100% 100%; }
   .sk-folding-cube .sk-cube2 {
     -webkit-transform: scale(1.1) rotateZ(90deg);

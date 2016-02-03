@@ -5,10 +5,10 @@
  *
  */
 .sk-rotating-plane {
-  width: 40px;
-  height: 40px;
-  background-color: #333;
-  margin: 40px auto;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: currentColor;
+  margin: 2.5em auto;
   -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
           animation: sk-rotatePlane 1.2s infinite ease-in-out; }
 

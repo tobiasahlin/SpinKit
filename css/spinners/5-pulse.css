@@ -5,13 +5,13 @@
  *
  */
 .sk-spinner-pulse {
-  width: 40px;
-  height: 40px;
-  margin: 40px auto;
-  background-color: #333;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 2.5em auto;
+  background-color: currentColor;
   border-radius: 100%;
-  -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
-          animation: sk-pulseScaleOut 1s infinite ease-in-out; }
+  -webkit-animation: sk-pulseScaleOut 1.0s infinite ease-in-out;
+          animation: sk-pulseScaleOut 1.0s infinite ease-in-out; }
 
 @-webkit-keyframes sk-pulseScaleOut {
   0% {

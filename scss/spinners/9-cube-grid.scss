@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
-      <div class="sk-cube-grid">
+      <div class="sk sk-cube-grid">
         <div class="sk-cube sk-cube1"></div>
         <div class="sk-cube sk-cube2"></div>
         <div class="sk-cube sk-cube3"></div>
@@ -14,19 +14,15 @@
       </div>
  *
  */
-@import "../variables";
+@import "../base";
 
-.sk-cube-grid {
+.sk.sk-cube-grid {
   $delayRange: 0.4s;
-
-  width: $spinkit-size;
-  height: $spinkit-size;
-  margin: $spinkit-spinner-margin;
 
   .sk-cube {
     width: 33.33%;
     height: 33.33%;
-    background-color: $spinkit-spinner-color;
+    background-color: $sk-spinner-color;
     float: left;
     animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
   }

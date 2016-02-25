@@ -1,16 +1,14 @@
 /*
  *  Usage:
  *
-      <div class="sk-spinner sk-spinner-pulse"></div>
+      <div class="sk sk-pulse"></div>
  *
  */
-@import "../variables";
+@import "../base";
 
-.sk-spinner-pulse {
-  width: $spinkit-size;
-  height: $spinkit-size;
-  margin: $spinkit-spinner-margin;
-  background-color: $spinkit-spinner-color;
+.sk.sk-pulse {
+
+  background-color: $sk-spinner-color;
   border-radius: 100%;
   animation: sk-pulseScaleOut 1.0s infinite ease-in-out;
 }

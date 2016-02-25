@@ -1,3 +1,19 @@
-$spinkit-spinner-margin: 40px auto !default;
-$spinkit-size: 40px !default;
-$spinkit-spinner-color: #333 !default;
+$sk-vertical-align: middle !default;
+$sk-display: inline-block !default;
+
+$sk-xs-size: 10px !default;
+$sk-sm-size: 20px !default;
+$sk-md-size: 40px !default;
+$sk-lg-size: 60px !default;
+$sk-xl-size: 100px !default;
+$sk-default-size: $sk-md-size !default;
+
+$sk-no-margin: 0 !default;
+$sk-auto-margin: auto !default;
+$sk-xs-margin: 10px !default;
+$sk-sm-margin: 20px !default;
+$sk-md-margin: 40px !default;
+$sk-lg-margin: 60px !default;
+$sk-xl-margin: 100px !default;
+
+$sk-spinner-color: #333 !default;

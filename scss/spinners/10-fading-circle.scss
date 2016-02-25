@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
-      <div class="sk-fading-circle">
+      <div class="sk sk-fading-circle">
         <div class="sk-circle1 sk-circle"></div>
         <div class="sk-circle2 sk-circle"></div>
         <div class="sk-circle3 sk-circle"></div>
@@ -17,15 +17,13 @@
       </div>
  *
  */
-@import "../variables";
+@import "../base";
 
-.sk-fading-circle {
+.sk.sk-fading-circle {
+
   $circleCount: 12;
   $animationDuration: 1.2s;
 
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size;
-  height: $spinkit-size;
   position: relative;
 
   .sk-circle {
@@ -42,7 +40,7 @@
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: $spinkit-spinner-color;
+    background-color: $sk-spinner-color;
     border-radius: 100%;
     animation: sk-circleFadeDelay $animationDuration infinite ease-in-out both;
   }

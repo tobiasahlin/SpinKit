@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
-      <div class="sk-folding-cube">
+      <div class="sk sk-folding-cube">
         <div class="sk-cube1 sk-cube"></div>
         <div class="sk-cube2 sk-cube"></div>
         <div class="sk-cube4 sk-cube"></div>
@@ -9,16 +9,14 @@
       </div>
  *
  */
-@import "../variables";
+@import "../base";
 
-.sk-folding-cube {
+.sk.sk-folding-cube {
+
   $cubeCount: 4;
   $animationDuration: 2.4s;
   $delayRange: $animationDuration/2;
 
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size;
-  height: $spinkit-size;
   position: relative;
   transform: rotateZ(45deg);
 
@@ -37,7 +35,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $spinkit-spinner-color;
+    background-color: $sk-spinner-color;
     animation: sk-foldCubeAngle $animationDuration infinite linear both;
     transform-origin: 100% 100%;
   }

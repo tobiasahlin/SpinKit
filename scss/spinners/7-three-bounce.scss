@@ -1,30 +1,52 @@
 /*
  *  Usage:
  *
-      <div class="sk-three-bounce">
+      <div class="sk sk-three-bounce">
         <div class="sk-child sk-bounce1"></div>
         <div class="sk-child sk-bounce2"></div>
         <div class="sk-child sk-bounce3"></div>
       </div>
  *
  */
- @import "../variables";
+ @import "../base";
 
-.sk-three-bounce {
+.sk.sk-three-bounce {
   $animationDuration: 1.4s;
   $delayRange: 0.32s;
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size * 2;
+  width: $sk-default-size * 2;
   text-align: center;
 
   .sk-child {
-    width: $spinkit-size / 2;
-    height: $spinkit-size / 2;
-    background-color: $spinkit-spinner-color;
+    width: $sk-default-size / 2;
+    height: $sk-default-size / 2;
+    background-color: $sk-spinner-color;
 
     border-radius: 100%;
     display: inline-block;
     animation: sk-three-bounce $animationDuration ease-in-out 0s infinite both;
+  }
+
+
+  &.sk-xs-width {
+    // Made smaller than the others to make border-radius behave
+    width: $sk-xs-size * 2.5;
+    .sk-child { width: $sk-xs-size / 2.5; height: $sk-xs-size / 2.5}
+  }
+  &.sk-sm-width {
+    width: $sk-sm-size * 2;
+    .sk-child { width: $sk-sm-size / 2; height: $sk-sm-size / 2}
+  }
+  &.sk-md-width {
+    width: $sk-md-size * 2;
+    .sk-child { width: $sk-md-size / 2; height: $sk-md-size / 2}
+  }
+  &.sk-lg-width {
+    width: $sk-lg-size * 2;
+    .sk-child { width: $sk-lg-size / 2; height: $sk-lg-size / 2}
+  }
+  &.sk-xl-width {
+    width: $sk-xl-size * 2;
+    .sk-child { width: $sk-xl-size / 2; height: $sk-xl-size / 2}
   }
 
   .sk-bounce1 { animation-delay: -$delayRange; }

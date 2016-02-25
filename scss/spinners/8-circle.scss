@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
-      <div class="sk-circle">
+      <div class="sk sk-circle">
         <div class="sk-circle1 sk-child"></div>
         <div class="sk-circle2 sk-child"></div>
         <div class="sk-circle3 sk-child"></div>
@@ -17,15 +17,13 @@
       </div>
  *
  */
-@import "../variables";
+@import "../base";
 
-.sk-circle {
+.sk.sk-circle {
+
   $circleCount: 12;
   $animationDuration: 1.2s;
 
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size;
-  height: $spinkit-size;
   position: relative;
 
   .sk-child {
@@ -42,7 +40,7 @@
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: $spinkit-spinner-color;
+    background-color: $sk-spinner-color;
     border-radius: 100%;
     animation: sk-circleBounceDelay $animationDuration infinite ease-in-out both;
   }

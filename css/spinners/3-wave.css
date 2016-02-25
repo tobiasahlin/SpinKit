@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
-      <div class="sk-wave">
+      <div class="sk sk-wave">
         <div class="sk-rect sk-rect1"></div>
         <div class="sk-rect sk-rect2"></div>
         <div class="sk-rect sk-rect3"></div>
@@ -10,32 +10,140 @@
       </div>
  *
  */
-.sk-wave {
-  margin: 40px auto;
-  width: 50px;
-  height: 40px;
+.sk {
+  vertical-align: middle;
+  display: inline-block; }
+  .sk.sk-default-width, .sk, .sk.sk-default {
+    width: 40px; }
+  .sk.sk-xs-width, .sk.sk-xs {
+    width: 10px; }
+  .sk.sk-sm-width, .sk.sk-sm {
+    width: 20px; }
+  .sk.sk-md-width, .sk.sk-md {
+    width: 40px; }
+  .sk.sk-lg-width, .sk.sk-lg {
+    width: 60px; }
+  .sk.sk-xl-width, .sk.sk-xl {
+    width: 100px; }
+  .sk.sk-default-height, .sk, .sk.sk-default {
+    height: 40px; }
+  .sk.sk-xs-height, .sk.sk-xs {
+    height: 10px; }
+  .sk.sk-sm-height, .sk.sk-sm {
+    height: 20px; }
+  .sk.sk-md-height, .sk.sk-md {
+    height: 40px; }
+  .sk.sk-lg-height, .sk.sk-lg {
+    height: 60px; }
+  .sk.sk-xl-height, .sk.sk-xl {
+    height: 100px; }
+  .sk.sk-no-margin {
+    margin: 0; }
+  .sk.sk-auto-margin {
+    margin: auto;
+    display: block; }
+  .sk.sk-xs-margin {
+    margin: 10px; }
+  .sk.sk-sm-margin {
+    margin: 20px; }
+  .sk.sk-md-margin {
+    margin: 40px; }
+  .sk.sk-lg-margin {
+    margin: 60px; }
+  .sk.sk-xl-margin {
+    margin: 100px; }
+  .sk.sk-no-vmargin, .sk {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .sk.sk-auto-vmargin {
+    margin-top: auto;
+    margin-bottom: auto; }
+  .sk.sk-xs-vmargin {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .sk.sk-sm-vmargin {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .sk.sk-md-vmargin {
+    margin-top: 40px;
+    margin-bottom: 40px; }
+  .sk.sk-lg-vmargin {
+    margin-top: 60px;
+    margin-bottom: 60px; }
+  .sk.sk-xl-vmargin {
+    margin-top: 100px;
+    margin-bottom: 100px; }
+  .sk.sk-no-hmargin, .sk {
+    margin-left: 0;
+    margin-right: 0; }
+  .sk.sk-auto-hmargin {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
+  .sk.sk-xs-hmargin {
+    margin-left: 10px;
+    margin-right: 10px; }
+  .sk.sk-sm-hmargin {
+    margin-left: 20px;
+    margin-right: 20px; }
+  .sk.sk-md-hmargin {
+    margin-left: 40px;
+    margin-right: 40px; }
+  .sk.sk-lg-hmargin {
+    margin-left: 60px;
+    margin-right: 60px; }
+  .sk.sk-xl-hmargin {
+    margin-left: 100px;
+    margin-right: 100px; }
+
+.sk.sk-wave {
   text-align: center;
   font-size: 10px; }
-  .sk-wave .sk-rect {
+  .sk.sk-wave .sk-rect {
     background-color: #333;
     height: 100%;
     width: 6px;
     display: inline-block;
     -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
             animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }
-  .sk-wave .sk-rect1 {
+  .sk.sk-wave.sk-xs-width, .sk.sk-wave.sk-xs {
+    width: 12.5px;
+    font-size: 2.5px; }
+    .sk.sk-wave.sk-xs-width .sk-rect, .sk.sk-wave.sk-xs .sk-rect {
+      width: 1.5px; }
+  .sk.sk-wave.sk-sm-width, .sk.sk-wave.sk-sm {
+    width: 25px;
+    font-size: 5px; }
+    .sk.sk-wave.sk-sm-width .sk-rect, .sk.sk-wave.sk-sm .sk-rect {
+      width: 3px; }
+  .sk.sk-wave.sk-md-width, .sk.sk-wave.sk-md {
+    width: 50px;
+    font-size: 10px; }
+    .sk.sk-wave.sk-md-width .sk-rect, .sk.sk-wave.sk-md .sk-rect {
+      width: 6px; }
+  .sk.sk-wave.sk-lg-width, .sk.sk-wave.sk-lg {
+    width: 75px;
+    font-size: 15px; }
+    .sk.sk-wave.sk-lg-width .sk-rect, .sk.sk-wave.sk-lg .sk-rect {
+      width: 9px; }
+  .sk.sk-wave.sk-xl-width, .sk.sk-wave.sk-xl {
+    width: 125px;
+    font-size: 25px; }
+    .sk.sk-wave.sk-xl-width .sk-rect, .sk.sk-wave.sk-xl .sk-rect {
+      width: 15px; }
+  .sk.sk-wave .sk-rect1 {
     -webkit-animation-delay: -1.2s;
             animation-delay: -1.2s; }
-  .sk-wave .sk-rect2 {
+  .sk.sk-wave .sk-rect2 {
     -webkit-animation-delay: -1.1s;
             animation-delay: -1.1s; }
-  .sk-wave .sk-rect3 {
+  .sk.sk-wave .sk-rect3 {
     -webkit-animation-delay: -1s;
             animation-delay: -1s; }
-  .sk-wave .sk-rect4 {
+  .sk.sk-wave .sk-rect4 {
     -webkit-animation-delay: -0.9s;
             animation-delay: -0.9s; }
-  .sk-wave .sk-rect5 {
+  .sk.sk-wave .sk-rect5 {
     -webkit-animation-delay: -0.8s;
             animation-delay: -0.8s; }
 

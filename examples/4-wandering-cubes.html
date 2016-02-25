@@ -6,18 +6,101 @@
     /*
  *  Usage:
  *
-      <div class="sk-wandering-cubes">
+      <div class="sk sk-wandering-cubes">
         <div class="sk-cube sk-cube1"></div>
         <div class="sk-cube sk-cube2"></div>
       </div>
  *
  */
-.sk-wandering-cubes {
-  margin: 40px auto;
-  width: 40px;
-  height: 40px;
+.sk {
+  vertical-align: middle;
+  display: inline-block; }
+  .sk.sk-default-width, .sk, .sk.sk-default {
+    width: 40px; }
+  .sk.sk-xs-width, .sk.sk-xs {
+    width: 10px; }
+  .sk.sk-sm-width, .sk.sk-sm {
+    width: 20px; }
+  .sk.sk-md-width, .sk.sk-md {
+    width: 40px; }
+  .sk.sk-lg-width, .sk.sk-lg {
+    width: 60px; }
+  .sk.sk-xl-width, .sk.sk-xl {
+    width: 100px; }
+  .sk.sk-default-height, .sk, .sk.sk-default {
+    height: 40px; }
+  .sk.sk-xs-height, .sk.sk-xs {
+    height: 10px; }
+  .sk.sk-sm-height, .sk.sk-sm {
+    height: 20px; }
+  .sk.sk-md-height, .sk.sk-md {
+    height: 40px; }
+  .sk.sk-lg-height, .sk.sk-lg {
+    height: 60px; }
+  .sk.sk-xl-height, .sk.sk-xl {
+    height: 100px; }
+  .sk.sk-no-margin {
+    margin: 0; }
+  .sk.sk-auto-margin {
+    margin: auto;
+    display: block; }
+  .sk.sk-xs-margin {
+    margin: 10px; }
+  .sk.sk-sm-margin {
+    margin: 20px; }
+  .sk.sk-md-margin {
+    margin: 40px; }
+  .sk.sk-lg-margin {
+    margin: 60px; }
+  .sk.sk-xl-margin {
+    margin: 100px; }
+  .sk.sk-no-vmargin, .sk {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .sk.sk-auto-vmargin {
+    margin-top: auto;
+    margin-bottom: auto; }
+  .sk.sk-xs-vmargin {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .sk.sk-sm-vmargin {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .sk.sk-md-vmargin {
+    margin-top: 40px;
+    margin-bottom: 40px; }
+  .sk.sk-lg-vmargin {
+    margin-top: 60px;
+    margin-bottom: 60px; }
+  .sk.sk-xl-vmargin {
+    margin-top: 100px;
+    margin-bottom: 100px; }
+  .sk.sk-no-hmargin, .sk {
+    margin-left: 0;
+    margin-right: 0; }
+  .sk.sk-auto-hmargin {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
+  .sk.sk-xs-hmargin {
+    margin-left: 10px;
+    margin-right: 10px; }
+  .sk.sk-sm-hmargin {
+    margin-left: 20px;
+    margin-right: 20px; }
+  .sk.sk-md-hmargin {
+    margin-left: 40px;
+    margin-right: 40px; }
+  .sk.sk-lg-hmargin {
+    margin-left: 60px;
+    margin-right: 60px; }
+  .sk.sk-xl-hmargin {
+    margin-left: 100px;
+    margin-right: 100px; }
+
+.sk.sk-wandering-cubes {
   position: relative; }
-  .sk-wandering-cubes .sk-cube {
+  .sk.sk-wandering-cubes .sk-cube {
     background-color: #333;
     width: 10px;
     height: 10px;
@@ -26,9 +109,24 @@
     left: 0;
     -webkit-animation: sk-wanderingCube 1.8s ease-in-out -1.8s infinite both;
             animation: sk-wanderingCube 1.8s ease-in-out -1.8s infinite both; }
-  .sk-wandering-cubes .sk-cube2 {
+  .sk.sk-wandering-cubes .sk-cube2 {
     -webkit-animation-delay: -0.9s;
             animation-delay: -0.9s; }
+  .sk.sk-wandering-cubes.sk-xs-width, .sk.sk-wandering-cubes.sk-xs {
+    width: 2.5px;
+    height: 2.5px; }
+  .sk.sk-wandering-cubes.sk-sm-width, .sk.sk-wandering-cubes.sk-sm {
+    width: 5px;
+    height: 5px; }
+  .sk.sk-wandering-cubes.sk-md-width, .sk.sk-wandering-cubes.sk-md {
+    width: 10px;
+    height: 10px; }
+  .sk.sk-wandering-cubes.sk-lg-width, .sk.sk-wandering-cubes.sk-lg {
+    width: 15px;
+    height: 15px; }
+  .sk.sk-wandering-cubes.sk-xl-width, .sk.sk-wandering-cubes.sk-xl {
+    width: 25px;
+    height: 25px; }
 
 @-webkit-keyframes sk-wanderingCube {
   0% {
@@ -77,7 +175,7 @@
 <body>
  
 
-      <div class="sk-wandering-cubes">
+      <div class="sk sk-wandering-cubes">
         <div class="sk-cube sk-cube1"></div>
         <div class="sk-cube sk-cube2"></div>
       </div>

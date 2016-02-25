@@ -1,7 +1,7 @@
 /*
  *  Usage:
  *
-      <div class="sk-wave">
+      <div class="sk sk-wave">
         <div class="sk-rect sk-rect1"></div>
         <div class="sk-rect sk-rect2"></div>
         <div class="sk-rect sk-rect3"></div>
@@ -10,25 +10,49 @@
       </div>
  *
  */
-@import "../variables";
+@import "../base";
 
-.sk-wave {
+.sk.sk-wave {
+
   $rectCount: 5;
   $animationDuration: 1.2s;
   $delayRange: 0.4s;
 
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size * 1.25;
-  height: $spinkit-size;
   text-align: center;
-  font-size: 10px;
+  font-size: $sk-default-size / 4;
 
   .sk-rect {
-    background-color: $spinkit-spinner-color;
+    background-color: $sk-spinner-color;
     height: 100%;
-    width: 6px;
+    width: $sk-default-size * 0.15;
     display: inline-block;
     animation: sk-waveStretchDelay $animationDuration infinite ease-in-out;
+  }
+
+  &.sk-xs-width {
+    width: $sk-xs-size * 1.25;
+    font-size: $sk-xs-size / 4;
+    & .sk-rect { width: $sk-xs-size * 0.15 }
+  }
+  &.sk-sm-width {
+    width: $sk-sm-size * 1.25;
+    font-size: $sk-sm-size / 4;
+    & .sk-rect { width: $sk-sm-size * 0.15 }
+  }
+  &.sk-md-width {
+    width: $sk-md-size * 1.25;
+    font-size: $sk-md-size / 4;
+    & .sk-rect { width: $sk-md-size * 0.15 }
+  }
+  &.sk-lg-width {
+    width: $sk-lg-size * 1.25;
+    font-size: $sk-lg-size / 4;
+    & .sk-rect { width: $sk-lg-size * 0.15 }
+  }
+  &.sk-xl-width {
+    width: $sk-xl-size * 1.25;
+    font-size: $sk-xl-size / 4;
+    & .sk-rect { width: $sk-xl-size * 0.15 }
   }
 
   @for $i from 1 through $rectCount {

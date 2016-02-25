@@ -1,0 +1,100 @@
+@import "./variables";
+
+.sk {
+    vertical-align: $sk-vertical-align;
+    display: $sk-display;
+    @extend .sk-default-width;
+    @extend .sk-default-height;
+    @extend .sk-no-vmargin;
+    @extend .sk-no-hmargin;
+
+    &.sk-default-width { width: $sk-default-size }
+    &.sk-xs-width { width: $sk-xs-size }
+    &.sk-sm-width { width: $sk-sm-size }
+    &.sk-md-width { width: $sk-md-size }
+    &.sk-lg-width { width: $sk-lg-size }
+    &.sk-xl-width { width: $sk-xl-size }
+
+    &.sk-default-height { height: $sk-default-size }
+    &.sk-xs-height { height: $sk-xs-size }
+    &.sk-sm-height { height: $sk-sm-size }
+    &.sk-md-height { height: $sk-md-size }
+    &.sk-lg-height { height: $sk-lg-size }
+    &.sk-xl-height { height: $sk-xl-size }
+
+    &.sk-default { @extend .sk-default-width; @extend .sk-default-height }
+    &.sk-xs { @extend .sk-xs-width; @extend .sk-xs-height }
+    &.sk-sm { @extend .sk-sm-width; @extend .sk-sm-height }
+    &.sk-md { @extend .sk-md-width; @extend .sk-md-height }
+    &.sk-lg { @extend .sk-lg-width; @extend .sk-lg-height }
+    &.sk-xl { @extend .sk-xl-width; @extend .sk-xl-height }
+
+    &.sk-no-margin { margin: $sk-no-margin }
+    // Force "block" to allow the spinner to be centered in its container.
+    &.sk-auto-margin { margin: $sk-auto-margin; display: block }
+    &.sk-xs-margin { margin: $sk-xs-margin }
+    &.sk-sm-margin { margin: $sk-sm-margin }
+    &.sk-md-margin { margin: $sk-md-margin }
+    &.sk-lg-margin { margin: $sk-lg-margin }
+    &.sk-xl-margin { margin: $sk-xl-margin }
+
+    &.sk-no-vmargin {
+      margin-top: $sk-no-margin;
+      margin-bottom: $sk-no-margin;
+    }
+    &.sk-auto-vmargin {
+      margin-top: $sk-auto-margin;
+      margin-bottom: $sk-auto-margin;
+    }
+    &.sk-xs-vmargin {
+      margin-top: $sk-xs-margin;
+      margin-bottom: $sk-xs-margin;
+    }
+    &.sk-sm-vmargin {
+      margin-top: $sk-sm-margin;
+      margin-bottom: $sk-sm-margin;
+    }
+    &.sk-md-vmargin {
+      margin-top: $sk-md-margin;
+      margin-bottom: $sk-md-margin;
+    }
+    &.sk-lg-vmargin {
+      margin-top: $sk-lg-margin;
+      margin-bottom: $sk-lg-margin;
+    }
+    &.sk-xl-vmargin {
+      margin-top: $sk-xl-margin;
+      margin-bottom: $sk-xl-margin;
+    }
+
+    &.sk-no-hmargin {
+      margin-left: $sk-no-margin;
+      margin-right: $sk-no-margin;
+    }
+    &.sk-auto-hmargin {
+      margin-left: $sk-auto-margin;
+      margin-right: $sk-auto-margin;
+      // Force "block" to allow the spinner to be centered in its container.
+      display: block;
+    }
+    &.sk-xs-hmargin {
+      margin-left: $sk-xs-margin;
+      margin-right: $sk-xs-margin;
+    }
+    &.sk-sm-hmargin {
+      margin-left: $sk-sm-margin;
+      margin-right: $sk-sm-margin;
+    }
+    &.sk-md-hmargin {
+      margin-left: $sk-md-margin;
+      margin-right: $sk-md-margin;
+    }
+    &.sk-lg-hmargin {
+      margin-left: $sk-lg-margin;
+      margin-right: $sk-lg-margin;
+    }
+    &.sk-xl-hmargin {
+      margin-left: $sk-xl-margin;
+      margin-right: $sk-xl-margin;
+    }
+}

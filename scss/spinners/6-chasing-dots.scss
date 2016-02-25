@@ -1,20 +1,18 @@
 /*
  *  Usage:
  *
-      <div class="sk-chasing-dots">
+      <div class="sk sk-chasing-dots">
         <div class="sk-child sk-dot1"></div>
         <div class="sk-child sk-dot2"></div>
       </div>
  *
  */
-@import "../variables";
+@import "../base";
 
-.sk-chasing-dots {
+.sk.sk-chasing-dots {
+
   $animationDuration: 2.0s;
 
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size;
-  height: $spinkit-size;
   position: relative;
   text-align: center;
   animation: sk-chasingDotsRotate $animationDuration infinite linear;
@@ -25,7 +23,7 @@
     display: inline-block;
     position: absolute;
     top: 0;
-    background-color: $spinkit-spinner-color;
+    background-color: $sk-spinner-color;
     border-radius: 100%;
     animation: sk-chasingDotsBounce $animationDuration infinite ease-in-out;
   }

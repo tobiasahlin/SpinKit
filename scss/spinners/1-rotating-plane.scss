@@ -1,16 +1,13 @@
 /*
  *  Usage:
  *
-      <div class="sk-rotating-plane"></div>
+      <div class="sk sk-rotating-plane"></div>
  *
  */
-@import "../variables";
+@import "../base";
 
-.sk-rotating-plane {
-  width: $spinkit-size;
-  height: $spinkit-size;
-  background-color: $spinkit-spinner-color;
-  margin: $spinkit-spinner-margin;
+.sk.sk-rotating-plane {
+  background-color: $sk-spinner-color;
   animation: sk-rotatePlane 1.2s infinite ease-in-out;
 }
 

@@ -1,26 +1,23 @@
 /*
  *  Usage:
  *
-      <div class="sk-wandering-cubes">
+      <div class="sk sk-wandering-cubes">
         <div class="sk-cube sk-cube1"></div>
         <div class="sk-cube sk-cube2"></div>
       </div>
  *
  */
-@import "../variables";
+@import "../base";
 
-.sk-wandering-cubes {
+.sk.sk-wandering-cubes {
   $animationDuration: 1.8s;
 
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size;
-  height: $spinkit-size;
   position: relative;
 
   .sk-cube {
-    background-color: $spinkit-spinner-color;
-    width: 10px;
-    height: 10px;
+    background-color: $sk-spinner-color;
+    width: $sk-default-size / 4;
+    height: $sk-default-size / 4;
     position: absolute;
     top: 0;
     left: 0;
@@ -30,6 +27,12 @@
   .sk-cube2 {
     animation-delay: -$animationDuration / 2;
   }
+
+  &.sk-xs-width { width: $sk-xs-size / 4; height: $sk-xs-size / 4 }
+  &.sk-sm-width { width: $sk-sm-size / 4; height: $sk-sm-size / 4 }
+  &.sk-md-width { width: $sk-md-size / 4; height: $sk-md-size / 4 }
+  &.sk-lg-width { width: $sk-lg-size / 4; height: $sk-lg-size / 4 }
+  &.sk-xl-width { width: $sk-xl-size / 4; height: $sk-xl-size / 4 }
 }
 
 @keyframes sk-wanderingCube {

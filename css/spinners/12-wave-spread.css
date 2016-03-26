@@ -1,0 +1,50 @@
+/*
+ *  Usage:
+ *
+      <div class="sk-wave-spread">
+        <div class="sk-rect sk-rect1"></div>
+        <div class="sk-rect sk-rect2"></div>
+        <div class="sk-rect sk-rect3"></div>
+        <div class="sk-rect sk-rect4"></div>
+        <div class="sk-rect sk-rect5"></div>
+      </div>
+ *
+ */
+.sk-wave-spread {
+  margin: 40px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px; }
+  .sk-wave-spread .sk-rect {
+    background-color: #333;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+            animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }
+  .sk-wave-spread .sk-rect1, .sk-wave-spread .sk-rect5 {
+    -webkit-animation-delay: -0.7s;
+            animation-delay: -0.7s; }
+  .sk-wave-spread .sk-rect4, .sk-wave-spread .sk-rect2 {
+    -webkit-animation-delay: -0.95s;
+            animation-delay: -0.95s; }
+  .sk-wave-spread .sk-rect3 {
+    -webkit-animation-delay: -1.2s;
+            animation-delay: -1.2s; }
+
+@-webkit-keyframes sk-waveStretchDelay {
+  0%, 100% {
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4); }
+  50% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1); } }
+
+@keyframes sk-waveStretchDelay {
+  0%, 100% {
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4); }
+  50% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1); } }

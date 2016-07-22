@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spinkit JS</title>
+  <link rel="stylesheet" type = "text/css" href="../css/spinkit.min.css"/>
+</head>
+<body>
+	<button type="button" onclick="create('rotatingPlane')">Rotating Plane</button>
+	<button type="button" onclick="create('doubleBounce')">Double Bounce</button>
+	<button type="button" onclick="create('wave')">Wave</button>
+	<button type="button" onclick="create('wanderingCubes')">Wandering Cubes</button>
+	<button type="button" onclick="create('pulse')">Pulse</button>
+	<button type="button" onclick="create('chasingDots')">Chasing Dots</button>
+	<button type="button" onclick="create('threeBounce')">Three Bounce</button>
+	<button type="button" onclick="create('circle')">Circle</button>
+	<button type="button" onclick="create('cubeGrid')">Cube Grid</button>
+	<button type="button" onclick="create('fadingCircle')">Fading Circle</button>
+	<button type="button" onclick="create('foldingCube')">Folding Cube</button>
+<script src="../js/spinkit.js"></script>
+<script>
+	var spinkit = new SpinKit('body');
+	spinkit.show();
+</script>
+<script>
+//------------- CODE ONLY FOR DEMONSTRATION
+function create(spinKitType){
+	spinkit.destroy();
+	spinkit = new SpinKit('body', spinKitType);
+	spinkit.show();
+}
+</script>
+</body>
+</html>

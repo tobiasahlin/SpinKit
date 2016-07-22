@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spinkit JQuery</title>
+  <link rel="stylesheet" type = "text/css" href="../css/spinkit.min.css"/>
+</head>
+<body>
+	<button type="button" onclick="create('rotatingPlane')">Rotating Plane</button>
+	<button type="button" onclick="create('doubleBounce')">Double Bounce</button>
+	<button type="button" onclick="create('wave')">Wave</button>
+	<button type="button" onclick="create('wanderingCubes')">Wandering Cubes</button>
+	<button type="button" onclick="create('pulse')">Pulse</button>
+	<button type="button" onclick="create('chasingDots')">Chasing Dots</button>
+	<button type="button" onclick="create('threeBounce')">Three Bounce</button>
+	<button type="button" onclick="create('circle')">Circle</button>
+	<button type="button" onclick="create('cubeGrid')">Cube Grid</button>
+	<button type="button" onclick="create('fadingCircle')">Fading Circle</button>
+	<button type="button" onclick="create('foldingCube')">Folding Cube</button>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="../js/spinkit.jquery.js"></script>
+<script>
+	$(document).ready(function(){ $('body').waiting(); });
+</script>
+<script>
+//------------- CODE ONLY FOR DEMONSTRATION
+function create(spinKitType){
+	$('body').waiting('destroy');
+	$('body').waiting({ 'spinner': spinKitType});
+}
+</script>
+</body>
+</html>

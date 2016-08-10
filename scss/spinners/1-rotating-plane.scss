@@ -6,13 +6,10 @@
  */
 @import "../variables";
 
-.sk-rotating-plane {
-  width: $spinkit-size;
-  height: $spinkit-size;
-  background-color: $spinkit-spinner-color;
-  margin: $spinkit-spinner-margin;
-  animation: sk-rotatePlane 1.2s infinite ease-in-out;
-}
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+$spinkit-animation-duration: 1.2s !default;
 
 @keyframes sk-rotatePlane {
   0% {
@@ -22,4 +19,22 @@
   } 100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+
+@mixin sk-rotate-plane(
+  $width: $spinkit-size,
+  $height: $spinkit-size,
+  $background-color: $spinkit-spinner-color,
+  $margin: $spinkit-spinner-margin,
+  $duration: $spinkit-animation-duration
+) {
+  width: $width;
+  height: $height;
+  background-color: $background-color;
+  margin: $margin;
+  animation: sk-rotatePlane #{$duration} infinite ease-in-out;
+}
+
+.sk-rotating-plane {
+  @include sk-rotate-plane;
 }

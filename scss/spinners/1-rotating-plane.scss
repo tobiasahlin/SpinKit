@@ -21,7 +21,7 @@ $spinkit-animation-duration: 1.2s !default;
   }
 }
 
-@mixin sk-rotate-plane(
+@mixin sk-rotating-plane(
   $width: $spinkit-size,
   $height: $spinkit-size,
   $background-color: $spinkit-spinner-color,

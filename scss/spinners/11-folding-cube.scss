@@ -11,11 +11,15 @@
  */
 @import "../variables";
 
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+
 $spinkit-folding-cube-child-count: 4 !default;
-$spinkit-folding-cube-width: $spinkit-size !default;
-$spinkit-folding-cube-height: $spinkit-size !default;
-$spinkit-folding-cube-margin: $spinkit-spinner-margin !default;
-$spinkit-folding-cube-background-color: $spinkit-spinner-color !default;
+$spinkit-folding-cube-width: $spinkit-size;
+$spinkit-folding-cube-height: $spinkit-size;
+$spinkit-folding-cube-margin: $spinkit-spinner-margin;
+$spinkit-folding-cube-background-color: $spinkit-spinner-color;
 $spinkit-folding-cube-animation-duration: 2.4s !default;
 $spinkit-folding-cube-animation-delay-range: 1.2s !default;
 $spinkit-folding-cube-css-export: true !default;

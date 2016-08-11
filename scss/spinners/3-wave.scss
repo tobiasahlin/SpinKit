@@ -12,11 +12,15 @@
  */
 @import "../variables";
 
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+
 $spinkit-wave-child-count: 5 !default;
-$spinkit-wave-width: $spinkit-size * 1.25 !default;
-$spinkit-wave-height: $spinkit-size !default;
-$spinkit-wave-margin: $spinkit-spinner-margin !default;
-$spinkit-wave-background-color: $spinkit-spinner-color !default;
+$spinkit-wave-width: $spinkit-size * 1.25;
+$spinkit-wave-height: $spinkit-size;
+$spinkit-wave-margin: $spinkit-spinner-margin;
+$spinkit-wave-background-color: $spinkit-spinner-color;
 $spinkit-wave-animation-duration: 1.2s !default;
 $spinkit-wave-animation-delay-range: 0.4s !default;
 $spinkit-wave-css-export: true !default;

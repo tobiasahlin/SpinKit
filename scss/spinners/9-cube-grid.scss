@@ -16,10 +16,14 @@
  */
 @import "../variables";
 
-$spinkit-cube-grid-width: $spinkit-size !default;
-$spinkit-cube-grid-height: $spinkit-size !default;
-$spinkit-cube-grid-margin: $spinkit-spinner-margin !default;
-$spinkit-cube-grid-background-color: $spinkit-spinner-color !default;
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+
+$spinkit-cube-grid-width: $spinkit-size;
+$spinkit-cube-grid-height: $spinkit-size;
+$spinkit-cube-grid-margin: $spinkit-spinner-margin;
+$spinkit-cube-grid-background-color: $spinkit-spinner-color;
 $spinkit-cube-grid-animation-duration: 1.3s !default;
 $spinkit-cube-grid-animation-delay-range: 0.4s !default;
 $spinkit-cube-grid-css-export: true !default;

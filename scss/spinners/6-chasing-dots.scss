@@ -9,10 +9,14 @@
  */
 @import "../variables";
 
-$spinkit-chasing-dots-width: $spinkit-size !default;
-$spinkit-chasing-dots-height: $spinkit-size !default;
-$spinkit-chasing-dots-margin: $spinkit-spinner-margin !default;
-$spinkit-chasing-dots-background-color: $spinkit-spinner-color !default;
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+
+$spinkit-chasing-dots-width: $spinkit-size;
+$spinkit-chasing-dots-height: $spinkit-size;
+$spinkit-chasing-dots-margin: $spinkit-spinner-margin;
+$spinkit-chasing-dots-background-color: $spinkit-spinner-color;
 $spinkit-chasing-dots-animation-duration: 2.0s !default;
 $spinkit-chasing-dots-css-export: true !default;
 

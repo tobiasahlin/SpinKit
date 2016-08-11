@@ -10,10 +10,14 @@
  */
  @import "../variables";
 
- $spinkit-three-bounce-width: $spinkit-size * 2 !default;
- $spinkit-three-bounce-height: $spinkit-size * 2 !default;
- $spinkit-three-bounce-margin: $spinkit-spinner-margin !default;
- $spinkit-three-bounce-background-color: $spinkit-spinner-color !default;
+ $spinkit-spinner-margin: 40px auto !default;
+ $spinkit-size: 40px !default;
+ $spinkit-spinner-color: #333 !default;
+
+ $spinkit-three-bounce-width: $spinkit-size * 2;
+ $spinkit-three-bounce-height: $spinkit-size * 2;
+ $spinkit-three-bounce-margin: $spinkit-spinner-margin;
+ $spinkit-three-bounce-background-color: $spinkit-spinner-color;
  $spinkit-three-bounce-animation-duration: 1.4s !default;
  $spinkit-three-bounce-animation-delay-range: 0.32s !default;
  $spinkit-three-bounce-css-export: true !default;

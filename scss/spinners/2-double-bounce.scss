@@ -9,10 +9,14 @@
  */
 @import "../variables";
 
-$spinkit-double-bounce-width: $spinkit-size !default;
-$spinkit-double-bounce-height: $spinkit-size !default;
-$spinkit-double-bounce-margin: $spinkit-spinner-margin !default;
-$spinkit-double-bounce-background-color: $spinkit-spinner-color !default;
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+
+$spinkit-double-bounce-width: $spinkit-size;
+$spinkit-double-bounce-height: $spinkit-size;
+$spinkit-double-bounce-margin: $spinkit-spinner-margin;
+$spinkit-double-bounce-background-color: $spinkit-spinner-color;
 $spinkit-double-bounce-animation-duration: 2.0s !default;
 $spinkit-double-bounce-css-export: true !default;
 

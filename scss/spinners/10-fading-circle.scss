@@ -19,11 +19,15 @@
  */
 @import "../variables";
 
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+
 $spinkit-fading-circle-child-count: 12 !default;
-$spinkit-fading-circle-width: $spinkit-size !default;
-$spinkit-fading-circle-height: $spinkit-size !default;
-$spinkit-fading-circle-margin: $spinkit-spinner-margin !default;
-$spinkit-fading-circle-background-color: $spinkit-spinner-color !default;
+$spinkit-fading-circle-width: $spinkit-size;
+$spinkit-fading-circle-height: $spinkit-size;
+$spinkit-fading-circle-margin: $spinkit-spinner-margin;
+$spinkit-fading-circle-background-color: $spinkit-spinner-color;
 $spinkit-fading-circle-animation-duration: 1.2s !default;
 $spinkit-fading-circle-css-export: true !default;
 

@@ -6,10 +6,14 @@
  */
 @import "../variables";
 
-$spinkit-pulse-width: $spinkit-size !default;
-$spinkit-pulse-height: $spinkit-size !default;
-$spinkit-pulse-margin: $spinkit-spinner-margin !default;
-$spinkit-pulse-background-color: $spinkit-spinner-color !default;
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+
+$spinkit-pulse-width: $spinkit-size;
+$spinkit-pulse-height: $spinkit-size;
+$spinkit-pulse-margin: $spinkit-spinner-margin;
+$spinkit-pulse-background-color: $spinkit-spinner-color;
 $spinkit-pulse-animation-duration: 1.0s !default;
 $spinkit-pulse-css-export: true !default;
 

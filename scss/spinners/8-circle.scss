@@ -19,11 +19,15 @@
  */
 @import "../variables";
 
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+
  $spinkit-circle-child-count: 12 !default;
- $spinkit-circle-width: $spinkit-size !default;
- $spinkit-circle-height: $spinkit-size !default;
- $spinkit-circle-margin: $spinkit-spinner-margin !default;
- $spinkit-circle-background-color: $spinkit-spinner-color !default;
+ $spinkit-circle-width: $spinkit-size;
+ $spinkit-circle-height: $spinkit-size;
+ $spinkit-circle-margin: $spinkit-spinner-margin;
+ $spinkit-circle-background-color: $spinkit-spinner-color;
  $spinkit-circle-animation-duration: 1.2s !default;
  $spinkit-circle-css-export: true !default;
 

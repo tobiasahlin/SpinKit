@@ -9,10 +9,14 @@
  */
 @import "../variables";
 
-$spinkit-wandering-cube-width: $spinkit-size !default;
-$spinkit-wandering-cube-height: $spinkit-size !default;
-$spinkit-wandering-cube-margin: $spinkit-spinner-margin !default;
-$spinkit-wandering-cube-background-color: $spinkit-spinner-color !default;
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
+
+$spinkit-wandering-cube-width: $spinkit-size;
+$spinkit-wandering-cube-height: $spinkit-size;
+$spinkit-wandering-cube-margin: $spinkit-spinner-margin;
+$spinkit-wandering-cube-background-color: $spinkit-spinner-color;
 $spinkit-wandering-cube-animation-duration: 1.8s !default;
 $spinkit-wandering-cube-css-export: true !default;
 

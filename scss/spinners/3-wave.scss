@@ -37,10 +37,10 @@ $spinkit-wave-css-export: true !default;
 ) {
   width: $width;
   height: $height;
-  font-size: floor($width / $child-count);
+  font-size: $width / $child-count;
 
   .sk-rect {
-    width: floor($width / $child-count * 3/5);
+    width: $width / $child-count * 0.6;
   }
 }
 

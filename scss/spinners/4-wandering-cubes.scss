@@ -48,6 +48,10 @@ $spinkit-wandering-cube-css-export: true !default;
   .sk-cube {
     animation: #{$keyframeName} $duration ease-in-out #{-$duration} infinite both;
   }
+
+  .sk-cube2 {
+    animation-delay: -$duration / 2;
+  }
 }
 
 @mixin sk-wandering-cubes-size(
@@ -102,10 +106,6 @@ $spinkit-wandering-cube-css-export: true !default;
     position: absolute;
     top: 0;
     left: 0;
-  }
-
-  .sk-cube2 {
-    animation-delay: -$duration / 2;
   }
 
   @include sk-wandering-cubes-animation(

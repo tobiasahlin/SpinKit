@@ -38,7 +38,11 @@
 
   .sk-child {
     width: $width / 4;
-    height: $height / 4;
+    @if ($height != "auto") {
+      height: $height / 4;
+    } @else {
+      height: $width / 4;
+    }
   }
 }
 
@@ -77,7 +81,6 @@
   $delay-range: $spinkit-three-bounce-animation-delay-range
 ) {
  text-align: center;
- display: inline;
 
  .sk-child {
    border-radius: 100%;

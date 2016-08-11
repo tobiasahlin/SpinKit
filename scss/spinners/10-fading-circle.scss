@@ -19,13 +19,30 @@
  */
 @import "../variables";
 
-.sk-fading-circle {
-  $circleCount: 12;
-  $animationDuration: 1.2s;
+$spinkit-fading-circle-child-count: 12 !default;
+$spinkit-fading-circle-width: $spinkit-size !default;
+$spinkit-fading-circle-height: $spinkit-size !default;
+$spinkit-fading-circle-margin: $spinkit-spinner-margin !default;
+$spinkit-fading-circle-background-color: $spinkit-spinner-color !default;
+$spinkit-fading-circle-animation-duration: 1.2s !default;
+$spinkit-fading-circle-css-export: true !default;
 
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size;
-  height: $spinkit-size;
+@keyframes sk-circleFadeDelay {
+  0%, 39%, 100% { opacity: 0 }
+  40% { opacity: 1 }
+}
+
+@mixin sk-fading-circle(
+  $width: $spinkit-fading-circle-width,
+  $height: $spinkit-fading-circle-height,
+  $color: $spinkit-fading-circle-background-color,
+  $margin: $spinkit-fading-circle-margin,
+  $duration: $spinkit-fading-circle-animation-duration,
+  $child-count: $spinkit-fading-circle-child-count
+) {
+  margin: $margin;
+  width: $width;
+  height: $height;
   position: relative;
 
   .sk-circle {
@@ -42,22 +59,23 @@
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: $spinkit-spinner-color;
+    background-color: $color;
     border-radius: 100%;
-    animation: sk-circleFadeDelay $animationDuration infinite ease-in-out both;
+    animation: sk-circleFadeDelay $duration infinite ease-in-out both;
   }
 
-  @for $i from 2 through $circleCount {
-    .sk-circle#{$i} { transform: rotate(360deg / $circleCount * ($i - 1)); }
+  @for $i from 2 through $child-count {
+    .sk-circle#{$i} { transform: rotate(360deg / $child-count * ($i - 1)); }
   }
 
-  @for $i from 2 through $circleCount {
-    .sk-circle#{$i}:before { animation-delay: - $animationDuration + $animationDuration / $circleCount * ($i - 1); }
+  @for $i from 2 through $child-count {
+    .sk-circle#{$i}:before { animation-delay: - $duration + $duration / $child-count * ($i - 1); }
   }
 
 }
 
-@keyframes sk-circleFadeDelay {
-  0%, 39%, 100% { opacity: 0 }
-  40% { opacity: 1 }
+@if ($spinkit-fading-circle-css-export) {
+  .sk-fading-circle {
+    @include sk-fading-circle;
+  }
 }

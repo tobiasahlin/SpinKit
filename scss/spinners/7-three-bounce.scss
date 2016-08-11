@@ -10,31 +10,50 @@
  */
  @import "../variables";
 
-.sk-three-bounce {
-  $animationDuration: 1.4s;
-  $delayRange: 0.32s;
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size * 2;
-  text-align: center;
-
-  .sk-child {
-    width: $spinkit-size / 2;
-    height: $spinkit-size / 2;
-    background-color: $spinkit-spinner-color;
-
-    border-radius: 100%;
-    display: inline-block;
-    animation: sk-three-bounce $animationDuration ease-in-out 0s infinite both;
-  }
-
-  .sk-bounce1 { animation-delay: -$delayRange; }
-  .sk-bounce2 { animation-delay: -$delayRange / 2; }
-}
+ $spinkit-three-bounce-width: $spinkit-size * 2 !default;
+ $spinkit-three-bounce-height: $spinkit-size * 2 !default;
+ $spinkit-three-bounce-margin: $spinkit-spinner-margin !default;
+ $spinkit-three-bounce-background-color: $spinkit-spinner-color !default;
+ $spinkit-three-bounce-animation-duration: 1.4s !default;
+ $spinkit-three-bounce-animation-delay-range: 0.32s !default;
+ $spinkit-three-bounce-css-export: true !default;
 
 @keyframes sk-three-bounce {
   0%, 80%, 100% {
     transform: scale(0);
   } 40% {
     transform: scale(1.0);
+  }
+}
+
+@mixin sk-three-bounce(
+  $width: $spinkit-three-bounce-width,
+  $height: $spinkit-three-bounce-height,
+  $color: $spinkit-three-bounce-background-color,
+  $margin: $spinkit-three-bounce-margin,
+  $duration: $spinkit-three-bounce-animation-duration,
+  $delay-range: $spinkit-three-bounce-animation-delay-range
+) {
+ margin: $margin;
+ width: $width;
+ text-align: center;
+
+ .sk-child {
+   width: $width / 4;
+   height: $height / 4;
+   background-color: $color;
+
+   border-radius: 100%;
+   display: inline-block;
+   animation: sk-three-bounce $duration ease-in-out 0s infinite both;
+ }
+
+ .sk-bounce1 { animation-delay: -$delay-range; }
+ .sk-bounce2 { animation-delay: -$delay-range / 2; }
+}
+
+@if ($spinkit-three-bounce-css-export) {
+  .sk-three-bounce {
+    @include sk-three-bounce;
   }
 }

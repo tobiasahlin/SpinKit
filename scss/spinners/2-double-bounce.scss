@@ -9,30 +9,49 @@
  */
 @import "../variables";
 
-.sk-double-bounce {
-  width: $spinkit-size;
-  height: $spinkit-size;
+$spinkit-double-bounce-width: $spinkit-size !default;
+$spinkit-double-bounce-height: $spinkit-size !default;
+$spinkit-double-bounce-margin: $spinkit-spinner-margin !default;
+$spinkit-double-bounce-background-color: $spinkit-spinner-color !default;
+$spinkit-double-bounce-animation-duration: 2.0s !default;
+$spinkit-double-bounce-css-export: true !default;
+
+@keyframes sk-doubleBounce {
+  0%, 100% { transform: scale(0) }
+  50% { transform: scale(1.0) }
+}
+
+@mixin sk-double-bounce(
+  $width: $spinkit-double-bounce-width,
+  $height: $spinkit-double-bounce-height,
+  $color: $spinkit-double-bounce-background-color,
+  $margin: $spinkit-double-bounce-margin,
+  $duration: $spinkit-double-bounce-animation-duration
+) {
+  width: $width;
+  height: $height;
   position: relative;
-  margin: $spinkit-spinner-margin;
+  margin: $margin;
 
   .sk-child {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: $spinkit-spinner-color;
+    background-color: $color;
     opacity: 0.6;
     position: absolute;
     top: 0;
     left: 0;
-    animation: sk-doubleBounce 2.0s infinite ease-in-out;
+    animation: sk-doubleBounce $duration infinite ease-in-out;
   }
 
-  .sk-double-bounce2 {
-    animation-delay: -1.0s;
+  &2 {
+    animation-delay: -$duration / 2;
   }
 }
 
-@keyframes sk-doubleBounce {
-  0%, 100% { transform: scale(0) }
-  50% { transform: scale(1.0) }
+@if ($spinkit-double-bounce-css-export) {
+  .sk-double-bounce {
+    @include sk-double-bounce;
+  }
 }

@@ -11,14 +11,40 @@
  */
 @import "../variables";
 
-.sk-folding-cube {
-  $cubeCount: 4;
-  $animationDuration: 2.4s;
-  $delayRange: $animationDuration/2;
+$spinkit-folding-cube-child-count: 4 !default;
+$spinkit-folding-cube-width: $spinkit-size !default;
+$spinkit-folding-cube-height: $spinkit-size !default;
+$spinkit-folding-cube-margin: $spinkit-spinner-margin !default;
+$spinkit-folding-cube-background-color: $spinkit-spinner-color !default;
+$spinkit-folding-cube-animation-duration: 2.4s !default;
+$spinkit-folding-cube-animation-delay-range: 1.2s !default;
+$spinkit-folding-cube-css-export: true !default;
 
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size;
-  height: $spinkit-size;
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  } 25%, 75% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  } 90%, 100% {
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@mixin sk-folding-cube(
+  $width: $spinkit-folding-cube-width,
+  $height: $spinkit-folding-cube-height,
+  $color: $spinkit-folding-cube-background-color,
+  $margin: $spinkit-folding-cube-margin,
+  $duration: $spinkit-folding-cube-animation-duration,
+  $delay-range: $spinkit-folding-cube-animation-delay-range,
+  $child-count: $spinkit-folding-cube-child-count
+) {
+  margin: $margin;
+  width: $width;
+  height: $height;
   position: relative;
   transform: rotateZ(45deg);
 
@@ -37,34 +63,27 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $spinkit-spinner-color;
-    animation: sk-foldCubeAngle $animationDuration infinite linear both;
+    background-color: $color;
+    animation: sk-foldCubeAngle $duration infinite linear both;
     transform-origin: 100% 100%;
   }
 
   // Rotation / angle
-  @for $i from 2 through $cubeCount {
+  @for $i from 2 through $child-count {
     .sk-cube#{$i} {
       transform: scale(1.1) rotateZ(90deg * ($i - 1));
     }
   }
 
-  @for $i from 2 through $cubeCount {
+  @for $i from 2 through $child-count {
     .sk-cube#{$i}:before {
-      animation-delay: $delayRange / $cubeCount * ($i - 1);
+      animation-delay: $delay-range / $child-count * ($i - 1);
     }
   }
 }
 
-@keyframes sk-foldCubeAngle {
-  0%, 10% {
-    transform: perspective(140px) rotateX(-180deg);
-    opacity: 0;
-  } 25%, 75% {
-    transform: perspective(140px) rotateX(0deg);
-    opacity: 1;
-  } 90%, 100% {
-    transform: perspective(140px) rotateY(180deg);
-    opacity: 0;
+@if ($spinkit-folding-cube-css-export) {
+  .sk-folding-cube {
+    @include sk-folding-cube;
   }
 }

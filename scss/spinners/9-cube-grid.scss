@@ -16,19 +16,37 @@
  */
 @import "../variables";
 
-.sk-cube-grid {
-  $delayRange: 0.4s;
+$spinkit-cube-grid-width: $spinkit-size !default;
+$spinkit-cube-grid-height: $spinkit-size !default;
+$spinkit-cube-grid-margin: $spinkit-spinner-margin !default;
+$spinkit-cube-grid-background-color: $spinkit-spinner-color !default;
+$spinkit-cube-grid-animation-duration: 1.3s !default;
+$spinkit-cube-grid-animation-delay-range: 0.4s !default;
+$spinkit-cube-grid-css-export: true !default;
 
-  width: $spinkit-size;
-  height: $spinkit-size;
-  margin: $spinkit-spinner-margin;
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% { transform:scale3D(1.0, 1.0, 1.0) }
+  35%           { transform:scale3D(0.0, 0.0, 1.0) }
+}
+
+@mixin sk-cube-grid(
+  $width: $spinkit-cube-grid-width,
+  $height: $spinkit-cube-grid-height,
+  $color: $spinkit-cube-grid-background-color,
+  $margin: $spinkit-cube-grid-margin,
+  $duration: $spinkit-cube-grid-animation-duration,
+  $delay-range: $spinkit-cube-grid-animation-delay-range
+) {
+  width: $width;
+  height: $height;
+  margin: $margin;
 
   .sk-cube {
     width: 33.33%;
     height: 33.33%;
-    background-color: $spinkit-spinner-color;
+    background-color: $color;
     float: left;
-    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay $duration infinite ease-in-out;
   }
 
   /*
@@ -38,18 +56,19 @@
    * 7 8 9
    */
 
-  .sk-cube1 { animation-delay: $delayRange * 0.50 }
-  .sk-cube2 { animation-delay: $delayRange * 0.75 }
-  .sk-cube3 { animation-delay: $delayRange }
-  .sk-cube4 { animation-delay: $delayRange * 0.25 }
-  .sk-cube5 { animation-delay: $delayRange * 0.50 }
-  .sk-cube6 { animation-delay: $delayRange * 0.75 }
+  .sk-cube1 { animation-delay: $delay-range * 0.50 }
+  .sk-cube2 { animation-delay: $delay-range * 0.75 }
+  .sk-cube3 { animation-delay: $delay-range }
+  .sk-cube4 { animation-delay: $delay-range * 0.25 }
+  .sk-cube5 { animation-delay: $delay-range * 0.50 }
+  .sk-cube6 { animation-delay: $delay-range * 0.75 }
   .sk-cube7 { animation-delay: 0.0s }
-  .sk-cube8 { animation-delay: $delayRange * 0.25 }
-  .sk-cube9 { animation-delay: $delayRange * 0.50 }
+  .sk-cube8 { animation-delay: $delay-range * 0.25 }
+  .sk-cube9 { animation-delay: $delay-range * 0.50 }
 }
 
-@keyframes sk-cubeGridScaleDelay {
-  0%, 70%, 100% { transform:scale3D(1.0, 1.0, 1.0) }
-  35%           { transform:scale3D(0.0, 0.0, 1.0) }
+@if ($spinkit-cube-grid-css-export) {
+  .sk-cube-grid {
+    @include sk-cube-grid;
+  }
 }

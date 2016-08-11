@@ -9,28 +9,12 @@
  */
 @import "../variables";
 
-.sk-wandering-cubes {
-  $animationDuration: 1.8s;
-
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size;
-  height: $spinkit-size;
-  position: relative;
-
-  .sk-cube {
-    background-color: $spinkit-spinner-color;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: sk-wanderingCube $animationDuration ease-in-out #{-$animationDuration} infinite both;
-  }
-
-  .sk-cube2 {
-    animation-delay: -$animationDuration / 2;
-  }
-}
+$spinkit-wandering-cube-width: $spinkit-size !default;
+$spinkit-wandering-cube-height: $spinkit-size !default;
+$spinkit-wandering-cube-margin: $spinkit-spinner-margin !default;
+$spinkit-wandering-cube-background-color: $spinkit-spinner-color !default;
+$spinkit-wandering-cube-animation-duration: 1.8s !default;
+$spinkit-wandering-cube-css-export: true !default;
 
 @keyframes sk-wanderingCube {
   $cubeDistance: 30px;
@@ -47,5 +31,38 @@
     transform: translateX(0) translateY($cubeDistance) rotate(-270deg) scale(0.5);
   } 100% {
     transform: rotate(-360deg);
+  }
+}
+
+@mixin sk-wandering-cube(
+  $width: $spinkit-wandering-cube-width,
+  $height: $spinkit-wandering-cube-height,
+  $color: $spinkit-wandering-cube-background-color,
+  $margin: $spinkit-wandering-cube-margin,
+  $duration: $spinkit-wandering-cube-animation-duration
+) {
+  margin: $margin;
+  width: $width;
+  height: $height;
+  position: relative;
+
+  .sk-cube {
+    background-color: $color;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: sk-wanderingCube $duration ease-in-out #{-$duration} infinite both;
+  }
+
+  .sk-cube2 {
+    animation-delay: -$duration / 2;
+  }
+}
+
+@if ($spinkit-wandering-cube-css-export) {
+  .sk-wandering-cubes {
+    @include sk-wandering-cube;
   }
 }

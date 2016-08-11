@@ -6,14 +6,12 @@
  */
 @import "../variables";
 
-.sk-spinner-pulse {
-  width: $spinkit-size;
-  height: $spinkit-size;
-  margin: $spinkit-spinner-margin;
-  background-color: $spinkit-spinner-color;
-  border-radius: 100%;
-  animation: sk-pulseScaleOut 1.0s infinite ease-in-out;
-}
+$spinkit-pulse-width: $spinkit-size !default;
+$spinkit-pulse-height: $spinkit-size !default;
+$spinkit-pulse-margin: $spinkit-spinner-margin !default;
+$spinkit-pulse-background-color: $spinkit-spinner-color !default;
+$spinkit-pulse-animation-duration: 1.0s !default;
+$spinkit-pulse-css-export: true !default;
 
 @keyframes sk-pulseScaleOut {
   0% {
@@ -21,5 +19,26 @@
   } 100% {
     transform: scale(1.0);
     opacity: 0;
+  }
+}
+
+@mixin sk-pulse(
+  $width: $spinkit-pulse-width,
+  $height: $spinkit-pulse-height,
+  $color: $spinkit-pulse-background-color,
+  $margin: $spinkit-pulse-margin,
+  $duration: $spinkit-pulse-animation-duration
+) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+  background-color: $color;
+  border-radius: 100%;
+  animation: sk-pulseScaleOut $duration infinite ease-in-out;
+}
+
+@if ($spinkit-pulse-css-export) {
+  .sk-spinner-pulse {
+    @include sk-pulse;
   }
 }

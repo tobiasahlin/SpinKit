@@ -12,31 +12,50 @@
  */
 @import "../variables";
 
-.sk-wave {
-  $rectCount: 5;
-  $animationDuration: 1.2s;
-  $delayRange: 0.4s;
-
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size * 1.25;
-  height: $spinkit-size;
-  text-align: center;
-  font-size: 10px;
-
-  .sk-rect {
-    background-color: $spinkit-spinner-color;
-    height: 100%;
-    width: 6px;
-    display: inline-block;
-    animation: sk-waveStretchDelay $animationDuration infinite ease-in-out;
-  }
-
-  @for $i from 1 through $rectCount {
-    .sk-rect#{$i} { animation-delay: - $animationDuration + $delayRange / ($rectCount - 1) * ($i - 1); }
-  }
-}
+$spinkit-wave-child-count: 5 !default;
+$spinkit-wave-width: $spinkit-size * 1.25 !default;
+$spinkit-wave-height: $spinkit-size !default;
+$spinkit-wave-margin: $spinkit-spinner-margin !default;
+$spinkit-wave-background-color: $spinkit-spinner-color !default;
+$spinkit-wave-animation-duration: 1.2s !default;
+$spinkit-wave-animation-delay-range: 0.4s !default;
+$spinkit-wave-css-export: true !default;
 
 @keyframes sk-waveStretchDelay {
   0%, 40%, 100% { transform: scaleY(0.4) }
   20% { transform: scaleY(1.0) }
+}
+
+@mixin sk-wave (
+  $width: $spinkit-wave-width,
+  $height: $spinkit-wave-height,
+  $color: $spinkit-wave-background-color,
+  $margin: $spinkit-wave-margin,
+  $duration: $spinkit-wave-animation-duration,
+  $delay-range: $spinkit-wave-animation-delay-range,
+  $child-count: $spinkit-wave-child-count
+) {
+  margin: $margin;
+  width: $width;
+  height: $height;
+  text-align: center;
+  font-size: 10px;
+
+  .sk-rect {
+    background-color: $color;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    animation: sk-waveStretchDelay $duration infinite ease-in-out;
+  }
+
+  @for $i from 1 through $child-count {
+    .sk-rect#{$i} { animation-delay: - $duration + $delay-range / ($child-count - 1) * ($i - 1); }
+  }
+}
+
+@if ($spinkit-wave-css-export) {
+  .sk-wave {
+    @include sk-wave;
+  }
 }

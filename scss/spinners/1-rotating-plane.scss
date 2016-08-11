@@ -27,6 +27,38 @@ $spinkit-rotating-plane-css-export: true !default;
   }
 }
 
+@mixin sk-rotating-plane-size(
+  $width: $spinkit-rotating-plane-width,
+  $height: $spinkit-rotating-plane-height
+) {
+  width: $width;
+  height: $height;
+}
+
+@mixin sk-rotating-plane-color(
+  $color: $spinkit-rotating-plane-background-color
+) {
+  background-color: $color;
+}
+
+@mixin sk-rotating-plane-style(
+  $width: $spinkit-rotating-plane-width,
+  $height: $spinkit-rotating-plane-height,
+  $color: $spinkit-rotating-plane-background-color,
+  $margin: $spinkit-rotating-plane-margin
+) {
+  margin: $margin;
+
+  @include sk-rotating-plane-size(
+    $width: $width,
+    $height: $height
+  );
+
+  @include sk-rotating-plane-color(
+    $color: $color
+  );
+}
+
 @mixin sk-rotating-plane(
   $width: $spinkit-rotating-plane-width,
   $height: $spinkit-rotating-plane-height,
@@ -34,11 +66,14 @@ $spinkit-rotating-plane-css-export: true !default;
   $margin: $spinkit-rotating-plane-margin,
   $duration: $spinkit-rotating-plane-animation-duration
 ) {
-  width: $width;
-  height: $height;
-  background-color: $color;
-  margin: $margin;
   animation: sk-rotatePlane #{$duration} infinite ease-in-out;
+
+  @include sk-rotating-plane-style(
+    $width: $width,
+    $height: $height,
+    $color: $color,
+    $margin: $margin
+  );
 }
 
 @if ($spinkit-rotating-plane-css-export) {

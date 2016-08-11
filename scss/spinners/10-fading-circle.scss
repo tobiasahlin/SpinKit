@@ -35,6 +35,41 @@ $spinkit-fading-circle-css-export: true !default;
   0%, 39%, 100% { opacity: 0 }
   40% { opacity: 1 }
 }
+@mixin sk-fading-circle-size(
+  $width: $spinkit-fading-circle-width,
+  $height: $spinkit-fading-circle-height
+) {
+  width: $width;
+  height: $height;
+}
+
+@mixin sk-fading-circle-color(
+  $color: $spinkit-fading-circle-background-color
+) {
+  .sk-circle:before {
+    background-color: $color;
+  }
+}
+
+@mixin sk-fading-circle-style(
+  $width: $spinkit-fading-circle-width,
+  $height: $spinkit-fading-circle-height,
+  $color: $spinkit-fading-circle-background-color,
+  $margin: $spinkit-fading-circle-margin
+) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+
+  @include sk-fading-circle-size(
+    $width: $width,
+    $height: $height
+  );
+
+  @include sk-fading-circle-color(
+    $color: $color
+  );
+}
 
 @mixin sk-fading-circle(
   $width: $spinkit-fading-circle-width,
@@ -44,9 +79,6 @@ $spinkit-fading-circle-css-export: true !default;
   $duration: $spinkit-fading-circle-animation-duration,
   $child-count: $spinkit-fading-circle-child-count
 ) {
-  margin: $margin;
-  width: $width;
-  height: $height;
   position: relative;
 
   .sk-circle {
@@ -63,7 +95,6 @@ $spinkit-fading-circle-css-export: true !default;
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: $color;
     border-radius: 100%;
     animation: sk-circleFadeDelay $duration infinite ease-in-out both;
   }
@@ -76,6 +107,12 @@ $spinkit-fading-circle-css-export: true !default;
     .sk-circle#{$i}:before { animation-delay: - $duration + $duration / $child-count * ($i - 1); }
   }
 
+  @include sk-fading-circle-style(
+    $width: $width,
+    $height: $height,
+    $color: $color,
+    $margin: $margin
+  );
 }
 
 @if ($spinkit-fading-circle-css-export) {

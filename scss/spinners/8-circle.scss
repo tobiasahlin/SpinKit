@@ -23,17 +23,50 @@ $spinkit-spinner-margin: 40px auto !default;
 $spinkit-size: 40px !default;
 $spinkit-spinner-color: #333 !default;
 
- $spinkit-circle-child-count: 12 !default;
- $spinkit-circle-width: $spinkit-size;
- $spinkit-circle-height: $spinkit-size;
- $spinkit-circle-margin: $spinkit-spinner-margin;
- $spinkit-circle-background-color: $spinkit-spinner-color;
- $spinkit-circle-animation-duration: 1.2s !default;
- $spinkit-circle-css-export: true !default;
+$spinkit-circle-child-count: 12 !default;
+$spinkit-circle-width: $spinkit-size;
+$spinkit-circle-height: $spinkit-size;
+$spinkit-circle-margin: $spinkit-spinner-margin;
+$spinkit-circle-background-color: $spinkit-spinner-color;
+$spinkit-circle-animation-duration: 1.2s !default;
+$spinkit-circle-css-export: true !default;
 
 @keyframes sk-circleBounceDelay {
   0%, 80%, 100% { transform: scale(0) }
   40% { transform: scale(1.0) }
+}
+@mixin sk-circle-size(
+  $width: $spinkit-circle-width,
+  $height: $spinkit-circle-height
+) {
+  width: $width;
+  height: $height;
+}
+
+@mixin sk-circle-color(
+  $color: $spinkit-circle-background-color
+) {
+  .sk-child:before {
+    background-color: $color;
+  }
+}
+
+@mixin sk-circle-style(
+  $width: $spinkit-circle-width,
+  $height: $spinkit-circle-height,
+  $color: $spinkit-circle-background-color,
+  $margin: $spinkit-circle-margin
+) {
+  margin: $margin;
+
+  @include sk-circle-size(
+    $width: $width,
+    $height: $height
+  );
+
+  @include sk-circle-color(
+    $color: $color
+  );
 }
 
 @mixin sk-circle(
@@ -44,9 +77,6 @@ $spinkit-spinner-color: #333 !default;
   $duration: $spinkit-circle-animation-duration,
   $child-count: $spinkit-circle-child-count
 ) {
-  margin: $margin;
-  width: $width;
-  height: $height;
   position: relative;
 
   .sk-child {
@@ -63,7 +93,6 @@ $spinkit-spinner-color: #333 !default;
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: $color;
     border-radius: 100%;
     animation: sk-circleBounceDelay $duration infinite ease-in-out both;
   }
@@ -75,6 +104,13 @@ $spinkit-spinner-color: #333 !default;
   @for $i from 2 through $child-count {
     .sk-circle#{$i}:before { animation-delay: - $duration + $duration / $child-count * ($i - 1); }
   }
+
+  @include sk-circle-style(
+    $width: $width,
+    $height: $height,
+    $color: $color,
+    $margin: $margin
+  );
 }
 
 @if ($spinkit-circle-css-export) {

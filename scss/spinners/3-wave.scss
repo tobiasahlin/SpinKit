@@ -30,6 +30,48 @@ $spinkit-wave-css-export: true !default;
   20% { transform: scaleY(1.0) }
 }
 
+@mixin sk-wave-size(
+  $width: $spinkit-wave-width,
+  $height: $spinkit-wave-height,
+  $child-count: $spinkit-wave-child-count
+) {
+  width: $width;
+  height: $height;
+  font-size: floor($width / $child-count);
+
+  .sk-rect {
+    width: floor($width / $child-count * 3/5);
+  }
+}
+
+@mixin sk-wave-color(
+  $color: $spinkit-wave-background-color
+) {
+  .sk-rect {
+    background-color: $color;
+  }
+}
+
+@mixin sk-wave-style(
+  $width: $spinkit-wave-width,
+  $height: $spinkit-wave-height,
+  $color: $spinkit-wave-background-color,
+  $margin: $spinkit-wave-margin,
+  $child-count: $spinkit-wave-child-count
+) {
+  margin: $margin;
+
+  @include sk-wave-size(
+    $width: $width,
+    $height: $height,
+    $child-count: $child-count
+  );
+
+  @include sk-wave-color(
+    $color: $color
+  );
+}
+
 @mixin sk-wave (
   $width: $spinkit-wave-width,
   $height: $spinkit-wave-height,
@@ -39,16 +81,10 @@ $spinkit-wave-css-export: true !default;
   $delay-range: $spinkit-wave-animation-delay-range,
   $child-count: $spinkit-wave-child-count
 ) {
-  margin: $margin;
-  width: $width;
-  height: $height;
   text-align: center;
-  font-size: 10px;
 
   .sk-rect {
-    background-color: $color;
     height: 100%;
-    width: 6px;
     display: inline-block;
     animation: sk-waveStretchDelay $duration infinite ease-in-out;
   }
@@ -56,6 +92,14 @@ $spinkit-wave-css-export: true !default;
   @for $i from 1 through $child-count {
     .sk-rect#{$i} { animation-delay: - $duration + $delay-range / ($child-count - 1) * ($i - 1); }
   }
+
+  @include sk-wave-style(
+    $width: $width,
+    $height: $height,
+    $color: $color,
+    $margin: $margin,
+    $child-count: $child-count
+  );
 }
 
 @if ($spinkit-wave-css-export) {

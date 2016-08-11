@@ -37,6 +37,40 @@ $spinkit-folding-cube-css-export: true !default;
   }
 }
 
+@mixin sk-folding-cube-size(
+  $width: $spinkit-folding-cube-width,
+  $height: $spinkit-folding-cube-height
+) {
+  width: $width;
+  height: $height;
+}
+
+@mixin sk-folding-cube-color(
+  $color: $spinkit-folding-cube-background-color
+) {
+  .sk-cube:before {
+    background-color: $color;
+  }
+}
+
+@mixin sk-folding-cube-style(
+  $width: $spinkit-folding-cube-width,
+  $height: $spinkit-folding-cube-height,
+  $color: $spinkit-folding-cube-background-color,
+  $margin: $spinkit-folding-cube-margin
+) {
+  margin: $margin;
+
+  @include sk-folding-cube-size(
+    $width: $width,
+    $height: $height
+  );
+
+  @include sk-folding-cube-color(
+    $color: $color
+  );
+}
+
 @mixin sk-folding-cube(
   $width: $spinkit-folding-cube-width,
   $height: $spinkit-folding-cube-height,
@@ -46,9 +80,6 @@ $spinkit-folding-cube-css-export: true !default;
   $delay-range: $spinkit-folding-cube-animation-delay-range,
   $child-count: $spinkit-folding-cube-child-count
 ) {
-  margin: $margin;
-  width: $width;
-  height: $height;
   position: relative;
   transform: rotateZ(45deg);
 
@@ -67,7 +98,6 @@ $spinkit-folding-cube-css-export: true !default;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $color;
     animation: sk-foldCubeAngle $duration infinite linear both;
     transform-origin: 100% 100%;
   }
@@ -84,6 +114,13 @@ $spinkit-folding-cube-css-export: true !default;
       animation-delay: $delay-range / $child-count * ($i - 1);
     }
   }
+
+  @include sk-folding-cube-style(
+    $width: $width,
+    $height: $height,
+    $color: $color,
+    $margin: $margin
+  );
 }
 
 @if ($spinkit-folding-cube-css-export) {

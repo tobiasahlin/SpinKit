@@ -20,53 +20,110 @@ $spinkit-wandering-cube-background-color: $spinkit-spinner-color;
 $spinkit-wandering-cube-animation-duration: 1.8s !default;
 $spinkit-wandering-cube-css-export: true !default;
 
-@keyframes sk-wanderingCube {
-  $cubeDistance: 30px;
-  0% {
-    transform: rotate(0deg);
-  } 25% {
-    transform: translateX($cubeDistance) rotate(-90deg) scale(0.5);
-  } 50% {
-    /* Hack to make FF rotate in the right direction */
-    transform: translateX($cubeDistance) translateY($cubeDistance) rotate(-179deg);
-  } 50.1% {
-    transform: translateX($cubeDistance) translateY($cubeDistance) rotate(-180deg);
-  } 75% {
-    transform: translateX(0) translateY($cubeDistance) rotate(-270deg) scale(0.5);
-  } 100% {
-    transform: rotate(-360deg);
+@mixin sk-wandering-cubes-animation(
+  $width: $spinkit-wandering-cube-width,
+  $height: $spinkit-wandering-cube-height,
+  $duration: $spinkit-wandering-cube-animation-duration
+) {
+  $distanceX: $width * 3/4;
+  $distanceY: $height * 3/4;
+  $keyframeName: selector-replace("sk-wanderingCube-" + $width + "-" + $height, ".", "");
+  @keyframes #{$keyframeName} {
+    0% {
+      transform: rotate(0deg);
+    } 25% {
+      transform: translateX($distanceX) rotate(-90deg) scale(0.5);
+    } 50% {
+      /* Hack to make FF rotate in the right direction */
+      transform: translateX($distanceX) translateY($distanceY) rotate(-179deg);
+    } 50.1% {
+      transform: translateX($distanceX) translateY($distanceY) rotate(-180deg);
+    } 75% {
+      transform: translateX(0) translateY($distanceY) rotate(-270deg) scale(0.5);
+    } 100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .sk-cube {
+    animation: #{$keyframeName} $duration ease-in-out #{-$duration} infinite both;
   }
 }
 
-@mixin sk-wandering-cube(
+@mixin sk-wandering-cubes-size(
+  $width: $spinkit-wandering-cube-width,
+  $height: $spinkit-wandering-cube-height
+) {
+  width: $width;
+  height: $height;
+
+  .sk-cube {
+    width: $width / 4;
+    height: $height / 4;
+  }
+}
+
+@mixin sk-wandering-cubes-color(
+  $color: $spinkit-wandering-cube-background-color
+) {
+  .sk-cube {
+    background-color: $color;
+  }
+}
+
+@mixin sk-wandering-cubes-style(
+  $width: $spinkit-wandering-cube-width,
+  $height: $spinkit-wandering-cube-height,
+  $color: $spinkit-wandering-cube-background-color,
+  $margin: $spinkit-wandering-cube-margin
+) {
+  margin: $margin;
+
+  @include sk-wandering-cubes-size(
+    $width: $width,
+    $height: $height
+  );
+
+  @include sk-wandering-cubes-color(
+    $color: $color
+  );
+}
+
+@mixin sk-wandering-cubes(
   $width: $spinkit-wandering-cube-width,
   $height: $spinkit-wandering-cube-height,
   $color: $spinkit-wandering-cube-background-color,
   $margin: $spinkit-wandering-cube-margin,
   $duration: $spinkit-wandering-cube-animation-duration
 ) {
-  margin: $margin;
-  width: $width;
-  height: $height;
   position: relative;
 
   .sk-cube {
-    background-color: $color;
-    width: 10px;
-    height: 10px;
     position: absolute;
     top: 0;
     left: 0;
-    animation: sk-wanderingCube $duration ease-in-out #{-$duration} infinite both;
   }
 
   .sk-cube2 {
     animation-delay: -$duration / 2;
   }
+
+  @include sk-wandering-cubes-animation(
+    $width: $width,
+    $height: $height,
+    $duration: $duration
+  );
+
+  @include sk-wandering-cubes-style(
+    $width: $width,
+    $height: $height,
+    $color: $color,
+    $margin: $margin
+  );
 }
 
 @if ($spinkit-wandering-cube-css-export) {
   .sk-wandering-cubes {
-    @include sk-wandering-cube;
+    @include sk-wandering-cubes;
   }
 }

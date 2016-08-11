@@ -25,6 +25,40 @@ $spinkit-double-bounce-css-export: true !default;
   50% { transform: scale(1.0) }
 }
 
+@mixin sk-double-bounce-size(
+  $width: $spinkit-double-bounce-width,
+  $height: $spinkit-double-bounce-height
+) {
+  width: $width;
+  height: $height;
+}
+
+@mixin sk-double-bounce-color(
+  $color: $spinkit-double-bounce-background-color
+) {
+  .sk-child {
+    background-color: $color;
+  }
+}
+
+@mixin sk-double-bounce-style(
+  $width: $spinkit-double-bounce-width,
+  $height: $spinkit-double-bounce-height,
+  $color: $spinkit-double-bounce-background-color,
+  $margin: $spinkit-double-bounce-margin
+) {
+  margin: $margin;
+
+  @include sk-double-bounce-size(
+    $width: $width,
+    $height: $height
+  );
+
+  @include sk-double-bounce-color(
+    $color: $color
+  );
+}
+
 @mixin sk-double-bounce(
   $width: $spinkit-double-bounce-width,
   $height: $spinkit-double-bounce-height,
@@ -32,16 +66,12 @@ $spinkit-double-bounce-css-export: true !default;
   $margin: $spinkit-double-bounce-margin,
   $duration: $spinkit-double-bounce-animation-duration
 ) {
-  width: $width;
-  height: $height;
   position: relative;
-  margin: $margin;
 
   .sk-child {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: $color;
     opacity: 0.6;
     position: absolute;
     top: 0;
@@ -52,6 +82,13 @@ $spinkit-double-bounce-css-export: true !default;
   &2 {
     animation-delay: -$duration / 2;
   }
+
+  @include sk-double-bounce-style(
+    $width: $width,
+    $height: $height,
+    $color: $color,
+    $margin: $margin
+  );
 }
 
 @if ($spinkit-double-bounce-css-export) {

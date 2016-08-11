@@ -29,6 +29,44 @@
     transform: scale(1.0);
   }
 }
+@mixin sk-three-bounce-size(
+  $width: $spinkit-three-bounce-width,
+  $height: $spinkit-three-bounce-height
+) {
+  width: $width;
+  height: $height;
+
+  .sk-child {
+    width: $width / 4;
+    height: $height / 4;
+  }
+}
+
+@mixin sk-three-bounce-color(
+  $color: $spinkit-three-bounce-background-color
+) {
+  .sk-child {
+    background-color: $color;
+  }
+}
+
+@mixin sk-three-bounce-style(
+  $width: $spinkit-three-bounce-width,
+  $height: $spinkit-three-bounce-height,
+  $color: $spinkit-three-bounce-background-color,
+  $margin: $spinkit-three-bounce-margin
+) {
+  margin: $margin;
+
+  @include sk-three-bounce-size(
+    $width: $width,
+    $height: $height
+  );
+
+  @include sk-three-bounce-color(
+    $color: $color
+  );
+}
 
 @mixin sk-three-bounce(
   $width: $spinkit-three-bounce-width,
@@ -38,15 +76,10 @@
   $duration: $spinkit-three-bounce-animation-duration,
   $delay-range: $spinkit-three-bounce-animation-delay-range
 ) {
- margin: $margin;
- width: $width;
  text-align: center;
+ display: inline;
 
  .sk-child {
-   width: $width / 4;
-   height: $height / 4;
-   background-color: $color;
-
    border-radius: 100%;
    display: inline-block;
    animation: sk-three-bounce $duration ease-in-out 0s infinite both;
@@ -54,6 +87,13 @@
 
  .sk-bounce1 { animation-delay: -$delay-range; }
  .sk-bounce2 { animation-delay: -$delay-range / 2; }
+
+ @include sk-three-bounce-style(
+   $width: $width,
+   $height: $height,
+   $color: $color,
+   $margin: $margin
+ );
 }
 
 @if ($spinkit-three-bounce-css-export) {

@@ -9,33 +9,16 @@
  */
 @import "../variables";
 
-.sk-chasing-dots {
-  $animationDuration: 2.0s;
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;
 
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size;
-  height: $spinkit-size;
-  position: relative;
-  text-align: center;
-  animation: sk-chasingDotsRotate $animationDuration infinite linear;
-
-  .sk-child {
-    width: 60%;
-    height: 60%;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    background-color: $spinkit-spinner-color;
-    border-radius: 100%;
-    animation: sk-chasingDotsBounce $animationDuration infinite ease-in-out;
-  }
-
-  .sk-dot2 {
-    top: auto;
-    bottom: 0;
-    animation-delay: - $animationDuration/2;
-  }
-}
+$spinkit-chasing-dots-width: $spinkit-size;
+$spinkit-chasing-dots-height: $spinkit-size;
+$spinkit-chasing-dots-margin: $spinkit-spinner-margin;
+$spinkit-chasing-dots-background-color: $spinkit-spinner-color;
+$spinkit-chasing-dots-animation-duration: 2.0s !default;
+$spinkit-chasing-dots-css-export: true !default;
 
 @keyframes sk-chasingDotsRotate {
   100% {
@@ -48,5 +31,79 @@
     transform: scale(0);
   } 50% {
     transform: scale(1.0);
+  }
+}
+@mixin sk-chasing-dots-size(
+  $width: $spinkit-chasing-dots-width,
+  $height: $spinkit-chasing-dots-height
+) {
+  width: $width;
+  height: $height;
+}
+
+@mixin sk-chasing-dots-color(
+  $color: $spinkit-chasing-dots-background-color
+) {
+  .sk-child {
+    background-color: $color;
+  }
+}
+
+@mixin sk-chasing-dots-style(
+  $width: $spinkit-chasing-dots-width,
+  $height: $spinkit-chasing-dots-height,
+  $color: $spinkit-chasing-dots-background-color,
+  $margin: $spinkit-chasing-dots-margin
+) {
+  margin: $margin;
+
+  @include sk-chasing-dots-size(
+    $width: $width,
+    $height: $height
+  );
+
+  @include sk-chasing-dots-color(
+    $color: $color
+  );
+}
+
+@mixin sk-chasing-dots(
+  $width: $spinkit-chasing-dots-width,
+  $height: $spinkit-chasing-dots-height,
+  $color: $spinkit-chasing-dots-background-color,
+  $margin: $spinkit-chasing-dots-margin,
+  $duration: $spinkit-chasing-dots-animation-duration
+) {
+  position: relative;
+  text-align: center;
+  animation: sk-chasingDotsRotate $duration infinite linear;
+
+  .sk-child {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    border-radius: 100%;
+    animation: sk-chasingDotsBounce $duration infinite ease-in-out;
+  }
+
+  .sk-dot2 {
+    top: auto;
+    bottom: 0;
+    animation-delay: - $duration/2;
+  }
+
+  @include sk-chasing-dots-style(
+    $width: $width,
+    $height: $height,
+    $color: $color,
+    $margin: $margin
+  );
+}
+
+@if ($spinkit-chasing-dots-css-export) {
+  .sk-chasing-dots {
+    @include sk-chasing-dots;
   }
 }

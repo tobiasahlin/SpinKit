@@ -10,31 +10,97 @@
  */
  @import "../variables";
 
-.sk-three-bounce {
-  $animationDuration: 1.4s;
-  $delayRange: 0.32s;
-  margin: $spinkit-spinner-margin;
-  width: $spinkit-size * 2;
-  text-align: center;
+ $spinkit-spinner-margin: 40px auto !default;
+ $spinkit-size: 40px !default;
+ $spinkit-spinner-color: #333 !default;
 
-  .sk-child {
-    width: $spinkit-size / 2;
-    height: $spinkit-size / 2;
-    background-color: $spinkit-spinner-color;
-
-    border-radius: 100%;
-    display: inline-block;
-    animation: sk-three-bounce $animationDuration ease-in-out 0s infinite both;
-  }
-
-  .sk-bounce1 { animation-delay: -$delayRange; }
-  .sk-bounce2 { animation-delay: -$delayRange / 2; }
-}
+ $spinkit-three-bounce-width: $spinkit-size * 2;
+ $spinkit-three-bounce-height: $spinkit-size * 2;
+ $spinkit-three-bounce-margin: $spinkit-spinner-margin;
+ $spinkit-three-bounce-background-color: $spinkit-spinner-color;
+ $spinkit-three-bounce-animation-duration: 1.4s !default;
+ $spinkit-three-bounce-animation-delay-range: 0.32s !default;
+ $spinkit-three-bounce-css-export: true !default;
 
 @keyframes sk-three-bounce {
   0%, 80%, 100% {
     transform: scale(0);
   } 40% {
     transform: scale(1.0);
+  }
+}
+@mixin sk-three-bounce-size(
+  $width: $spinkit-three-bounce-width,
+  $height: $spinkit-three-bounce-height
+) {
+  width: $width;
+  height: $height;
+
+  .sk-child {
+    width: $width / 4;
+    @if ($height != "auto") {
+      height: $height / 4;
+    } @else {
+      height: $width / 4;
+    }
+  }
+}
+
+@mixin sk-three-bounce-color(
+  $color: $spinkit-three-bounce-background-color
+) {
+  .sk-child {
+    background-color: $color;
+  }
+}
+
+@mixin sk-three-bounce-style(
+  $width: $spinkit-three-bounce-width,
+  $height: $spinkit-three-bounce-height,
+  $color: $spinkit-three-bounce-background-color,
+  $margin: $spinkit-three-bounce-margin
+) {
+  margin: $margin;
+
+  @include sk-three-bounce-size(
+    $width: $width,
+    $height: $height
+  );
+
+  @include sk-three-bounce-color(
+    $color: $color
+  );
+}
+
+@mixin sk-three-bounce(
+  $width: $spinkit-three-bounce-width,
+  $height: $spinkit-three-bounce-height,
+  $color: $spinkit-three-bounce-background-color,
+  $margin: $spinkit-three-bounce-margin,
+  $duration: $spinkit-three-bounce-animation-duration,
+  $delay-range: $spinkit-three-bounce-animation-delay-range
+) {
+ text-align: center;
+
+ .sk-child {
+   border-radius: 100%;
+   display: inline-block;
+   animation: sk-three-bounce $duration ease-in-out 0s infinite both;
+ }
+
+ .sk-bounce1 { animation-delay: -$delay-range; }
+ .sk-bounce2 { animation-delay: -$delay-range / 2; }
+
+ @include sk-three-bounce-style(
+   $width: $width,
+   $height: $height,
+   $color: $color,
+   $margin: $margin
+ );
+}
+
+@if ($spinkit-three-bounce-css-export) {
+  .sk-three-bounce {
+    @include sk-three-bounce;
   }
 }

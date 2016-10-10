@@ -2,10 +2,10 @@
  *  Usage:
  *
       <div class="sk-folding-cube">
-        <div class="sk-cube1 sk-cube"></div>
-        <div class="sk-cube2 sk-cube"></div>
-        <div class="sk-cube4 sk-cube"></div>
-        <div class="sk-cube3 sk-cube"></div>
+        <div class="sk-cube1 sk-child"></div>
+        <div class="sk-cube2 sk-child"></div>
+        <div class="sk-cube4 sk-child"></div>
+        <div class="sk-cube3 sk-child"></div>
       </div>
  *
  */
@@ -22,7 +22,7 @@
   position: relative;
   transform: rotateZ(45deg);
 
-  .sk-cube {
+  .sk-child {
     float: left;
     width: 50%;
     height: 50%;
@@ -30,7 +30,7 @@
     transform: scale(1.1);
   }
 
-  .sk-cube:before {
+  .sk-child:before {
     content: '';
     position: absolute;
     top: 0;

@@ -2,8 +2,8 @@
  *  Usage:
  *
       <div class="sk-wandering-cubes">
-        <div class="sk-cube sk-cube1"></div>
-        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-child sk-cube1"></div>
+        <div class="sk-child sk-cube2"></div>
       </div>
  *
  */
@@ -17,7 +17,7 @@
   height: $spinkit-size;
   position: relative;
 
-  .sk-cube {
+  .sk-child {
     background-color: $spinkit-spinner-color;
     width: 10px;
     height: 10px;

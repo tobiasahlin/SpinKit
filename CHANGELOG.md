@@ -1,3 +1,8 @@
+# 1.2.6
+
+* Renamed all child like objects to sk-child to be more generic.
+* Fixed: precision of seconds in examples, from 2s to 2.0s
+
 # 1.2.5
 
 * Fixed: Add folding cube spinner (11) to combined CSS file

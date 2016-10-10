@@ -2,8 +2,8 @@
  *  Usage:
  *
       <div class="sk-wandering-cubes">
-        <div class="sk-cube sk-cube1"></div>
-        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-child sk-cube1"></div>
+        <div class="sk-child sk-cube2"></div>
       </div>
  *
  */
@@ -12,7 +12,7 @@
   width: 40px;
   height: 40px;
   position: relative; }
-  .sk-wandering-cubes .sk-cube {
+  .sk-wandering-cubes .sk-child {
     background-color: #333;
     width: 10px;
     height: 10px;

@@ -2,11 +2,11 @@
  *  Usage:
  *
       <div class="sk-wave">
-        <div class="sk-rect sk-rect1"></div>
-        <div class="sk-rect sk-rect2"></div>
-        <div class="sk-rect sk-rect3"></div>
-        <div class="sk-rect sk-rect4"></div>
-        <div class="sk-rect sk-rect5"></div>
+        <div class="sk-child sk-rect1"></div>
+        <div class="sk-child sk-rect2"></div>
+        <div class="sk-child sk-rect3"></div>
+        <div class="sk-child sk-rect4"></div>
+        <div class="sk-child sk-rect5"></div>
       </div>
  *
  */
@@ -23,7 +23,7 @@
   text-align: center;
   font-size: 10px;
 
-  .sk-rect {
+  .sk-child {
     background-color: $spinkit-spinner-color;
     height: 100%;
     width: 6px;

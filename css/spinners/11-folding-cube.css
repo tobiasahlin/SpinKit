@@ -15,7 +15,6 @@
   height: 40px;
   position: relative;
   -webkit-transform: rotateZ(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotateZ(45deg); }
   .sk-folding-cube .sk-child {
     float: left;
@@ -40,15 +39,12 @@
             transform-origin: 100% 100%; }
   .sk-folding-cube .sk-cube2 {
     -webkit-transform: scale(1.1) rotateZ(90deg);
-        -ms-transform: scale(1.1) rotate(90deg);
             transform: scale(1.1) rotateZ(90deg); }
   .sk-folding-cube .sk-cube3 {
     -webkit-transform: scale(1.1) rotateZ(180deg);
-        -ms-transform: scale(1.1) rotate(180deg);
             transform: scale(1.1) rotateZ(180deg); }
   .sk-folding-cube .sk-cube4 {
     -webkit-transform: scale(1.1) rotateZ(270deg);
-        -ms-transform: scale(1.1) rotate(270deg);
             transform: scale(1.1) rotateZ(270deg); }
   .sk-folding-cube .sk-cube2:before {
     -webkit-animation-delay: 0.3s;

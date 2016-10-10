@@ -36,7 +36,9 @@ gulp.task('clean-styles', function(cb) {
 gulp.task('styles', ['clean-styles'], function() {
   return gulp.src(scssDir + '/**/*.scss')
              .pipe(sass({errLogToConsole: true}))
-             .pipe(autoprefixer('last 2 versions', {map: false}))
+             .pipe(autoprefixer({
+               browsers: ['IE >= 9', 'last 4 versions'], map: false
+             }))
              .pipe(gulp.dest(cssDir));
 });
 

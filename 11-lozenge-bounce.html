@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Lozenge Bounce</title>
+    <style>
+      .spinner {
+        margin: 100px auto;
+        width: 500px;
+        height: 30px;
+        text-align: center;
+        font-size: 10px;
+      }
+
+      .spinner > div {
+        background-color: #333;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+        display: inline-block;
+        -webkit-animation: stretchdelay 1s infinite ease-in-out;
+        animation: stretchdelay 1s infinite ease-in-out;
+      }
+
+     .spinner .circ1, .spinner .circ5 {
+        -webkit-animation-delay: .18s;
+        animation-delay: .18s;
+      }
+
+      .spinner .circ2, .spinner .circ4 {
+        -webkit-animation-delay: .09s;
+        animation-delay: .09s;
+      }
+
+      @-webkit-keyframes stretchdelay {
+        0%, 90%, 100% {
+          -webkit-transform: rotate(45deg) scaleX(0.3) scaleY(0.3);
+          transform: rotate(45deg) scaleX(0.3) scaleY(0.3);
+          border-radius: 50%;
+        }
+
+        45% {
+          -webkit-transform: rotate(45deg) scaleX(1) scaleY(1);
+          transform: rotate(45deg) scaleX(1) scaleY(1);
+          border-radius: 0;
+        }
+      }
+
+      @keyframes stretchdelay {
+        0%, 90%, 100% {
+          -webkit-transform: rotate(45deg) scaleX(0.3) scaleY(0.3);
+          transform: rotate(45deg) scaleX(0.3) scaleY(0.3);
+          border-radius: 50%;
+        }
+
+        45% {
+          -webkit-transform: rotate(45deg) scaleX(1) scaleY(1);
+          transform: rotate(45deg) scaleX(1) scaleY(1);
+          border-radius: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spinner">
+      <div class="circ1"></div>
+      <div class="circ2"></div>
+      <div class="circ3"></div>
+      <div class="circ4"></div>
+      <div class="circ5"></div>
+    </div>
+  </body>
+</html>

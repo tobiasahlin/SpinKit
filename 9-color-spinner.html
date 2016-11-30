@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Color Spinner</title>
+    <style>
+    
+    .loading, .loading::after {
+      border-bottom: 1em solid rgba(0, 172, 255, 0.5);
+      border-right: 1em solid rgba(225, 255, 0, 0.5);
+      
+      border-top-color: rgba(217, 0, 255, 0.5);
+      border-left-color: rgba(255, 137, 0, 0.5);
+      
+      
+      border-left: 1em solid transparent;
+      border-top: 1em solid transparent;
+    }
+
+    .loading::after {
+      border-bottom-color: rgba(217, 0, 255, 0.5);
+      border-right-color: rgba(255, 137, 0, 0.5);
+      
+      border-top: 1em solid rgba(0, 172, 255, 0.5);
+      border-left: 1em solid rgba(225, 255, 0, 0.5);
+    }
+
+    .loading, .loading::after {
+      display: block;
+      margin: auto;
+      width: 3em;
+      height: 3em;
+      background: transparent;
+      border-radius: 50%;
+      -webkit-animation: spinFlash 10s infinite linear;
+              animation: spinFlash 10s infinite linear;
+      position: relative;
+    }
+
+    .loading::after {
+      content: '';
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -1em;
+      top: -1em;
+
+      -webkit-animation: spinFlash 5s infinite linear reverse;
+              animation: spinFlash 5s infinite linear reverse;
+    }
+
+    @-webkit-keyframes spinFlash {
+      100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes spinFlash {
+      100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    </style>
+    
+    <!-- example page styles -->
+    <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 50px;
+      display: flex;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGklEQVQIW2Pk5OT8z8HBwcCopaX1//79+wwAITMFT9nBcr8AAAAASUVORK5CYII=');
+    }
+</style>
+  </head>
+  <body>
+  <div class="loading"></div>
+  </body>
+</html>

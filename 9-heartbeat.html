@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Rotating Plane</title>
+    <style>
+    .spinner {
+      width: 30px;
+      height: 30px;
+      background-color: #333;
+
+      margin: 100px auto;
+			
+			border-radius:50%;
+      -webkit-animation: heartbeat 850ms infinite cubic-bezier(.67,0,.47,1);
+      animation: heartbeat 850ms infinite cubic-bezier(.67,0,.47,1);
+				
+				-webkit-transition: all 200ms cubic-bezier(0.940, 0, 0.400, 1); /* older webkit */
+-webkit-transition: all 200ms cubic-bezier(0.940, -0.260, 0.400, 1.325); 
+   -moz-transition: all 200ms cubic-bezier(0.940, -0.260, 0.400, 1.325); 
+     -o-transition: all 200ms cubic-bezier(0.940, -0.260, 0.400, 1.325); 
+        transition: all 200ms cubic-bezier(0.940, -0.260, 0.400, 1.325);
+    }
+
+    @-webkit-keyframes heartbeat {
+      0% {
+        -moz-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-o-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-ms-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      } 15% {
+       -moz-transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-webkit-transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-o-transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-ms-transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      } 30% {
+        -moz-transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-webkit-transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-o-transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-ms-transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      } 45% {
+				-moz-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-o-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-ms-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			}
+    }
+
+    @keyframes heartbeat {
+      0% {
+        -moz-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-o-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-ms-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      } 15% {
+       -moz-transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-webkit-transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-o-transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-ms-transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				transform: scale(1.75) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      } 30% {
+        -moz-transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-webkit-transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-o-transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-ms-transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				transform: scale(0.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      } 45% {
+				-moz-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-o-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				-ms-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+				transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			}
+    }
+    </style>
+  </head>
+  <body>
+    <div class="spinner"></div>
+  </body>
+</html>

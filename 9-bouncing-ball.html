@@ -1,0 +1,44 @@
+    
+	<html>
+	<head>
+	
+	<title>Bouncing Ball</title>
+    <style>
+    .spinner {
+      width: 10px;
+      height: 10px;
+      margin: 100px auto;
+      background-color: #333;
+      border-radius: 100%;
+      -webkit-animation: scaleout 1s ease 0s infinite;
+      animation: scaleout 1s ease 0s infinite;
+
+    }
+	 
+    @-webkit-keyframes scaleout {
+      0% { -webkit-transform: scaleX(1.5); -webkit-animation-timing-function: ease-in-out;}
+	  50% { -webkit-transform:translateY(-80px) scaleY(1.2);}
+      100% {-webkit-transform: scaleX(1.5);}
+    }
+
+    @keyframes scaleout {
+      0% {
+        transform: scale(0.0);
+          
+        }50% 
+        {transform:translateY(-80px) scaleY(1.2);
+        }100% {
+        transform: scale(0.5);
+       
+        opacity: 0;
+      }
+    }
+	
+
+    </style>
+</head>
+  <body>
+    <div class="spinner"></div>	  
+  </body>
+
+</html>

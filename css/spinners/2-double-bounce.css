@@ -24,8 +24,8 @@
     -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
             animation: sk-doubleBounce 2s infinite ease-in-out; }
   .sk-double-bounce .sk-double-bounce2 {
-    -webkit-animation-delay: -1.0s;
-            animation-delay: -1.0s; }
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; }
 
 @-webkit-keyframes sk-doubleBounce {
   0%, 100% {

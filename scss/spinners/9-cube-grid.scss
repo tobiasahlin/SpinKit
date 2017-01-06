@@ -38,18 +38,49 @@
    * 7 8 9
    */
 
-  .sk-cube1 { animation-delay: $delayRange * 0.50 }
-  .sk-cube2 { animation-delay: $delayRange * 0.75 }
-  .sk-cube3 { animation-delay: $delayRange }
-  .sk-cube4 { animation-delay: $delayRange * 0.25 }
-  .sk-cube5 { animation-delay: $delayRange * 0.50 }
-  .sk-cube6 { animation-delay: $delayRange * 0.75 }
-  .sk-cube7 { animation-delay: 0.0s }
-  .sk-cube8 { animation-delay: $delayRange * 0.25 }
-  .sk-cube9 { animation-delay: $delayRange * 0.50 }
+  .sk-cube1 {
+    animation-delay: $delayRange * 0.5;
+    -webkit-animation-delay: $delayRange * 0.5 - 1
+  }
+  .sk-cube2 {
+    animation-delay: $delayRange * 0.75;
+    -webkit-animation-delay: $delayRange * 0.75 - 1
+  }
+  .sk-cube3 {
+    animation-delay: $delayRange;
+    -webkit-animation-delay: $delayRange - 1
+  }
+  .sk-cube4 {
+    animation-delay: $delayRange * 0.25;
+    -webkit-animation-delay: $delayRange * 0.25  - 1
+  }
+  .sk-cube5 {
+    animation-delay: $delayRange * 0.5;
+    -webkit-animation-delay: $delayRange * 0.5  - 1
+  }
+  .sk-cube6 {
+    animation-delay: $delayRange * 0.75;
+    -webkit-animation-delay: $delayRange * 0.75  - 1
+  }
+  .sk-cube7 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s
+  }
+  .sk-cube8 {
+    animation-delay: $delayRange * 0.25;
+    -webkit-animation-delay: $delayRange * 0.25  - 1
+  }
+  .sk-cube9 {
+    animation-delay: $delayRange * 0.5;
+    -webkit-animation-delay: $delayRange * 0.5  - 1
+  }
 }
 
 @keyframes sk-cubeGridScaleDelay {
-  0%, 70%, 100% { transform:scale3D(1.0, 1.0, 1.0) }
-  35%           { transform:scale3D(0.0, 0.0, 1.0) }
+  0%, 70%, 100% {
+    transform: scale3D(1, 1, 1)
+  }
+  35% {
+    transform: scale3D(0, 0, 1)
+  }
 }

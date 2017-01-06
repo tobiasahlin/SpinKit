@@ -32,32 +32,32 @@
     -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
             animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; }
   .sk-cube-grid .sk-cube1 {
-    -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s; }
+    animation-delay: 0.2s;
+    -webkit-animation-delay: -0.8s; }
   .sk-cube-grid .sk-cube2 {
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s; }
+    animation-delay: 0.3s;
+    -webkit-animation-delay: -0.7s; }
   .sk-cube-grid .sk-cube3 {
-    -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s; }
+    animation-delay: 0.4s;
+    -webkit-animation-delay: -0.6s; }
   .sk-cube-grid .sk-cube4 {
-    -webkit-animation-delay: 0.1s;
-            animation-delay: 0.1s; }
+    animation-delay: 0.1s;
+    -webkit-animation-delay: -0.9s; }
   .sk-cube-grid .sk-cube5 {
-    -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s; }
+    animation-delay: 0.2s;
+    -webkit-animation-delay: -0.8s; }
   .sk-cube-grid .sk-cube6 {
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s; }
+    animation-delay: 0.3s;
+    -webkit-animation-delay: -0.7s; }
   .sk-cube-grid .sk-cube7 {
-    -webkit-animation-delay: 0.0s;
-            animation-delay: 0.0s; }
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s; }
   .sk-cube-grid .sk-cube8 {
-    -webkit-animation-delay: 0.1s;
-            animation-delay: 0.1s; }
+    animation-delay: 0.1s;
+    -webkit-animation-delay: -0.9s; }
   .sk-cube-grid .sk-cube9 {
-    -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s; }
+    animation-delay: 0.2s;
+    -webkit-animation-delay: -0.8s; }
 
 @-webkit-keyframes sk-cubeGridScaleDelay {
   0%, 70%, 100% {

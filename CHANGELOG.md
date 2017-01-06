@@ -1,3 +1,9 @@
+# 1.2.6
+
+* Fixed: iOS Bug on 9-cube-grid. see @ http://i.xomf.com/nhqkq.gif.
+* Cleaned up the SCSS - removed unnecessary decimals
+* Notice: there seems to be problems using "gulp build". generated sources are missing -ms-* tags. tried to append ie to browserslist definition but still missing. applied to css files by hand. maybe the latest version of postcss/autoprefixer gets in trouble with gulp-autoprefixer.
+
 # 1.2.5
 
 * Fixed: Add folding cube spinner (11) to combined CSS file

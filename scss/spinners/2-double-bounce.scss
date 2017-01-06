@@ -24,15 +24,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    animation: sk-doubleBounce 2.0s infinite ease-in-out;
+    animation: sk-doubleBounce 2s infinite ease-in-out;
   }
 
   .sk-double-bounce2 {
-    animation-delay: -1.0s;
+    animation-delay: -1s;
   }
 }
 
 @keyframes sk-doubleBounce {
   0%, 100% { transform: scale(0) }
-  50% { transform: scale(1.0) }
+  50% { transform: scale(1) }
 }

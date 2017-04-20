@@ -19,7 +19,7 @@
  */
 @import "../variables";
 
-.sk-circle {
+.#{$spinkit-class-prefix}-circle {
   $circleCount: 12;
   $animationDuration: 1.2s;
 
@@ -28,7 +28,7 @@
   height: $spinkit-size;
   position: relative;
 
-  .sk-child {
+  .#{$spinkit-class-prefix}-child {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -36,7 +36,7 @@
     top: 0;
   }
 
-  .sk-child:before {
+  .#{$spinkit-class-prefix}-child:before {
     content: '';
     display: block;
     margin: 0 auto;
@@ -48,11 +48,11 @@
   }
 
   @for $i from 2 through $circleCount {
-    .sk-circle#{$i} { transform: rotate(360deg / $circleCount * ($i - 1)); }
+    .#{$spinkit-class-prefix}-circle#{$i} { transform: rotate(360deg / $circleCount * ($i - 1)); }
   }
 
   @for $i from 2 through $circleCount {
-    .sk-circle#{$i}:before { animation-delay: - $animationDuration + $animationDuration / $circleCount * ($i - 1); }
+    .#{$spinkit-class-prefix}-circle#{$i}:before { animation-delay: - $animationDuration + $animationDuration / $circleCount * ($i - 1); }
   }
 }
 

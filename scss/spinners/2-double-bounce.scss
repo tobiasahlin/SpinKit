@@ -9,13 +9,13 @@
  */
 @import "../variables";
 
-.sk-double-bounce {
+.#{$spinkit-class-prefix}-double-bounce {
   width: $spinkit-size;
   height: $spinkit-size;
   position: relative;
   margin: $spinkit-spinner-margin;
 
-  .sk-child {
+  .#{$spinkit-class-prefix}-child {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -27,7 +27,7 @@
     animation: sk-doubleBounce 2.0s infinite ease-in-out;
   }
 
-  .sk-double-bounce2 {
+  .#{$spinkit-class-prefix}-double-bounce2 {
     animation-delay: -1.0s;
   }
 }

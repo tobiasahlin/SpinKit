@@ -11,7 +11,7 @@
  */
 @import "../variables";
 
-.sk-folding-cube {
+.#{$spinkit-class-prefix}-folding-cube {
   $cubeCount: 4;
   $animationDuration: 2.4s;
   $delayRange: $animationDuration/2;
@@ -22,7 +22,7 @@
   position: relative;
   transform: rotateZ(45deg);
 
-  .sk-cube {
+  .#{$spinkit-class-prefix}-cube {
     float: left;
     width: 50%;
     height: 50%;
@@ -30,7 +30,7 @@
     transform: scale(1.1);
   }
 
-  .sk-cube:before {
+  .#{$spinkit-class-prefix}-cube:before {
     content: '';
     position: absolute;
     top: 0;
@@ -44,13 +44,13 @@
 
   // Rotation / angle
   @for $i from 2 through $cubeCount {
-    .sk-cube#{$i} {
+    .#{$spinkit-class-prefix}-cube#{$i} {
       transform: scale(1.1) rotateZ(90deg * ($i - 1));
     }
   }
 
   @for $i from 2 through $cubeCount {
-    .sk-cube#{$i}:before {
+    .#{$spinkit-class-prefix}-cube#{$i}:before {
       animation-delay: $delayRange / $cubeCount * ($i - 1);
     }
   }

@@ -16,14 +16,14 @@
  */
 @import "../variables";
 
-.sk-cube-grid {
+.#{$spinkit-class-prefix}-cube-grid {
   $delayRange: 0.4s;
 
   width: $spinkit-size;
   height: $spinkit-size;
   margin: $spinkit-spinner-margin;
 
-  .sk-cube {
+  .#{$spinkit-class-prefix}-cube {
     width: 33.33%;
     height: 33.33%;
     background-color: $spinkit-spinner-color;
@@ -38,15 +38,15 @@
    * 7 8 9
    */
 
-  .sk-cube1 { animation-delay: $delayRange * 0.50 }
-  .sk-cube2 { animation-delay: $delayRange * 0.75 }
-  .sk-cube3 { animation-delay: $delayRange }
-  .sk-cube4 { animation-delay: $delayRange * 0.25 }
-  .sk-cube5 { animation-delay: $delayRange * 0.50 }
-  .sk-cube6 { animation-delay: $delayRange * 0.75 }
-  .sk-cube7 { animation-delay: 0.0s }
-  .sk-cube8 { animation-delay: $delayRange * 0.25 }
-  .sk-cube9 { animation-delay: $delayRange * 0.50 }
+  .#{$spinkit-class-prefix}-cube1 { animation-delay: $delayRange * 0.50 }
+  .#{$spinkit-class-prefix}-cube2 { animation-delay: $delayRange * 0.75 }
+  .#{$spinkit-class-prefix}-cube3 { animation-delay: $delayRange }
+  .#{$spinkit-class-prefix}-cube4 { animation-delay: $delayRange * 0.25 }
+  .#{$spinkit-class-prefix}-cube5 { animation-delay: $delayRange * 0.50 }
+  .#{$spinkit-class-prefix}-cube6 { animation-delay: $delayRange * 0.75 }
+  .#{$spinkit-class-prefix}-cube7 { animation-delay: 0.0s }
+  .#{$spinkit-class-prefix}-cube8 { animation-delay: $delayRange * 0.25 }
+  .#{$spinkit-class-prefix}-cube9 { animation-delay: $delayRange * 0.50 }
 }
 
 @keyframes sk-cubeGridScaleDelay {

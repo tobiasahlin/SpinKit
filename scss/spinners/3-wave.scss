@@ -12,7 +12,7 @@
  */
 @import "../variables";
 
-.sk-wave {
+.#{$spinkit-class-prefix}-wave {
   $rectCount: 5;
   $animationDuration: 1.2s;
   $delayRange: 0.4s;
@@ -23,7 +23,7 @@
   text-align: center;
   font-size: 10px;
 
-  .sk-rect {
+  .#{$spinkit-class-prefix}-rect {
     background-color: $spinkit-spinner-color;
     height: 100%;
     width: 6px;
@@ -32,7 +32,7 @@
   }
 
   @for $i from 1 through $rectCount {
-    .sk-rect#{$i} { animation-delay: - $animationDuration + $delayRange / ($rectCount - 1) * ($i - 1); }
+    .#{$spinkit-class-prefix}-rect#{$i} { animation-delay: - $animationDuration + $delayRange / ($rectCount - 1) * ($i - 1); }
   }
 }
 

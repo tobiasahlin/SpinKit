@@ -10,14 +10,14 @@
  */
  @import "../variables";
 
-.sk-three-bounce {
+.#{$spinkit-class-prefix}-three-bounce {
   $animationDuration: 1.4s;
   $delayRange: 0.32s;
   margin: $spinkit-spinner-margin;
   width: $spinkit-size * 2;
   text-align: center;
 
-  .sk-child {
+  .#{$spinkit-class-prefix}-child {
     width: $spinkit-size / 2;
     height: $spinkit-size / 2;
     background-color: $spinkit-spinner-color;
@@ -27,8 +27,8 @@
     animation: sk-three-bounce $animationDuration ease-in-out 0s infinite both;
   }
 
-  .sk-bounce1 { animation-delay: -$delayRange; }
-  .sk-bounce2 { animation-delay: -$delayRange / 2; }
+  .#{$spinkit-class-prefix}-bounce1 { animation-delay: -$delayRange; }
+  .#{$spinkit-class-prefix}-bounce2 { animation-delay: -$delayRange / 2; }
 }
 
 @keyframes sk-three-bounce {

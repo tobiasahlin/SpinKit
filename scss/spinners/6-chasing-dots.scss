@@ -9,7 +9,7 @@
  */
 @import "../variables";
 
-.sk-chasing-dots {
+.#{$spinkit-class-prefix}-chasing-dots {
   $animationDuration: 2.0s;
 
   margin: $spinkit-spinner-margin;
@@ -19,7 +19,7 @@
   text-align: center;
   animation: sk-chasingDotsRotate $animationDuration infinite linear;
 
-  .sk-child {
+  .#{$spinkit-class-prefix}-child {
     width: 60%;
     height: 60%;
     display: inline-block;
@@ -30,7 +30,7 @@
     animation: sk-chasingDotsBounce $animationDuration infinite ease-in-out;
   }
 
-  .sk-dot2 {
+  .#{$spinkit-class-prefix}-dot2 {
     top: auto;
     bottom: 0;
     animation-delay: - $animationDuration/2;

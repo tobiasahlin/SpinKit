@@ -9,7 +9,7 @@
  */
 @import "../variables";
 
-.sk-wandering-cubes {
+.#{$spinkit-class-prefix}-wandering-cubes {
   $animationDuration: 1.8s;
 
   margin: $spinkit-spinner-margin;
@@ -17,7 +17,7 @@
   height: $spinkit-size;
   position: relative;
 
-  .sk-cube {
+  .#{$spinkit-class-prefix}-cube {
     background-color: $spinkit-spinner-color;
     width: 10px;
     height: 10px;
@@ -27,7 +27,7 @@
     animation: sk-wanderingCube $animationDuration ease-in-out #{-$animationDuration} infinite both;
   }
 
-  .sk-cube2 {
+  .#{$spinkit-class-prefix}-cube2 {
     animation-delay: -$animationDuration / 2;
   }
 }

@@ -6,7 +6,7 @@
  */
 @import "../variables";
 
-.sk-spinner-pulse {
+.#{$spinkit-class-prefix}-spinner-pulse {
   width: $spinkit-size;
   height: $spinkit-size;
   margin: $spinkit-spinner-margin;

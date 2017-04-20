@@ -6,7 +6,7 @@
  */
 @import "../variables";
 
-.sk-rotating-plane {
+.#{$spinkit-class-prefix}-rotating-plane {
   width: $spinkit-size;
   height: $spinkit-size;
   background-color: $spinkit-spinner-color;

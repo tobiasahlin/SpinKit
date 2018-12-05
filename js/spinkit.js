@@ -1,19 +1,94 @@
 function SpinKit(DOMElement, spinKitType) {
 	//set attributes
-	var _elementRef = DOMElement;
-	var _spinnerName = getSpinnerName(spinKitType);
+	this._elementRef = DOMElement;
+	this._spinnerName = getSpinnerName(spinKitType);
+	this._setTo = this._elementRef;
+	this._isShown = false;
+	this._useOverlay = false;
 	
 	//get DOM node and spinner
-	this.DOMnode = getDOMnode();
-	this.spinner = getSpinner();
+	this.DOMnode = getDOMnode(this._elementRef);
+	this.spinner = getSpinner(this._spinnerName);
 	
 	this.show = function() {
-		return this.DOMnode.appendChild(this.spinner);
-	}
+		//if shown return false
+		if(this._isShown){
+			console.error("Spinkit is already shown");
+			return;
+		}
+
+		if(this._useOverlay){
+			var overlayElem = document.createElement('div');
+			overlayElem.setAttribute("class", "sk-page-overlay");
+			document.body.appendChild(overlayElem);
+			overlayElem.appendChild(this.spinner);
+
+			//change set to
+			this._setTo = overlayElem;
+
+			//return
+			return;
+		}
+
+		//default to dom element
+		this.DOMnode.appendChild(this.spinner);
+
+		//change set to
+		this._setTo = this.DOMnode;
+
+		//set to shown
+		this._isShown = true;
+	};
 	
 	this.destroy = function(){
-		return this.DOMnode.removeChild(this.spinner);
-	}
+		//if not shown return false
+		if(!this._isShown){
+			console.error("Spinkit has not been added to the DOM");
+			return;
+		}
+
+		//if overlay destroy the set to element
+		if(this._useOverlay){
+			//remove overlay
+			document.body.removeChild(this._setTo);
+
+			//set is shown
+			this._isShown = false;
+
+			//return
+			return;
+		}
+
+		//remove spinner
+		this.DOMnode.removeChild(this.spinner);
+
+		//set is shown
+		this._isShown = false;
+
+		//return
+		return;
+	};
+
+	this.setOverlay = function(boolVal){
+		console.log("is shown", this._isShown);
+		//if already shown handle migration
+		if(this._isShown){
+			//destroy the current setup and recreate
+			this.destroy();
+
+			//set use overlay to true
+			this._useOverlay = boolVal;
+
+			//show the element
+			this.show();
+
+			//return
+			return;
+		}
+
+		console.log("setting overlay property", boolVal);
+		this._useOverlay = boolVal;
+	};
 	
 	//get spinner name by ensuring supplied type is valid
 	function getSpinnerName(spinnerType){
@@ -59,28 +134,28 @@ function SpinKit(DOMElement, spinKitType) {
 	}
 	
 	//get DOM node based on arguments supplied
-	function getDOMnode(){
+	function getDOMnode(elemRef){
 		//if a dom element is already supplied
-		if(typeof(_elementRef) == 'object'){
-			return _elementRef;
+		if(typeof(elemRef) == 'object'){
+			return elemRef;
 		}
 		else{
-			if(_elementRef[0] == '#'){
-				return document.getElementById(_elementRef.substr(1));
+			if(elemRef[0] == '#'){
+				return document.getElementById(elemRef.substr(1));
 			}
-			else if(_elementRef[0] == '.'){
+			else if(elemRef.toString()[0] == '.'){
 				//get first element with class type
-				return document.getElementsByClassName(_elementRef.substr(1))[0];
+				return document.getElementsByClassName(elemRef.substr(1))[0];
 			}
 			else {
-				return document[_elementRef];
+				return document[elemRef];
 			}
 		}
 	}
 	
 	//get spinner based on spinner name
-	function getSpinner(){
-		return HTMLFromString(getTemplate(_spinnerName));
+	function getSpinner(templateName){
+		return HTMLFromString(getTemplate(templateName));
 	}
 	
 	//helper function

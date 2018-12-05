@@ -1,0 +1,14 @@
+﻿.sk-page-overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:rgba(183, 175, 175, 0.30);
+}
+
+.sk-page-overlay > .sk {
+    position:fixed;
+    top:30%;
+    left:48%;
+}

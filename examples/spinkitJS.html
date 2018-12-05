@@ -3,6 +3,7 @@
 <head>
   <title>Spinkit JS</title>
   <link rel="stylesheet" type = "text/css" href="../css/spinkit.min.css"/>
+  <link rel="stylesheet" type = "text/css" href="../css/spinkit.extended.css"/>
 </head>
 <body>
 	<button type="button" onclick="create('rotatingPlane')">Rotating Plane</button>
@@ -16,8 +17,10 @@
 	<button type="button" onclick="create('cubeGrid')">Cube Grid</button>
 	<button type="button" onclick="create('fadingCircle')">Fading Circle</button>
 	<button type="button" onclick="create('foldingCube')">Folding Cube</button>
+	<input type="checkbox" onchange="adjustPosition(this)"/> Use overlay?
 <script src="../js/spinkit.js"></script>
 <script>
+	//on load spinner is set to body
 	var spinkit = new SpinKit('body');
 	spinkit.show();
 </script>
@@ -27,6 +30,10 @@ function create(spinKitType){
 	spinkit.destroy();
 	spinkit = new SpinKit('body', spinKitType);
 	spinkit.show();
+}
+
+function adjustPosition(checkboxElem){
+	spinkit.setOverlay(checkboxElem.checked);
 }
 </script>
 </body>

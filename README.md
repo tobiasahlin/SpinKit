@@ -4,32 +4,12 @@ Simple loading spinners animated with CSS. See [demo](http://tobiasahlin.com/spi
 
 ## Usage
 
-### Regular CSS
+using overlay overrides the element the spinner is set to and creates a page overlay to be used. The spinkit manages this overlay by destroying and creating the element within the DOM. If this is not the desired behaviour simply use the DOM element indicator and manage the show and hide in your code
 
-Grab the HTML and CSS for a spinner from the example files, or add SpinKit directly to your project with `bower`:
+### Javascript (Vanilla)
 
-```bash
-$ bower install spinkit
-```
+### Using jQuery
 
-or npm:
-
-```bash
-$ npm install spinkit
-```
-
-### SCSS
-
-If you're using SCSS you can include specific spinners (rather than all of them) by importing them one by one:
-
-```scss
-@import '../bower_components/spinkit/scss/spinners/1-rotating-plane',
-        '../bower_components/spinkit/scss/spinners/3-wave';
-```
-
-You currently need to use an [autoprefixer](https://github.com/postcss/autoprefixer) if you want to support all browsers. If you're compiling your SCSS with gulp you can use [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer), and [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) if you use grunt.
-
-Variables that can be overridden are listed in [scss/_variables.scss](https://github.com/tobiasahlin/SpinKit/blob/master/scss/_variables.scss).
 
 ## Web browser compatibility
 
@@ -69,4 +49,6 @@ if (!browserSupportsCSSProperty('animation')) {
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/tobiasahlin/SpinKit/blob/master/CONTRIBUTING.md) for details.
+Contributing to spinkit animations see [CONTRIBUTING.md](https://github.com/tobiasahlin/SpinKit/blob/master/CONTRIBUTING.md) for details.
+
+Contributing to javascript enhancements see [CONTRIBUTING.md](https://github.com/cr1x56/SpinKit/blob/master/CONTRIBUTING.md) for details

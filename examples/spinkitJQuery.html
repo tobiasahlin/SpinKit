@@ -3,6 +3,7 @@
 <head>
   <title>Spinkit JQuery</title>
   <link rel="stylesheet" type = "text/css" href="../css/spinkit.min.css"/>
+  <link rel="stylesheet" type = "text/css" href="../css/spinkit.extended.css"/>
 </head>
 <body>
 	<button type="button" onclick="create('rotatingPlane')">Rotating Plane</button>
@@ -16,16 +17,24 @@
 	<button type="button" onclick="create('cubeGrid')">Cube Grid</button>
 	<button type="button" onclick="create('fadingCircle')">Fading Circle</button>
 	<button type="button" onclick="create('foldingCube')">Folding Cube</button>
+	<input type="checkbox" onchange="adjustPosition(this)"/> Use overlay?
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="../js/spinkit.jquery.js"></script>
 <script>
 	$(document).ready(function(){ $('body').waiting(); });
 </script>
 <script>
+	var currentTemplate;
 //------------- CODE ONLY FOR DEMONSTRATION
 function create(spinKitType){
+	currentTemplate = spinKitType;
 	$('body').waiting('destroy');
-	$('body').waiting({ 'spinner': spinKitType});
+	$('body').waiting({ 'spinner': spinKitType });
+}
+
+function adjustPosition(){
+	$('body').waiting('destroy');
+	$('body').waiting({ 'spinner': currentTemplate, 'useOverlay': true });
 }
 </script>
 </body>

@@ -3,13 +3,67 @@
 Simple loading spinners animated with CSS. See [demo](http://tobiasahlin.com/spinkit/). SpinKit uses hardware accelerated (`translate` and `opacity`) CSS animations to create smooth and easily customizable animations. 
 
 ## Usage
+### Javascript
+Basic setup that loads a default spinner to the body
+```javascript
+var spinkit = new SpinKit('body');
+spinkit.show();
+```
 
-using overlay overrides the element the spinner is set to and creates a page overlay to be used. The spinkit manages this overlay by destroying and creating the element within the DOM. If this is not the desired behaviour simply use the DOM element indicator and manage the show and hide in your code
+To specify a spinkit style add as the second parameter to the spinkit call.
+```javascript
+var spinkit = new SpinKit('body', 'cubeGrid');
+spinkit.show();
+```
+Refer to the examples to view all supported spinkits
 
-### Javascript (Vanilla)
+To remove a spinkit from a page simply call the destroy method
+```javascript
+var spinkit = new SpinKit('body');
+spinkit.show();
+
+//destroy the spinkit
+spinkit.destroy();
+```
 
 ### Using jQuery
+Basic setup that loads a default spinner to the body
+```javascript
+$('body').waiting();
+```
 
+To specify a spinkit style add as the second parameter to the spinkit call.
+```javascript
+$('body').waiting({ 'spinner': 'cubeGrid' });
+```
+Refer to the examples to view all supported spinkits
+
+To remove a spinkit from a page simply call the destroy method
+```javascript
+$('body').waiting();
+
+//destroy the spinkit
+$('body').waiting('destroy');
+```
+
+### Using SpinKit Extended
+Spinkit can also add a page overlay that disables interaction with the page. The default styles for this overlay can be found in the spinkit.extended.css file. You can alter this file to add your own overlay colours and styles for any elements that may be added to the overlay.
+If your page has elements that use z-index, the overlay will need to be adjusted to be at the highest z-index to disable interaction with the elements.
+
+**NB.** Once an overlay is used, the DOM selector supplied is ignored and the body is used.
+
+#### Javascript
+```javascript
+spinkit.setOverlay(true);
+```
+This can be called before or after .show() is used. If called before the spinkit is prepped to be added to an overlay. If called after, an overlay is added and the spinkit is migrated to the overlay.
+
+#### jQuery
+```javascript
+$('body').waiting({ 'spinner': currentTemplate, 'useOverlay': true });
+```
+
+These functions require no additional files to be called. The extended spinkit is simply a default styling added to the overlay.
 
 ## Web browser compatibility
 

@@ -21,20 +21,20 @@
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="../dist/js/spinkit.jquery.js"></script>
 <script>
-	$(document).ready(function(){ $('body').waiting(); });
+	$(document).ready(function(){ $('body').spinkit(); });
 </script>
 <script>
 	var currentTemplate;
 //------------- CODE ONLY FOR DEMONSTRATION
 function create(spinKitType){
 	currentTemplate = spinKitType;
-	$('body').waiting('destroy');
-	$('body').waiting({ 'spinner': spinKitType });
+	$('body').spinkit('destroy');
+	$('body').spinkit({ 'spinner': spinKitType });
 }
 
 function adjustPosition(){
-	$('body').waiting('destroy');
-	$('body').waiting({ 'spinner': currentTemplate, 'useOverlay': true });
+	$('body').spinkit('destroy');
+	$('body').spinkit({ 'spinner': currentTemplate, 'useOverlay': true });
 }
 </script>
 </body>

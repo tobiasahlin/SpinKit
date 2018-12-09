@@ -18,6 +18,10 @@
 	<button type="button" onclick="create('fadingCircle')">Fading Circle</button>
 	<button type="button" onclick="create('foldingCube')">Folding Cube</button>
 	<input type="checkbox" onchange="adjustPosition(this)"/> Use overlay?
+	<input type="text" onchange="adjustSize(this)" placeholder="change size"/>
+	<input type="text" onchange="adjustWidth(this)" placeholder="change width"/>
+	<input type="text" onchange="adjustHeight(this)" placeholder="change height"/>
+	<input type="text" onchange="adjustColor(this)" placeholder="change color"/>
 <script src="../dist/js/spinkit.js"></script>
 <script>
 	//on load spinner is set to body
@@ -34,6 +38,34 @@ function create(spinKitType){
 
 function adjustPosition(checkboxElem){
 	spinkit.setOverlay(checkboxElem.checked);
+}
+
+function adjustWidth(inputElem){
+	//get value
+	var size = inputElem.value;
+
+	spinkit.setWidth(size);
+}
+
+function adjustHeight(inputElem){
+	//get value
+	var size = inputElem.value;
+
+	spinkit.setHeight(size);
+}
+
+function adjustSize(inputElem){
+	//get value
+	var size = inputElem.value;
+
+	spinkit.setSize(size);
+}
+
+function adjustColor(inputElem){
+	//get value
+	var color = inputElem.value;
+
+	spinkit.setColor(color);
 }
 </script>
 </body>

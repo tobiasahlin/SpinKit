@@ -1,10 +1,15 @@
+/*!
+  * Spinkit v1.1.0
+  * Copyright 2016-2018
+  * Author Bradley Ramdeen
+  */
 //must reference Jquery before this script can execute
 if (typeof (jQuery) === 'undefined') {
     throw new Error('SpinKit requires jQuery');
 }
 
 (function () {
-    $.fn.waiting = function (userOptions) {
+    $.fn.spinkit = function (userOptions) {
         //if destroy is option find all spinner objects and remove
         if (userOptions == 'destroy') {
             //look for overlay to see if it was created
@@ -25,30 +30,30 @@ if (typeof (jQuery) === 'undefined') {
             var _options = $.extend({}, $.fn.waiting.defaults, userOptions);
 
             //initialize waiting element
-            var _waiting;
+            var _spinkit;
 
             //check to see setTo property
             if (_options.useOverlay) {
                 //create overlay
                 _overlay = createPageOverlay();
 
-                //set waaiting to overlay
-                _waiting = _overlay;
+                //set _spinkit to overlay
+                _spinkit = _overlay;
             }
             else {
-                _waiting = this.first();
+                _spinkit = this.first();
             }
 
             //get spinnner
             var _spinner = getSpinner();
 
             //insert into element
-            _waiting.append(_spinner);
+            _spinkit.append(_spinner);
         }
 
         //gets the type of spinner needed to render
         function getSpinner() {
-            return $.fn.waiting.templates[_options.spinner];
+            return $.fn.spinkit.templates[_options.spinner];
         }
 
         function createPageOverlay(){
@@ -59,7 +64,7 @@ if (typeof (jQuery) === 'undefined') {
         }
     };
 
-    $.fn.waiting.templates = {
+    $.fn.spinkit.templates = {
         "rotatingPlane": '<div class="sk sk-rotating-plane"></div>',
         "doubleBounce": '<div class="sk sk-double-bounce"><div class="sk-child sk-double-bounce1"></div><div class="sk-child sk-double-bounce2"></div></div>',
         "wave": '<div class="sk sk-wave"><div class="sk-rect sk-rect1"></div><div class="sk-rect sk-rect2"></div><div class="sk-rect sk-rect3"></div><div class="sk-rect sk-rect4"></div><div class="sk-rect sk-rect5"></div></div>',
@@ -73,5 +78,5 @@ if (typeof (jQuery) === 'undefined') {
         "foldingCube": '<div class="sk sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
     };
 
-    $.fn.waiting.defaults = { 'spinner': 'wave', 'setTo': 'default', 'color': 'default' };
+    $.fn.spinkit.defaults = { 'spinner': 'wave', 'setTo': 'default', 'color': 'default' };
 })(jQuery);

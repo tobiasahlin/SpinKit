@@ -29,21 +29,21 @@ spinkit.destroy();
 ### Using jQuery
 Basic setup that loads a default spinner to the body
 ```javascript
-$('body').waiting();
+$('body').spinkit();
 ```
 
 To specify a spinkit style add as the second parameter to the spinkit call.
 ```javascript
-$('body').waiting({ 'spinner': 'cubeGrid' });
+$('body').spinkit({ 'spinner': 'cubeGrid' });
 ```
 Refer to the examples to view all supported spinkits
 
 To remove a spinkit from a page simply call the destroy method
 ```javascript
-$('body').waiting();
+$('body').spinkit();
 
 //destroy the spinkit
-$('body').waiting('destroy');
+$('body').spinkit('destroy');
 ```
 
 ### Using SpinKit Extended
@@ -60,7 +60,7 @@ This can be called before or after .show() is used. If called before the spinkit
 
 #### jQuery
 ```javascript
-$('body').waiting({ 'spinner': currentTemplate, 'useOverlay': true });
+$('body').spinkit({ 'spinner': 'cubeGrid', 'useOverlay': true });
 ```
 
 These functions require no additional files to be called. The extended spinkit is simply a default styling added to the overlay.

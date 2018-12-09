@@ -1,3 +1,9 @@
+# 1.1.0
+
+* Changed jquery function name to 'spinkit' for uniformity
+* Added size change functions
+* Added color change functions
+
 # 1.0.0
 
 * Added javascript file that allows creation of spinKit

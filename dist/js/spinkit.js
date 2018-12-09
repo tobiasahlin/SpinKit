@@ -138,12 +138,12 @@ function SpinKit(DOMElement, spinKitType) {
 				document.body.append(styleNode);
 			}
 
-			//get pseudoparent
-			var pseudoParent = this.spinner.dataset.pseudoparent;
+			//get pseudotarget
+			var pseudoTarget = this.spinner.dataset.pseudotarget;
 
 			//reset style
 			styleNode.innerHTML = '';
-			styleNode.innerHTML = pseudoParent + ':before{ background: ' + color + '; }'
+			styleNode.innerHTML = pseudoTarget + '{ background: ' + color + '; }'
 		}		
 	};
 	
@@ -234,10 +234,10 @@ function SpinKit(DOMElement, spinKitType) {
 			"pulse": '<div class="sk sk-spinner sk-spinner-pulse" data-color="me"></div>',
 			"chasingDots": '<div class="sk sk-chasing-dots" data-color="children"><div class="sk-child sk-dot1"></div><div class="sk-child sk-dot2"></div></div>',
 			"threeBounce": '<div class="sk sk-three-bounce" data-color="children"><div class="sk-child sk-bounce1"></div><div class="sk-child sk-bounce2"></div><div class="sk-child sk-bounce3"></div></div>',
-			"circle": '<div class="sk sk-circle" data-color="children"><div class="sk-circle1 sk-child"></div><div class="sk-circle2 sk-child"></div><div class="sk-circle3 sk-child"></div><div class="sk-circle4 sk-child"></div><div class="sk-circle5 sk-child"></div><div class="sk-circle6 sk-child"></div><div class="sk-circle7 sk-child"></div><div class="sk-circle8 sk-child"></div><div class="sk-circle9 sk-child"></div><div class="sk-circle10 sk-child"></div><div class="sk-circle11 sk-child"></div><div class="sk-circle12 sk-child"></div></div>',
+			"circle": '<div class="sk sk-circle" data-color="pseudo" data-pseudoTarget=".sk-circle .sk-child:before"><div class="sk-circle1 sk-child"></div><div class="sk-circle2 sk-child"></div><div class="sk-circle3 sk-child"></div><div class="sk-circle4 sk-child"></div><div class="sk-circle5 sk-child"></div><div class="sk-circle6 sk-child"></div><div class="sk-circle7 sk-child"></div><div class="sk-circle8 sk-child"></div><div class="sk-circle9 sk-child"></div><div class="sk-circle10 sk-child"></div><div class="sk-circle11 sk-child"></div><div class="sk-circle12 sk-child"></div></div>',
 			"cubeGrid": '<div class="sk sk-cube-grid" data-color="children"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div></div>',
-			"fadingCircle": '<div class="sk sk-fading-circle" data-color="pseudo" data-pseudoParent=".sk-fading-circle .sk-circle"><div class="sk-circle1 sk-circle"></div><div class="sk-circle2 sk-circle"></div><div class="sk-circle3 sk-circle"></div><div class="sk-circle4 sk-circle"></div><div class="sk-circle5 sk-circle"></div><div class="sk-circle6 sk-circle"></div><div class="sk-circle7 sk-circle"></div><div class="sk-circle8 sk-circle"></div><div class="sk-circle9 sk-circle"></div><div class="sk-circle10 sk-circle"></div><div class="sk-circle11 sk-circle"></div><div class="sk-circle12 sk-circle"></div></div>',
-			"foldingCube": '<div class="sk sk-folding-cube" data-color="pseudo" data-pseudoParent=".sk-folding-cube .sk-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
+			"fadingCircle": '<div class="sk sk-fading-circle" data-color="pseudo" data-pseudoTarget=".sk-fading-circle .sk-circle:before"><div class="sk-circle1 sk-circle"></div><div class="sk-circle2 sk-circle"></div><div class="sk-circle3 sk-circle"></div><div class="sk-circle4 sk-circle"></div><div class="sk-circle5 sk-circle"></div><div class="sk-circle6 sk-circle"></div><div class="sk-circle7 sk-circle"></div><div class="sk-circle8 sk-circle"></div><div class="sk-circle9 sk-circle"></div><div class="sk-circle10 sk-circle"></div><div class="sk-circle11 sk-circle"></div><div class="sk-circle12 sk-circle"></div></div>',
+			"foldingCube": '<div class="sk sk-folding-cube" data-color="pseudo" data-pseudoTarget=".sk-folding-cube .sk-cube:before"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
 		};
 		
 		return templates[spinner];

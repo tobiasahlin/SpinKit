@@ -18,6 +18,10 @@
 	<button type="button" onclick="create('fadingCircle')">Fading Circle</button>
 	<button type="button" onclick="create('foldingCube')">Folding Cube</button>
 	<input type="checkbox" onchange="adjustPosition(this)"/> Use overlay?
+	<input type="text" onchange="adjustSize(this)" placeholder="change size"/>
+	<input type="text" onchange="adjustWidth(this)" placeholder="change width"/>
+	<input type="text" onchange="adjustHeight(this)" placeholder="change height"/>
+	<input type="text" onchange="adjustColor(this)" placeholder="change color"/>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="../dist/js/spinkit.jquery.js"></script>
 <script>
@@ -28,13 +32,49 @@
 //------------- CODE ONLY FOR DEMONSTRATION
 function create(spinKitType){
 	currentTemplate = spinKitType;
-	$('body').spinkit('destroy');
-	$('body').spinkit({ 'spinner': spinKitType });
+	
+	$('body').spinkit.destroy();
+	$('body').spinkit({ 'spinner': currentTemplate });
 }
 
 function adjustPosition(){
-	$('body').spinkit('destroy');
+	$('body').spinkit.destroy();
 	$('body').spinkit({ 'spinner': currentTemplate, 'useOverlay': true });
+
+	//remove overlay in 5 seconds
+	setTimeout(function(){$('body').spinkit.destroy();}, 3000);
+}
+
+function adjustWidth(inputElem){
+	//get value
+	var size = $(inputElem).val();
+	
+	$('body').spinkit.destroy();
+	$('body').spinkit({ 'spinner': currentTemplate, width: size });
+}
+
+function adjustHeight(inputElem){
+	//get value
+	var size = $(inputElem).val();
+	
+	$('body').spinkit.destroy();
+	$('body').spinkit({ 'spinner': currentTemplate, height: size });
+}
+
+function adjustSize(inputElem){
+	//get value
+	var size = $(inputElem).val();
+	
+	$('body').spinkit.destroy();
+	$('body').spinkit({ 'spinner': currentTemplate, size: size });
+}
+
+function adjustColor(inputElem){
+	//get value
+	var color = $(inputElem).val();
+	
+	$('body').spinkit.destroy();
+	$('body').spinkit({ 'spinner': currentTemplate, color: color });
 }
 </script>
 </body>

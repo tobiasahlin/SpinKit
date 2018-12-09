@@ -38,6 +38,9 @@ function create(spinKitType){
 
 function adjustPosition(checkboxElem){
 	spinkit.setOverlay(checkboxElem.checked);
+
+	//remove overlay in 5 seconds
+	setTimeout(function(){spinkit.destroy();}, 3000);
 }
 
 function adjustWidth(inputElem){

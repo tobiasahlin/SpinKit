@@ -87,6 +87,9 @@ function SpinKit(DOMElement, spinKitType) {
 			//show the element
 			this.show();
 
+			//set to show
+			this._isShown = true;
+
 			//return
 			return;
 		}

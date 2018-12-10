@@ -3,6 +3,8 @@
 * Changed jquery function name to 'spinkit' for uniformity
 * Added size change functions
 * Added color change functions
+* Removed unnecessary examples
+* Removed individual css files
 
 # 1.0.0
 

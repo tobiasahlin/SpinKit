@@ -30,10 +30,26 @@ if (typeof (jQuery) === 'undefined') {
 
         //get spinnner
         spinner = getSpinner();
-
+        
         //set color
-        if(_options.color != $.fn.spinkit.defaults.color){
+        if(_options.hasOwnProperty('color')){
             changeColor(_options.color);
+        }
+        
+        //set size
+        if(_options.hasOwnProperty('size')){
+            changeSize(_options.size);
+        }
+        else if(_options.hasOwnProperty('width') || _options.hasOwnProperty('height')){
+            //see if to modify height
+            if(_options.hasOwnProperty('height')){
+                changeHeight(_options.height);
+            }
+
+            //see if to modify width
+            if(_options.hasOwnProperty('width')){
+                changeWidth(_options.width);
+            }
         }
 
         //insert into element
@@ -78,6 +94,20 @@ if (typeof (jQuery) === 'undefined') {
                 styleNode.html(pseudoTarget + '{ background: ' + color + '; }');
             }            
         }
+
+        function changeSize(size){
+            //change width and height
+            changeHeight(size);
+            changeWidth(size);
+        }
+
+        function changeHeight(height){
+            $(spinner).css('height', height);
+        }
+
+        function changeWidth(width){
+            $(spinner).css('width', width);
+        }
     };
 
     $.fn.spinkit.destroy = function(){
@@ -109,5 +139,5 @@ if (typeof (jQuery) === 'undefined') {
 			"foldingCube": '<div class="sk sk-folding-cube" data-color="pseudo" data-pseudoTarget=".sk-folding-cube .sk-cube:before"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
     };
 
-    $.fn.spinkit.defaults = { 'spinner': 'wave', 'useOverlay': false, 'color': '#333' };
+    $.fn.spinkit.defaults = { 'spinner': 'wave', 'useOverlay': false };
 })(jQuery);

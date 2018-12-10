@@ -3,6 +3,8 @@
 Simple loading spinners animated with CSS. See [demo](http://tobiasahlin.com/spinkit/). SpinKit uses hardware accelerated (`translate` and `opacity`) CSS animations to create smooth and easily customizable animations. 
 
 ## Usage
+# Not all spinkits support resizing (v 1.1.0)
+
 ### Javascript
 Basic setup that loads a default spinner to the body
 ```javascript

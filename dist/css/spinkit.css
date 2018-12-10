@@ -100,7 +100,8 @@
   .sk-wave .sk-rect {
     background-color: #333;
     height: 100%;
-    width: 6px;
+    width: 8%;
+    margin: 0 3px;
     display: inline-block;
     -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
             animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }

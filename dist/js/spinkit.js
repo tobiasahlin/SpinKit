@@ -7,7 +7,7 @@
 function SpinKit(DOMElement, spinKitType) {
 	//set attributes
 	this._elementRef = DOMElement;
-	this._spinnerName = getSpinnerName(spinKitType);
+	this._spinnerName = validateSpinKit(spinKitType);
 	this._setTo = this._elementRef;
 	this._isShown = false;
 	this._useOverlay = false;
@@ -151,46 +151,13 @@ function SpinKit(DOMElement, spinKitType) {
 	};
 	
 	//get spinner name by ensuring supplied type is valid
-	function getSpinnerName(spinnerType){
-		var spinnerName = "";
-		
-		switch(spinnerType){
-			case "rotatingPlane":
-				spinnerName = "rotatingPlane";
-				break;
-			case "doubleBounce":
-				spinnerName = "doubleBounce";
-				break;
-			case "wanderingCubes":
-				spinnerName = "wanderingCubes";
-				break;
-			case "pulse":
-				spinnerName = "pulse";
-				break;
-			case "chasingDots":
-				spinnerName = "chasingDots";
-				break;
-			case "threeBounce":
-				spinnerName = "threeBounce";
-				break;
-			case "circle":
-				spinnerName = "circle";
-				break;
-			case "cubeGrid":
-				spinnerName = "cubeGrid";
-				break;
-			case "fadingCircle":
-				spinnerName = "fadingCircle";
-				break;
-			case "foldingCube":
-				spinnerName = "foldingCube";
-				break;
-			case "wave":	
-			default:
-				spinnerName = "wave";
+	function validateSpinKit(spinnerType){
+		if(typeof(spinnerType) == 'undefined' || typeof(getSpinner(spinnerType)) == 'undefined'){
+			return 'wave';
 		}
-		
-		return spinnerName;
+		else {
+			return spinnerType;
+		}
 	}
 	
 	//get DOM node based on arguments supplied

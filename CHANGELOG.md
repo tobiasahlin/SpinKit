@@ -1,3 +1,8 @@
+# 1.1.1
+
+* Removed redundant code for validating spinkit
+* Added easier way to add new spinners to spinkit
+
 # 1.1.0
 
 * Changed jquery function name to 'spinkit' for uniformity

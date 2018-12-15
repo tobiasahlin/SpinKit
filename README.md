@@ -1,9 +1,9 @@
 # [SpinKit](http://tobiasahlin.com/spinkit/)
 
-Simple loading spinners animated with CSS. See [demo](http://tobiasahlin.com/spinkit/). SpinKit uses hardware accelerated (`translate` and `opacity`) CSS animations to create smooth and easily customizable animations. 
+This repo was birthed from an attempt to extend the spinkit repo by [@tobiasahlin](https://github.com/tobiasahlin). I used the spinkit many times and have now decided to extend this repo with new spinners that fit the idea of the "spinkit" project (my opinion of it). 
 
 ## Usage
-# Not all spinkits support resizing (v 1.1.0)
+# Not all spinkits support resizing (v 1.1.0 - v 1.2.0). Future version will remove these unsupported spinners
 
 ### Javascript
 Basic setup that loads a default spinner to the body
@@ -108,3 +108,8 @@ if (!browserSupportsCSSProperty('animation')) {
 Contributing to spinkit animations see [CONTRIBUTING.md](https://github.com/tobiasahlin/SpinKit/blob/master/CONTRIBUTING.md) for details.
 
 Contributing to javascript enhancements see [CONTRIBUTING.md](https://github.com/cr1x56/SpinKit/blob/master/CONTRIBUTING.md) for details
+
+## Acknowledgements
+
+Tobias' Spinkit - http://tobiasahlin.com/spinkit
+Beaulticircle - https://codepen.io/Roosa/pen/yOQrdg

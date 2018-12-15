@@ -769,3 +769,78 @@
     -webkit-transform: perspective(140px) rotateY(180deg);
             transform: perspective(140px) rotateY(180deg);
     opacity: 0; } }
+
+/*
+ *  Usage:
+ *
+      <div class="sk sk-beaulticircle">
+        <div class="sk-child sk-beaulticircle1"></div>
+        <div class="sk-child sk-beaulticircle2"></div>
+        <div class="sk-child sk-beaulticircle3"></div>
+        <div class="sk-child sk-beaulticircle4"></div>
+        <div class="sk-child sk-beaulticircle5"></div>
+      </div>
+ *
+ */
+ .sk-beaulticircle {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	margin: 0 auto;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+.sk-beaulticircle .sk-child {
+	position: absolute;
+	border-radius:100%;
+	border: 1px solid red;
+	animation-name: up;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+	transition:2s;
+	border-bottom:none;
+	border-right:none;
+	animation-timing-function:linear;
+}
+  
+@keyframes up{
+	from{transform:rotate(0deg); }
+	50%{transform:rotate(180deg);}
+	100%{transform:rotate(360deg);}
+}
+
+.sk-beaulticircle1 {
+	width:100%;
+	height:100%;
+}
+
+.sk-beaulticircle2 {
+	width: 90%;
+	height:90%;
+	margin: 5%;
+	animation-delay:.2s !important;
+}
+
+.sk-beaulticircle3 {
+	width: 80%;
+	height:80%;
+	margin: 10%;
+	animation-delay:.4s !important;
+}
+
+.sk-beaulticircle4 {
+	width: 70%;
+	height:70%;
+	margin: 15%;
+	animation-delay:.6s !important;
+}
+
+.sk-beaulticircle5 {
+	width: 60%;
+	height:60%;
+	margin: 20%;
+	animation-delay:.8s !important;
+}

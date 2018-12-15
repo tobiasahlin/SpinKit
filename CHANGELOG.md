@@ -1,3 +1,9 @@
+# 1.1.1
+
+* Removed redundant code for validating spinkit
+* Added easier way to add new spinners to spinkit
+* Added new spinner (Beaulticirle - inspired by https://codepen.io/Roosa/pen/yOQrdg)
+
 # 1.1.0
 
 * Changed jquery function name to 'spinkit' for uniformity

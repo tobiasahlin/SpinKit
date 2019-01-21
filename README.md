@@ -3,7 +3,6 @@
 This repo was birthed from an attempt to extend the spinkit repo by [@tobiasahlin](https://github.com/tobiasahlin). I used the spinkit many times and have now decided to extend this repo with new spinners that fit the idea of the "spinkit" project (my opinion of it). 
 
 ## Usage
-# Not all spinkits support resizing (v 1.1.0 - v 1.2.0). Future version will remove these unsupported spinners
 
 ### Javascript
 Basic setup that loads a default spinner to the body

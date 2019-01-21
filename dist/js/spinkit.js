@@ -1,6 +1,6 @@
 /*!
-  * Spinkit v1.1.0
-  * Copyright 2016-2018
+  * Spinkit v1.2.0
+  * Copyright 2016-2019
   * Author Bradley Ramdeen
   */
 
@@ -206,10 +206,8 @@ function SpinKit(DOMElement, spinKitType) {
 			"rotatingPlane": '<div class="sk sk-rotating-plane" data-color="me"></div>',
 			"doubleBounce": '<div class="sk sk-double-bounce" data-color="children"><div class="sk-child sk-double-bounce1"></div><div class="sk-child sk-double-bounce2"></div></div>',
 			"wave": '<div class="sk sk-wave" data-color="children"><div class="sk-rect sk-rect1"></div><div class="sk-rect sk-rect2"></div><div class="sk-rect sk-rect3"></div><div class="sk-rect sk-rect4"></div><div class="sk-rect sk-rect5"></div></div>',
-			"wanderingCubes": '<div class="sk sk-wandering-cubes" data-color="children"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div></div>',
 			"pulse": '<div class="sk sk-spinner sk-spinner-pulse" data-color="me"></div>',
 			"chasingDots": '<div class="sk sk-chasing-dots" data-color="children"><div class="sk-child sk-dot1"></div><div class="sk-child sk-dot2"></div></div>',
-			"threeBounce": '<div class="sk sk-three-bounce" data-color="children"><div class="sk-child sk-bounce1"></div><div class="sk-child sk-bounce2"></div><div class="sk-child sk-bounce3"></div></div>',
 			"circle": '<div class="sk sk-circle" data-color="pseudo" data-pseudoTarget=".sk-circle .sk-child:before"><div class="sk-circle1 sk-child"></div><div class="sk-circle2 sk-child"></div><div class="sk-circle3 sk-child"></div><div class="sk-circle4 sk-child"></div><div class="sk-circle5 sk-child"></div><div class="sk-circle6 sk-child"></div><div class="sk-circle7 sk-child"></div><div class="sk-circle8 sk-child"></div><div class="sk-circle9 sk-child"></div><div class="sk-circle10 sk-child"></div><div class="sk-circle11 sk-child"></div><div class="sk-circle12 sk-child"></div></div>',
 			"cubeGrid": '<div class="sk sk-cube-grid" data-color="children"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div></div>',
 			"fadingCircle": '<div class="sk sk-fading-circle" data-color="pseudo" data-pseudoTarget=".sk-fading-circle .sk-circle:before"><div class="sk-circle1 sk-circle"></div><div class="sk-circle2 sk-circle"></div><div class="sk-circle3 sk-circle"></div><div class="sk-circle4 sk-circle"></div><div class="sk-circle5 sk-circle"></div><div class="sk-circle6 sk-circle"></div><div class="sk-circle7 sk-circle"></div><div class="sk-circle8 sk-circle"></div><div class="sk-circle9 sk-circle"></div><div class="sk-circle10 sk-circle"></div><div class="sk-circle11 sk-circle"></div><div class="sk-circle12 sk-circle"></div></div>',

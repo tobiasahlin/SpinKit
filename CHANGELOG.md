@@ -1,3 +1,9 @@
+# 1.2.0
+
+* Removed unsupported spinners
+* Updated Readme
+* Updated examples
+
 # 1.1.1
 
 * Removed redundant code for validating spinkit

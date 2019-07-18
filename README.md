@@ -44,7 +44,7 @@ To remove a spinkit from a page simply call the destroy method
 $('body').spinkit();
 
 //destroy the spinkit
-$('body').spinkit('destroy');
+$('body').spinkit.destroy();
 ```
 
 ### Using SpinKit Extended

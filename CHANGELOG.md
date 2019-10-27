@@ -1,10 +1,11 @@
 # 2.0.0
 
 * New: Added examples.html, with an overview of all spinners
-* Fixed: All elements now only have one single class
-* Fixed: No more dependencies. gulp, npm, node, etc. is not required to build this project.
-* Fixed: No more SCSS. All configuration is now done through CSS vars.
-* Fixed: All keyframe animations are now named (exactly) after their respective spinners
+* Changed: No positioning is now applied by default on any of the spinners.
+* Changed: All elements now only have one single class.
+* Changed: No more dependencies. gulp, npm, node, etc. is not required to build this project.
+* Changed: No more SCSS. All configuration is now done through CSS vars.
+* Fixed: All keyframe animations are now named (exactly) after their respective spinners.
 
 # 1.2.5
 

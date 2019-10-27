@@ -12,10 +12,10 @@
   width: var(--sk-size);
   height: var(--sk-size);
   background-color: var(--sk-color);
-  animation: sk-rotate-plane 1.2s infinite ease-in-out; 
+  animation: sk-rotating-plane 1.2s infinite ease-in-out; 
 }
 
-@keyframes sk-rotate-plane {
+@keyframes sk-rotating-plane {
   0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg); 
   } 50% {
@@ -119,14 +119,14 @@
 }
 
 .sk-wandering-cubes-cube {
-    background-color: var(--sk-color);
-    width: 25%;
-    height: 25%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    --sk-wander-distance: calc(var(--sk-size) * 0.75);
-    animation: sk-wandering-cubes 1.8s ease-in-out -1.8s infinite both;
+  background-color: var(--sk-color);
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  --sk-wander-distance: calc(var(--sk-size) * 0.75);
+  animation: sk-wandering-cubes 1.8s ease-in-out -1.8s infinite both;
 }
 .sk-wandering-cubes-cube:nth-child(2) { animation-delay: -0.9s; }
 
@@ -188,14 +188,14 @@
 }
   
 .sk-chasing-dots-dot {
-    width: 60%;
-    height: 60%;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    background-color: var(--sk-color);
-    border-radius: 100%;
-    animation: sk-chasing-dots-dot 2s infinite ease-in-out; 
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: var(--sk-color);
+  border-radius: 100%;
+  animation: sk-chasing-dots-dot 2s infinite ease-in-out; 
 }
 
 .sk-chasing-dots-dot:nth-child(2) {

@@ -11,7 +11,7 @@
 .sk-rotating-plane {
   width: var(--sk-size);
   height: var(--sk-size);
-  background-color: var(--sk-size);
+  background-color: var(--sk-color);
   animation: sk-rotate-plane 1.2s infinite ease-in-out; 
 }
 
@@ -27,10 +27,10 @@
 
 /*
  *  Usage:
- *
+
       <div class="sk-double-bounce">
-        <div class="sk-child sk-double-bounce1"></div>
-        <div class="sk-child sk-double-bounce2"></div>
+        <div class="sk-double-bounce-circle"></div>
+        <div class="sk-double-bounce-circle"></div>
       </div>
  *
  */
@@ -40,174 +40,197 @@
   position: relative;
 }
 
-.sk-double-bounce .sk-child {
+.sk-double-bounce-circle {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: var(--sk-size);
+  background-color: var(--sk-color);
   opacity: 0.6;
   position: absolute;
   top: 0;
   left: 0;
-  animation: sk-doubleBounce 2s infinite ease-in-out; 
+  animation: sk-double-bounce 2s infinite ease-in-out; 
 }
 
-  .sk-double-bounce .sk-double-bounce2 {
-            animation-delay: -1.0s; }
+.sk-double-bounce-circle:last-child {
+  animation-delay: -1.0s; 
+}
 
-@keyframes sk-doubleBounce {
+@keyframes sk-double-bounce {
   0%, 100% {
-            transform: scale(0); }
+    transform: scale(0); }
   50% {
-            transform: scale(1); } }
+    transform: scale(1); 
+  } 
+}
 
 /*
  *  Usage:
- *
+
       <div class="sk-wave">
-        <div class="sk-rect sk-rect1"></div>
-        <div class="sk-rect sk-rect2"></div>
-        <div class="sk-rect sk-rect3"></div>
-        <div class="sk-rect sk-rect4"></div>
-        <div class="sk-rect sk-rect5"></div>
+        <div class="sk-wave-rect"></div>
+        <div class="sk-wave-rect"></div>
+        <div class="sk-wave-rect"></div>
+        <div class="sk-wave-rect"></div>
+        <div class="sk-wave-rect"></div>
       </div>
  *
  */
 .sk-wave {
-  margin: 40px auto;
   width: 50px;
   height: 40px;
   text-align: center;
-  font-size: 10px; }
-  .sk-wave .sk-rect {
-    background-color: #333;
-    height: 100%;
-    width: 6px;
-    display: inline-block;
-            animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }
-  .sk-wave .sk-rect1 {
-            animation-delay: -1.2s; }
-  .sk-wave .sk-rect2 {
-            animation-delay: -1.1s; }
-  .sk-wave .sk-rect3 {
-            animation-delay: -1s; }
-  .sk-wave .sk-rect4 {
-            animation-delay: -0.9s; }
-  .sk-wave .sk-rect5 {
-            animation-delay: -0.8s; }
+  font-size: 10px; 
+}
 
-@keyframes sk-waveStretchDelay {
+.sk-wave-rect {
+  background-color: var(--sk-color);
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  animation: sk-wave 1.2s infinite ease-in-out; 
+}
+
+.sk-wave-rect:nth-child(1) {
+  animation-delay: -1.2s; 
+}
+.sk-wave-rect:nth-child(2) {
+  animation-delay: -1.1s; 
+}
+.sk-wave-rect:nth-child(3) {
+  animation-delay: -1s; 
+}
+.sk-wave-rect:nth-child(4) {
+  animation-delay: -0.9s; 
+}
+.sk-wave-rect:nth-child(5) {
+  animation-delay: -0.8s; 
+}
+
+@keyframes sk-wave {
   0%, 40%, 100% {
-            transform: scaleY(0.4); }
-  20% {
-            transform: scaleY(1); } }
+    transform: scaleY(0.4); 
+  } 20% {
+    transform: scaleY(1); 
+} }
 
 /*
  *  Usage:
  *
       <div class="sk-wandering-cubes">
-        <div class="sk-cube sk-cube1"></div>
-        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-wandering-cubes-cube"></div>
+        <div class="sk-wandering-cubes-cube"></div>
       </div>
  *
  */
 .sk-wandering-cubes {
-  margin: 40px auto;
-  width: 40px;
-  height: 40px;
-  position: relative; }
-  .sk-wandering-cubes .sk-cube {
-    background-color: #333;
-    width: 10px;
-    height: 10px;
+  width: var(--sk-size);
+  height: var(--sk-size);
+  position: relative; 
+}
+
+.sk-wandering-cubes-cube {
+    background-color: var(--sk-color);
+    width: 25%;
+    height: 25%;
     position: absolute;
     top: 0;
     left: 0;
-            animation: sk-wanderingCube 1.8s ease-in-out -1.8s infinite both; }
-  .sk-wandering-cubes .sk-cube2 {
-            animation-delay: -0.9s; }
+    animation: sk-wandering-cubes 1.8s ease-in-out -1.8s infinite both;
+}
+.sk-wandering-cubes-cube:nth-child(2) { animation-delay: -0.9s; }
 
-
-@keyframes sk-wanderingCube {
+@keyframes sk-wandering-cubes {
   0% {
-            transform: rotate(0deg); }
+    transform: rotate(0deg); }
   25% {
-            transform: translateX(30px) rotate(-90deg) scale(0.5); }
+    transform: translateX(30px) rotate(-90deg) scale(0.5); }
   50% {
     /* Hack to make FF rotate in the right direction */
-            transform: translateX(30px) translateY(30px) rotate(-179deg); }
+    transform: translateX(30px) translateY(30px) rotate(-179deg); }
   50.1% {
-            transform: translateX(30px) translateY(30px) rotate(-180deg); }
+    transform: translateX(30px) translateY(30px) rotate(-180deg); }
   75% {
-            transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5); }
+    transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5); }
   100% {
-            transform: rotate(-360deg); } }
+    transform: rotate(-360deg); 
+  } 
+}
 
 /*
  *  Usage:
- *
-      <div class="sk-spinner sk-spinner-pulse"></div>
+
+      <div class="sk-pulse"></div>
  *
  */
-.sk-spinner-pulse {
-  width: 40px;
-  height: 40px;
-  margin: 40px auto;
-  background-color: #333;
+.sk-pulse {
+  width: var(--sk-size);
+  height: var(--sk-size);
+  background-color: var(--sk-color);
   border-radius: 100%;
-          animation: sk-pulseScaleOut 1s infinite ease-in-out; }
+  animation: sk-pulse 1s infinite ease-in-out; 
+}
 
-@keyframes sk-pulseScaleOut {
+@keyframes sk-pulse {
   0% {
-            transform: scale(0); }
-  100% {
-            transform: scale(1);
-    opacity: 0; } }
+    transform: scale(0); 
+  } 100% {
+    transform: scale(1);
+    opacity: 0; 
+  }
+}
 
 /*
  *  Usage:
- *
+
       <div class="sk-chasing-dots">
-        <div class="sk-child sk-dot1"></div>
-        <div class="sk-child sk-dot2"></div>
+        <div class="sk-chasing-dots-dot"></div>
+        <div class="sk-chasing-dots-dot"></div>
       </div>
  *
  */
 .sk-chasing-dots {
-  margin: 40px auto;
-  width: 40px;
-  height: 40px;
+  width: var(--sk-size);
+  height: var(--sk-size);
   position: relative;
   text-align: center;
-          animation: sk-chasingDotsRotate 2s infinite linear; }
-  .sk-chasing-dots .sk-child {
+  animation: sk-chasing-dots 2s infinite linear; 
+}
+  
+.sk-chasing-dots-dot {
     width: 60%;
     height: 60%;
     display: inline-block;
     position: absolute;
     top: 0;
-    background-color: #333;
+    background-color: var(--sk-color);
     border-radius: 100%;
-            animation: sk-chasingDotsBounce 2s infinite ease-in-out; }
-  .sk-chasing-dots .sk-dot2 {
-    top: auto;
-    bottom: 0;
-            animation-delay: -1s; }
+    animation: sk-chasing-dots-dot 2s infinite ease-in-out; 
+}
 
-@keyframes sk-chasingDotsRotate {
+.sk-chasing-dots-dot:nth-child(2) {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s; 
+}
+
+@keyframes sk-chasing-dots {
   100% {
-            transform: rotate(360deg); } }
+    transform: rotate(360deg); 
+  } 
+}
 
-
-@keyframes sk-chasingDotsBounce {
+@keyframes sk-chasing-dots-dot {
   0%, 100% {
-            transform: scale(0); }
+    transform: scale(0); }
   50% {
-            transform: scale(1); } }
+    transform: scale(1); 
+  } 
+}
 
 /*
  *  Usage:
- *
+
       <div class="sk-three-bounce">
         <div class="sk-child sk-bounce1"></div>
         <div class="sk-child sk-bounce2"></div>
@@ -216,7 +239,6 @@
  *
  */
 .sk-three-bounce {
-  margin: 40px auto;
   width: 80px;
   text-align: center; }
   .sk-three-bounce .sk-child {
@@ -257,7 +279,6 @@
  *
  */
 .sk-circle {
-  margin: 40px auto;
   width: 40px;
   height: 40px;
   position: relative; }
@@ -270,7 +291,6 @@
   .sk-circle .sk-child:before {
     content: '';
     display: block;
-    margin: 0 auto;
     width: 15%;
     height: 15%;
     background-color: #333;
@@ -357,7 +377,6 @@
 .sk-cube-grid {
   width: 40px;
   height: 40px;
-  margin: 40px auto;
   /*
    * Spinner positions
    * 1 2 3
@@ -415,7 +434,6 @@
  *
  */
 .sk-fading-circle {
-  margin: 40px auto;
   width: 40px;
   height: 40px;
   position: relative; }
@@ -428,7 +446,6 @@
   .sk-fading-circle .sk-circle:before {
     content: '';
     display: block;
-    margin: 0 auto;
     width: 15%;
     height: 15%;
     background-color: #333;
@@ -508,7 +525,6 @@
  *
  */
 .sk-folding-cube {
-  margin: 40px auto;
   width: 40px;
   height: 40px;
   position: relative;

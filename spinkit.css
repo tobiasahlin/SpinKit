@@ -230,7 +230,7 @@
  */
 .sk-three-bounce {
   width: calc(var(--sk-size) * 1.5);
-  text-align: center; 
+  text-align: center;
 }
 
 .sk-three-bounce-circle {

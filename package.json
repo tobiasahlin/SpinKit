@@ -9,7 +9,6 @@
     "loading",
     "ui"
   ],
-  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,13 +21,5 @@
   "bugs": {
     "url": "https://github.com/tobiasahlin/SpinKit/issues"
   },
-  "homepage": "https://github.com/tobiasahlin/SpinKit",
-  "devDependencies": {
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-sass": "^2.0.3",
-    "lodash": "^4.17.15",
-    "q": "^1.4.1"
-  }
+  "homepage": "https://github.com/tobiasahlin/SpinKit"
 }

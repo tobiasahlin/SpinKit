@@ -125,6 +125,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    --sk-wander-distance: calc(var(--sk-size) * 0.75);
     animation: sk-wandering-cubes 1.8s ease-in-out -1.8s infinite both;
 }
 .sk-wandering-cubes-cube:nth-child(2) { animation-delay: -0.9s; }
@@ -133,14 +134,14 @@
   0% {
     transform: rotate(0deg); }
   25% {
-    transform: translateX(30px) rotate(-90deg) scale(0.5); }
+    transform: translateX(var(--sk-wander-distance)) rotate(-90deg) scale(0.5); }
   50% {
     /* Hack to make FF rotate in the right direction */
-    transform: translateX(30px) translateY(30px) rotate(-179deg); }
+    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-179deg); }
   50.1% {
-    transform: translateX(30px) translateY(30px) rotate(-180deg); }
+    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-180deg); }
   75% {
-    transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5); }
+    transform: translateX(0) translateY(var(--sk-wander-distance)) rotate(-270deg) scale(0.5); }
   100% {
     transform: rotate(-360deg); 
   } 

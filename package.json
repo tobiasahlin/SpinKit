@@ -28,7 +28,7 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-sass": "^2.0.3",
-    "lodash": "^3.10.0",
+    "lodash": "^4.17.15",
     "q": "^1.4.1"
   }
 }

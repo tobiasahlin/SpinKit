@@ -377,7 +377,7 @@
   } 
 }
 
-/*
+/*  Circles Fade
  *  Usage:
 
       <div class="sk-circles-fade">
@@ -444,9 +444,11 @@
 
 @keyframes sk-circles-fade {
   0%, 39%, 100% {
-    opacity: 0; 
+    opacity: 0;
+    transform: scale(0.6);
   } 40% {
     opacity: 1; 
+    transform: scale(1);
   }
 }
 

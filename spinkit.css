@@ -79,15 +79,14 @@
 .sk-wave {
   width: var(--sk-size);
   height: var(--sk-size);
-  text-align: center;
-  font-size: 10px; 
+  display: flex;
+  justify-content: space-between;
 }
 
 .sk-wave-rect {
   background-color: var(--sk-color);
   height: 100%;
   width: 15%;
-  display: inline-block;
   animation: sk-wave 1.2s infinite ease-in-out; 
 }
 

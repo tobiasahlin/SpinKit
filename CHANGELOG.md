@@ -1,6 +1,7 @@
 # 2.0.0
 
 * New: Added examples.html, with an overview of all spinners
+* New: Added spinkit.min.css, for minified CSS
 * Changed: No positioning is now applied by default on any of the spinners.
 * Changed: All elements now only have one single class.
 * Changed: No more dependencies. gulp, npm, node, etc. is not required to build this project.

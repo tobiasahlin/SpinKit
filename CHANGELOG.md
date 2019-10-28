@@ -1,3 +1,16 @@
+# 2.0.0
+
+* New: Added examples.html, with an overview of all spinners
+* New: Added a brand new chase spinner
+* New: Added spinkit.min.css
+* Fixed: `inline-block` is no longed used to position any spinners (decoupling spacing from any potential font effects)
+* Changed: Most spinners now have more distinct and shorter names
+* Changed: No positioning is now applied by default on any of the spinners (center the spinner with the utility class `sk-center`)
+* Changed: All elements now only have one single class
+* Changed: No more dependencies. gulp, npm, node, etc. is not required to build this project. There's nothing to build
+* Changed: No more SCSS. All configuration is now done through CSS vars
+* Fixed: All keyframe animations are now named after the elements/classes that are using them
+
 # 1.2.5
 
 * Fixed: Add folding cube spinner (11) to combined CSS file

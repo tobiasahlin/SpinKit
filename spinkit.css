@@ -248,7 +248,7 @@
 
 @keyframes sk-three-bounce {
   0%, 80%, 100% {
-    transform: scale(0); }
+    transform: scale(0.25); }
   40% {
     transform: scale(1); 
   }

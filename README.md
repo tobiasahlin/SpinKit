@@ -6,7 +6,19 @@ Simple loading spinners animated with CSS. See [demo](http://tobiasahlin.com/spi
 
 - Add `spinkit.css` or `spinkit.min.css` to your project (or copy-paste the CSS that you need for your spinner—there are no dependencies between spinners, no shared classes, and no shared animations, etc, so it should be fairly straight-forward to extract only the code that you need)
 - Add a spinner to your project by copy-pasting HTML from `spinkit.css` or `examples.html`
-- Configure the spinner through the CSS variables `--sk-size` (spinner width & height) and `--sk-color` (spinner color). If you need broader browser support, remove the CSS variables.
+- Configure the spinner by overwriting the CSS variables, primarily `--sk-size` (spinner width & height) and `--sk-color` (spinner color). If you need broader browser support, remove the CSS variables.
+
+You can include SpinKit to your project with `bower`:
+
+```bash
+$ bower install spinkit
+```
+
+or npm:
+
+```bash
+$ npm install spinkit
+```
 
 ## Spinners
 
@@ -192,7 +204,3 @@ if (!browserSupportsCSSProperty('animation')) {
   // fallback…
 }
 ```
-
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/tobiasahlin/SpinKit/blob/master/CONTRIBUTING.md) for details.

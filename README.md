@@ -110,7 +110,7 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
 </div>
 ```
 
-### Circles Fade
+### Circle Fade
 
 ```html
 <div class="sk-circle-fade">

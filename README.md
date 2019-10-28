@@ -42,8 +42,6 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
   <div class="sk-chase-dot"></div>
   <div class="sk-chase-dot"></div>
   <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
 </div>
 ```
 

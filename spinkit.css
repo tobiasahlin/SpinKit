@@ -132,19 +132,19 @@
 
 @keyframes sk-wandering-cubes {
   0% {
-    transform: rotate(0deg); }
-  25% {
-    transform: translateX(var(--sk-wander-distance)) rotate(-90deg) scale(0.5); }
-  50% {
+    transform: rotate(0deg); 
+  } 25% {
+    transform: translateX(var(--sk-wander-distance)) rotate(-90deg) scale(0.5); 
+  } 50% {
     /* Hack to make FF rotate in the right direction */
-    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-179deg); }
-  50.1% {
-    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-180deg); }
-  75% {
-    transform: translateX(0) translateY(var(--sk-wander-distance)) rotate(-270deg) scale(0.5); }
-  100% {
+    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-179deg); 
+  } 50.1% {
+    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-180deg); 
+  } 75% {
+    transform: translateX(0) translateY(var(--sk-wander-distance)) rotate(-270deg) scale(0.5);
+  } 100% {
     transform: rotate(-360deg); 
-  } 
+  }
 }
 
 /*

@@ -5,6 +5,10 @@
 }
 
 
+/* Utility class for centering */
+.sk-center { margin: auto; }
+
+
 /*  Plane
 
       <div class="sk-plane"></div>

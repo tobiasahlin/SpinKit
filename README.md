@@ -42,9 +42,10 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
 ### Wandering Cubes
 
 ```html
-<div class="sk-wandering-cubes">
-  <div class="sk-wandering-cubes-cube"></div>
-  <div class="sk-wandering-cubes-cube"></div>
+<div class="sk-wander">
+  <div class="sk-wander-cube"></div>
+  <div class="sk-wander-cube"></div>
+  <div class="sk-wander-cube"></div>
 </div>
 ```
 

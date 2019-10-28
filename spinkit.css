@@ -106,42 +106,44 @@
 /*
  *  Usage:
  *
-      <div class="sk-wandering-cubes">
-        <div class="sk-wandering-cubes-cube"></div>
-        <div class="sk-wandering-cubes-cube"></div>
+      <div class="sk-wander">
+        <div class="sk-wander-cube"></div>
+        <div class="sk-wander-cube"></div>
+        <div class="sk-wander-cube"></div>
+        <div class="sk-wander-cube"></div>
       </div>
  *
  */
-.sk-wandering-cubes {
+.sk-wander {
   width: var(--sk-size);
   height: var(--sk-size);
   position: relative; 
 }
 
-.sk-wandering-cubes-cube {
+.sk-wander-cube {
   background-color: var(--sk-color);
-  width: 25%;
-  height: 25%;
+  width: 20%;
+  height: 20%;
   position: absolute;
   top: 0;
   left: 0;
   --sk-wander-distance: calc(var(--sk-size) * 0.75);
-  animation: sk-wandering-cubes 1.8s ease-in-out -1.8s infinite both;
+  animation: sk-wander 2.0s ease-in-out -2.0s infinite both;
 }
-.sk-wandering-cubes-cube:nth-child(2) { animation-delay: -0.9s; }
+.sk-wander-cube:nth-child(2) { animation-delay: -0.5s; }
+.sk-wander-cube:nth-child(3) { animation-delay: -1.0s; }
 
-@keyframes sk-wandering-cubes {
+@keyframes sk-wander {
   0% {
     transform: rotate(0deg); 
   } 25% {
-    transform: translateX(var(--sk-wander-distance)) rotate(-90deg) scale(0.5); 
-  } 50% {
-    /* Hack to make FF rotate in the right direction */
+    transform: translateX(var(--sk-wander-distance)) rotate(-90deg) scale(0.6); 
+  } 50% { /* Make FF rotate in the right direction */
     transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-179deg); 
   } 50.1% {
     transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-180deg); 
   } 75% {
-    transform: translateX(0) translateY(var(--sk-wander-distance)) rotate(-270deg) scale(0.5);
+    transform: translateX(0) translateY(var(--sk-wander-distance)) rotate(-270deg) scale(0.6);
   } 100% {
     transform: rotate(-360deg); 
   }

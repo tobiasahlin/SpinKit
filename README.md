@@ -166,6 +166,18 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
 </div>
 ```
 
+### Hexagon
+
+```html
+<div class="sk-hexagon">
+  <div class="sk-hex-parent">
+    <div class="sk-hex-child"></div>
+    <div class="sk-hex-child"></div>
+    <div class="sk-hex-child"></div>
+  </div>
+</div>
+```
+
 ## Web browser compatibility
 
 SpinKit uses CSS animations and variables:

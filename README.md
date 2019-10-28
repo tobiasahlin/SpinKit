@@ -12,18 +12,33 @@ Simple loading spinners animated with CSS. See [demo](http://tobiasahlin.com/spi
 
 Given that you have included `spinkit.min.css` in your project, these snippets will produce the different spinners:
 
-### Rotating plane
+### Plane
 
 ```html
-<div class="sk-rotating-plane"></div>
+<div class="sk-plane"></div>
 ```
 
-### Double Bounce
+### Chase
 
 ```html
-<div class="sk-double-bounce">
-  <div class="sk-double-bounce-circle"></div>
-  <div class="sk-double-bounce-circle"></div>
+<div class="sk-chase">
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+</div>
+```
+
+### Bounce
+
+```html
+<div class="sk-bounce">
+  <div class="sk-bounce-dot"></div>
+  <div class="sk-bounce-dot"></div>
 </div>
 ```
 
@@ -39,20 +54,20 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
 </div>
  ```
 
-### Wandering Cubes
-
-```html
-<div class="sk-wander">
-  <div class="sk-wander-cube"></div>
-  <div class="sk-wander-cube"></div>
-  <div class="sk-wander-cube"></div>
-</div>
-```
-
 ### Pulse
 
 ```html
 <div class="sk-pulse"></div>
+```
+
+### Flow
+
+```html
+<div class="sk-flow">
+  <div class="sk-flow-dot"></div>
+  <div class="sk-flow-dot"></div>
+  <div class="sk-flow-dot"></div>
+</div>
 ```
 
 ### Swing
@@ -64,32 +79,41 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
 </div>
 ```
 
-### Three Bounce
+### Circle
 
 ```html
-<div class="sk-three-bounce">
-  <div class="sk-three-bounce-circle"></div>
-  <div class="sk-three-bounce-circle"></div>
-  <div class="sk-three-bounce-circle"></div>
+<div class="sk-circle">
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
+  <div class="sk-circle-dot"></div>
 </div>
 ```
 
-### Circles
+### Circles Fade
 
 ```html
-<div class="sk-circles">
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
-  <div class="sk-circles-circle"></div>
+<div class="sk-circle-fade">
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
+  <div class="sk-circle-fade-dot"></div>
 </div>
 ```
 
@@ -109,25 +133,6 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
 </div>
 ```
 
-### Circles Fade
-
-```html
-<div class="sk-circles-fade">
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-  <div class="sk-circles-fade-circle"></div>
-</div>
-```
-
 ### Fold
 
 ```html
@@ -139,18 +144,13 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
 </div>
 ```
 
-### Chase
+### Wander
 
 ```html
-<div class="sk-chase">
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
+<div class="sk-wander">
+  <div class="sk-wander-cube"></div>
+  <div class="sk-wander-cube"></div>
+  <div class="sk-wander-cube"></div>
 </div>
 ```
 

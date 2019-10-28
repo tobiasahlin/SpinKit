@@ -1,21 +1,22 @@
-/* Preferences */
+/* Config */
 :root {
   --sk-size: 40px;
   --sk-color: #333;
 }
 
-/*  Usage:
 
-      <div class="sk-rotating-plane"></div>
+/*  Plane
+
+      <div class="sk-plane"></div>
  */
-.sk-rotating-plane {
+.sk-plane {
   width: var(--sk-size);
   height: var(--sk-size);
   background-color: var(--sk-color);
-  animation: sk-rotating-plane 1.2s infinite ease-in-out; 
+  animation: sk-plane 1.2s infinite ease-in-out; 
 }
 
-@keyframes sk-rotating-plane {
+@keyframes sk-plane {
   0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg); 
   } 50% {
@@ -25,22 +26,90 @@
   } 
 }
 
-/*
- *  Usage:
 
-      <div class="sk-double-bounce">
-        <div class="sk-double-bounce-circle"></div>
-        <div class="sk-double-bounce-circle"></div>
+/*  Chase
+
+      <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
       </div>
- *
  */
-.sk-double-bounce {
+.sk-chase {
+  width: var(--sk-size);
+  height: var(--sk-size);
+  position: relative;
+  animation: sk-chase 2.5s infinite linear both; 
+}
+
+.sk-chase-dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; 
+  animation: sk-chase-dot 2.0s infinite ease-in-out both; 
+}
+
+.sk-chase-dot:before {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-color: var(--sk-color);
+  border-radius: 100%;
+  animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
+}
+
+.sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
+.sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
+.sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
+.sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
+.sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
+.sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
+.sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
+.sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
+.sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
+.sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
+.sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
+.sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+
+@keyframes sk-chase {
+  100% { transform: rotate(360deg); } 
+}
+
+@keyframes sk-chase-dot {
+  80%, 100% { transform: rotate(360deg); } 
+}
+
+@keyframes sk-chase-dot-before {
+  50% {
+    transform: scale(0.4); 
+  } 100%, 0% {
+    transform: scale(1.0); 
+  } 
+}
+
+
+/*  Bounce
+
+      <div class="sk-bounce">
+        <div class="sk-bounce-dot"></div>
+        <div class="sk-bounce-dot"></div>
+      </div>
+  */
+.sk-bounce {
   width: var(--sk-size);
   height: var(--sk-size);
   position: relative;
 }
 
-.sk-double-bounce-circle {
+.sk-bounce-dot {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -49,23 +118,21 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: sk-double-bounce 2s infinite ease-in-out; 
+  animation: sk-bounce 2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955); 
 }
 
-.sk-double-bounce-circle:last-child {
-  animation-delay: -1.0s; 
-}
+.sk-bounce-dot:nth-child(2) { animation-delay: -1.0s; }
 
-@keyframes sk-double-bounce {
+@keyframes sk-bounce {
   0%, 100% {
-    transform: scale(0); }
-  50% {
+    transform: scale(0);
+  } 45%, 55% {
     transform: scale(1); 
   } 
 }
 
-/*
- *  Usage:
+
+/*  Wave
 
       <div class="sk-wave">
         <div class="sk-wave-rect"></div>
@@ -74,7 +141,6 @@
         <div class="sk-wave-rect"></div>
         <div class="sk-wave-rect"></div>
       </div>
- *
  */
 .sk-wave {
   width: var(--sk-size);
@@ -101,66 +167,20 @@
     transform: scaleY(0.4); 
   } 20% {
     transform: scaleY(1); 
-} }
-
-/*
- *  Usage:
- *
-      <div class="sk-wander">
-        <div class="sk-wander-cube"></div>
-        <div class="sk-wander-cube"></div>
-        <div class="sk-wander-cube"></div>
-        <div class="sk-wander-cube"></div>
-      </div>
- *
- */
-.sk-wander {
-  width: var(--sk-size);
-  height: var(--sk-size);
-  position: relative; 
+  } 
 }
 
-.sk-wander-cube {
-  background-color: var(--sk-color);
-  width: 20%;
-  height: 20%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  --sk-wander-distance: calc(var(--sk-size) * 0.75);
-  animation: sk-wander 2.0s ease-in-out -2.0s infinite both;
-}
-.sk-wander-cube:nth-child(2) { animation-delay: -0.5s; }
-.sk-wander-cube:nth-child(3) { animation-delay: -1.0s; }
 
-@keyframes sk-wander {
-  0% {
-    transform: rotate(0deg); 
-  } 25% {
-    transform: translateX(var(--sk-wander-distance)) rotate(-90deg) scale(0.6); 
-  } 50% { /* Make FF rotate in the right direction */
-    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-179deg); 
-  } 50.1% {
-    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-180deg); 
-  } 75% {
-    transform: translateX(0) translateY(var(--sk-wander-distance)) rotate(-270deg) scale(0.6);
-  } 100% {
-    transform: rotate(-360deg); 
-  }
-}
-
-/*
- *  Usage:
+/*  Pulse
 
       <div class="sk-pulse"></div>
- *
  */
 .sk-pulse {
   width: var(--sk-size);
   height: var(--sk-size);
   background-color: var(--sk-color);
   border-radius: 100%;
-  animation: sk-pulse 1s infinite ease-in-out; 
+  animation: sk-pulse 1.2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955); 
 }
 
 @keyframes sk-pulse {
@@ -172,14 +192,47 @@
   }
 }
 
-/*
- *  Usage:
+
+/*  Flow
+
+      <div class="sk-flow">
+        <div class="sk-flow-dot"></div>
+        <div class="sk-flow-dot"></div>
+        <div class="sk-flow-dot"></div>
+      </div>
+ */
+.sk-flow {
+  width: calc(var(--sk-size) * 1.3);
+  display: flex;
+  justify-content: space-between;
+}
+
+.sk-flow-dot {
+  width: calc(var(--sk-size) / 3);
+  height: calc(var(--sk-size) / 3);
+  background-color: var(--sk-color);
+  border-radius: 100%;
+  animation: sk-flow 1.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s infinite both;
+}
+
+.sk-flow-dot:nth-child(1) { animation-delay: -0.30s; }
+.sk-flow-dot:nth-child(2) { animation-delay: -0.15s; }
+
+@keyframes sk-flow {
+  0%, 80%, 100% {
+    transform: scale(0.3); }
+  40% {
+    transform: scale(1); 
+  }
+}
+
+
+/*  Swing
 
       <div class="sk-swing">
         <div class="sk-swing-dot"></div>
         <div class="sk-swing-dot"></div>
       </div>
- *
  */
 .sk-swing {
   width: var(--sk-size);
@@ -221,107 +274,72 @@
   } 
 }
 
-/*
- *  Usage:
 
-      <div class="sk-three-bounce">
-        <div class="sk-three-bounce-circle"></div>
-        <div class="sk-three-bounce-circle"></div>
-        <div class="sk-three-bounce-circle"></div>
+/*  Circle
+
+      <div class="sk-circle">
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
+        <div class="sk-circle-dot"></div>
       </div>
- *
  */
-.sk-three-bounce {
-  width: calc(var(--sk-size) * 1.5);
-  display: flex;
-  justify-content: space-between;
-}
-
-.sk-three-bounce-circle {
-  width: calc(var(--sk-size) / 3);
-  height: calc(var(--sk-size) / 3);
-  background-color: var(--sk-color);
-  border-radius: 100%;
-  animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
-}
-
-.sk-three-bounce-circle:nth-child(1) { animation-delay: -0.32s; }
-.sk-three-bounce-circle:nth-child(2) { animation-delay: -0.16s; }
-
-@keyframes sk-three-bounce {
-  0%, 80%, 100% {
-    transform: scale(0.25); }
-  40% {
-    transform: scale(1); 
-  }
-}
-
-/*
- *  Usage:
-
-      <div class="sk-circles">
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-        <div class="sk-circles-circle"></div>
-      </div>
- *
- */
-.sk-circles {
+.sk-circle {
   width: var(--sk-size);
   height: var(--sk-size);
   position: relative; 
 }
 
-.sk-circles-circle {
+.sk-circle-dot {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
-  top: 0; 
+  top: 0;
 }
 
-.sk-circles-circle:before {
+.sk-circle-dot:before {
     content: '';
     display: block;
     width: 15%;
     height: 15%;
     background-color: var(--sk-color);
     border-radius: 100%;
-    animation: sk-circles 1.2s infinite ease-in-out both; 
+    animation: sk-circle 1.2s infinite ease-in-out both; 
 }
-.sk-circles-circle:nth-child(1) { transform: rotate(30deg); }
-.sk-circles-circle:nth-child(2) { transform: rotate(60deg); }
-.sk-circles-circle:nth-child(3) { transform: rotate(90deg); }
-.sk-circles-circle:nth-child(4) { transform: rotate(120deg); }
-.sk-circles-circle:nth-child(5) { transform: rotate(150deg); }
-.sk-circles-circle:nth-child(6) { transform: rotate(180deg); }
-.sk-circles-circle:nth-child(7) { transform: rotate(210deg); }
-.sk-circles-circle:nth-child(8) { transform: rotate(240deg); }
-.sk-circles-circle:nth-child(9) { transform: rotate(270deg); }
-.sk-circles-circle:nth-child(10) { transform: rotate(300deg); }
-.sk-circles-circle:nth-child(11) { transform: rotate(330deg); }
-.sk-circles-circle:nth-child(1):before { animation-delay: -1.1s; }
-.sk-circles-circle:nth-child(2):before { animation-delay: -1s; }
-.sk-circles-circle:nth-child(3):before { animation-delay: -0.9s; }
-.sk-circles-circle:nth-child(4):before { animation-delay: -0.8s; }
-.sk-circles-circle:nth-child(5):before { animation-delay: -0.7s; }
-.sk-circles-circle:nth-child(6):before { animation-delay: -0.6s; }
-.sk-circles-circle:nth-child(7):before { animation-delay: -0.5s; }
-.sk-circles-circle:nth-child(8):before { animation-delay: -0.4s; }
-.sk-circles-circle:nth-child(9):before { animation-delay: -0.3s; }
-.sk-circles-circle:nth-child(10):before { animation-delay: -0.2s; }
-.sk-circles-circle:nth-child(11):before { animation-delay: -0.1s; }
 
-@keyframes sk-circles {
+.sk-circle-dot:nth-child(1) { transform: rotate(30deg); }
+.sk-circle-dot:nth-child(2) { transform: rotate(60deg); }
+.sk-circle-dot:nth-child(3) { transform: rotate(90deg); }
+.sk-circle-dot:nth-child(4) { transform: rotate(120deg); }
+.sk-circle-dot:nth-child(5) { transform: rotate(150deg); }
+.sk-circle-dot:nth-child(6) { transform: rotate(180deg); }
+.sk-circle-dot:nth-child(7) { transform: rotate(210deg); }
+.sk-circle-dot:nth-child(8) { transform: rotate(240deg); }
+.sk-circle-dot:nth-child(9) { transform: rotate(270deg); }
+.sk-circle-dot:nth-child(10) { transform: rotate(300deg); }
+.sk-circle-dot:nth-child(11) { transform: rotate(330deg); }
+.sk-circle-dot:nth-child(1):before { animation-delay: -1.1s; }
+.sk-circle-dot:nth-child(2):before { animation-delay: -1s; }
+.sk-circle-dot:nth-child(3):before { animation-delay: -0.9s; }
+.sk-circle-dot:nth-child(4):before { animation-delay: -0.8s; }
+.sk-circle-dot:nth-child(5):before { animation-delay: -0.7s; }
+.sk-circle-dot:nth-child(6):before { animation-delay: -0.6s; }
+.sk-circle-dot:nth-child(7):before { animation-delay: -0.5s; }
+.sk-circle-dot:nth-child(8):before { animation-delay: -0.4s; }
+.sk-circle-dot:nth-child(9):before { animation-delay: -0.3s; }
+.sk-circle-dot:nth-child(10):before { animation-delay: -0.2s; }
+.sk-circle-dot:nth-child(11):before { animation-delay: -0.1s; }
+
+@keyframes sk-circle {
   0%, 80%, 100% {
     transform: scale(0); }
   40% {
@@ -329,9 +347,84 @@
   } 
 }
 
-/*
- *  Usage:
- *
+
+/*  Circle Fade
+
+      <div class="sk-circle-fade">
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+        <div class="sk-circle-fade-dot"></div>
+      </div>
+ */
+.sk-circle-fade {
+  width: var(--sk-size);
+  height: var(--sk-size);
+  position: relative; 
+}
+
+.sk-circle-fade-dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; 
+}
+
+.sk-circle-fade-dot:before {
+  content: '';
+  display: block;
+  width: 15%;
+  height: 15%;
+  background-color: var(--sk-color);
+  border-radius: 100%;
+  animation: sk-circle-fade 1.2s infinite ease-in-out both; 
+}
+
+.sk-circle-fade-dot:nth-child(1)  { transform: rotate(30deg);  }
+.sk-circle-fade-dot:nth-child(2)  { transform: rotate(60deg);  }
+.sk-circle-fade-dot:nth-child(3)  { transform: rotate(90deg);  }
+.sk-circle-fade-dot:nth-child(4)  { transform: rotate(120deg); }
+.sk-circle-fade-dot:nth-child(5)  { transform: rotate(150deg); }
+.sk-circle-fade-dot:nth-child(6)  { transform: rotate(180deg); }
+.sk-circle-fade-dot:nth-child(7)  { transform: rotate(210deg); }
+.sk-circle-fade-dot:nth-child(8)  { transform: rotate(240deg); }
+.sk-circle-fade-dot:nth-child(9)  { transform: rotate(270deg); }
+.sk-circle-fade-dot:nth-child(10) { transform: rotate(300deg); }
+.sk-circle-fade-dot:nth-child(11) { transform: rotate(330deg); }
+.sk-circle-fade-dot:nth-child(1):before  { animation-delay: -1.1s; }
+.sk-circle-fade-dot:nth-child(2):before  { animation-delay: -1.0s; }
+.sk-circle-fade-dot:nth-child(3):before  { animation-delay: -0.9s; }
+.sk-circle-fade-dot:nth-child(4):before  { animation-delay: -0.8s; }
+.sk-circle-fade-dot:nth-child(5):before  { animation-delay: -0.7s; }
+.sk-circle-fade-dot:nth-child(6):before  { animation-delay: -0.6s; }
+.sk-circle-fade-dot:nth-child(7):before  { animation-delay: -0.5s; }
+.sk-circle-fade-dot:nth-child(8):before  { animation-delay: -0.4s; }
+.sk-circle-fade-dot:nth-child(9):before  { animation-delay: -0.3s; }
+.sk-circle-fade-dot:nth-child(10):before { animation-delay: -0.2s; }
+.sk-circle-fade-dot:nth-child(11):before { animation-delay: -0.1s; }
+
+@keyframes sk-circle-fade {
+  0%, 39%, 100% {
+    opacity: 0;
+    transform: scale(0.6);
+  } 40% {
+    opacity: 1; 
+    transform: scale(1);
+  }
+}
+
+
+/*  Grid
+
     <div class="sk-grid">
       <div class="sk-grid-cube"></div>
       <div class="sk-grid-cube"></div>
@@ -343,13 +436,11 @@
       <div class="sk-grid-cube"></div>
       <div class="sk-grid-cube"></div>
     </div>
- *
  */
 .sk-grid {
   width: var(--sk-size);
   height: var(--sk-size);
-  /*
-   * Spinner positions
+  /* Cube positions
    * 1 2 3
    * 4 5 6
    * 7 8 9
@@ -380,83 +471,8 @@
   } 
 }
 
-/*  Circles Fade
- *  Usage:
 
-      <div class="sk-circles-fade">
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-        <div class="sk-circles-fade-circle"></div>
-      </div>
- *
- */
-.sk-circles-fade {
-  width: var(--sk-size);
-  height: var(--sk-size);
-  position: relative; 
-}
-
-.sk-circles-fade-circle {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0; 
-}
-.sk-circles-fade-circle:before {
-  content: '';
-  display: block;
-  width: 15%;
-  height: 15%;
-  background-color: var(--sk-color);
-  border-radius: 100%;
-  animation: sk-circles-fade 1.2s infinite ease-in-out both; 
-}
-
-.sk-circles-fade-circle:nth-child(1)  { transform: rotate(30deg);  }
-.sk-circles-fade-circle:nth-child(2)  { transform: rotate(60deg);  }
-.sk-circles-fade-circle:nth-child(3)  { transform: rotate(90deg);  }
-.sk-circles-fade-circle:nth-child(4)  { transform: rotate(120deg); }
-.sk-circles-fade-circle:nth-child(5)  { transform: rotate(150deg); }
-.sk-circles-fade-circle:nth-child(6)  { transform: rotate(180deg); }
-.sk-circles-fade-circle:nth-child(7)  { transform: rotate(210deg); }
-.sk-circles-fade-circle:nth-child(8)  { transform: rotate(240deg); }
-.sk-circles-fade-circle:nth-child(9)  { transform: rotate(270deg); }
-.sk-circles-fade-circle:nth-child(10) { transform: rotate(300deg); }
-.sk-circles-fade-circle:nth-child(11) { transform: rotate(330deg); }
-.sk-circles-fade-circle:nth-child(1):before  { animation-delay: -1.1s; }
-.sk-circles-fade-circle:nth-child(2):before  { animation-delay: -1.0s; }
-.sk-circles-fade-circle:nth-child(3):before  { animation-delay: -0.9s; }
-.sk-circles-fade-circle:nth-child(4):before  { animation-delay: -0.8s; }
-.sk-circles-fade-circle:nth-child(5):before  { animation-delay: -0.7s; }
-.sk-circles-fade-circle:nth-child(6):before  { animation-delay: -0.6s; }
-.sk-circles-fade-circle:nth-child(7):before  { animation-delay: -0.5s; }
-.sk-circles-fade-circle:nth-child(8):before  { animation-delay: -0.4s; }
-.sk-circles-fade-circle:nth-child(9):before  { animation-delay: -0.3s; }
-.sk-circles-fade-circle:nth-child(10):before { animation-delay: -0.2s; }
-.sk-circles-fade-circle:nth-child(11):before { animation-delay: -0.1s; }
-
-@keyframes sk-circles-fade {
-  0%, 39%, 100% {
-    opacity: 0;
-    transform: scale(0.6);
-  } 40% {
-    opacity: 1; 
-    transform: scale(1);
-  }
-}
-
-/*
- *  Usage:
+/*  Fold
 
       <div class="sk-fold">
         <div class="sk-fold-cube"></div>
@@ -464,7 +480,6 @@
         <div class="sk-fold-cube"></div>
         <div class="sk-fold-cube"></div>
       </div>
- *
  */
 .sk-fold {
   width: var(--sk-size);
@@ -511,73 +526,47 @@
   } 
 }
 
-/*
- *  Usage:
 
-      <div class="sk-chase">
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
+/*  Wander
+
+      <div class="sk-wander">
+        <div class="sk-wander-cube"></div>
+        <div class="sk-wander-cube"></div>
+        <div class="sk-wander-cube"></div>
+        <div class="sk-wander-cube"></div>
       </div>
- *
  */
-.sk-chase {
+.sk-wander {
   width: var(--sk-size);
   height: var(--sk-size);
-  position: relative;
-  animation: sk-chase 2.5s infinite linear both; 
+  position: relative; 
 }
-.sk-chase-dot {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0; 
-  animation: sk-chase-dot 2.0s infinite ease-in-out both; 
-}
-.sk-chase-dot:before {
-  content: '';
-  display: block;
-  width: 25%;
-  height: 25%;
+
+.sk-wander-cube {
   background-color: var(--sk-color);
-  border-radius: 100%;
-  animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  --sk-wander-distance: calc(var(--sk-size) * 0.75);
+  animation: sk-wander 2.0s ease-in-out -2.0s infinite both;
 }
-.sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
-.sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
-.sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
-.sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
-.sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
-.sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
-.sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
-.sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
-.sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
-.sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
-.sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
-.sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+.sk-wander-cube:nth-child(2) { animation-delay: -0.5s; }
+.sk-wander-cube:nth-child(3) { animation-delay: -1.0s; }
 
-@keyframes sk-chase {
-  100% {
-    transform: rotate(360deg); 
-  } 
-}
-
-@keyframes sk-chase-dot {
-  80%, 100% {
-    transform: rotate(360deg); 
-  } 
-}
-
-@keyframes sk-chase-dot-before {
-  50% {
-    transform: scale(0.4); 
-  } 100%, 0% {
-    transform: scale(1.0); 
-  } 
+@keyframes sk-wander {
+  0% {
+    transform: rotate(0deg); 
+  } 25% {
+    transform: translateX(var(--sk-wander-distance)) rotate(-90deg) scale(0.6); 
+  } 50% { /* Make FF rotate in the right direction */
+    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-179deg); 
+  } 50.1% {
+    transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-180deg); 
+  } 75% {
+    transform: translateX(0) translateY(var(--sk-wander-distance)) rotate(-270deg) scale(0.6);
+  } 100% {
+    transform: rotate(-360deg); 
+  }
 }

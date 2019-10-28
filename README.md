@@ -4,9 +4,154 @@ Simple loading spinners animated with CSS. See [demo](http://tobiasahlin.com/spi
 
 ## Usage
 
-- Add `spinkit.css` or `spinkit.min.css` to your project
+- Add `spinkit.css` or `spinkit.min.css` to your project (or copy-paste the CSS that you need for your spinner—there are no dependencies between spinners, no shared classes, and no shared animations, etc, so it should be fairly straight-forward to extract only the code that you need)
 - Add a spinner to your project by copy-pasting HTML from `spinkit.css` or `examples.html`
-- Configure the spinner through the CSS variables `--sk-size` (spinner width & height) and `--sk-color` (spinner color)
+- Configure the spinner through the CSS variables `--sk-size` (spinner width & height) and `--sk-color` (spinner color). If you need broader browser support, remove the CSS variables.
+
+## Spinners
+
+Given that you have included `spinkit.min.css` in your project, these snippets will produce the different spinners:
+
+### Rotating plane
+
+```html
+<div class="sk-rotating-plane"></div>
+```
+
+### Double Bounce
+
+```html
+<div class="sk-double-bounce">
+  <div class="sk-double-bounce-circle"></div>
+  <div class="sk-double-bounce-circle"></div>
+</div>
+```
+
+### Wave
+
+```html
+<div class="sk-wave">
+  <div class="sk-wave-rect"></div>
+  <div class="sk-wave-rect"></div>
+  <div class="sk-wave-rect"></div>
+  <div class="sk-wave-rect"></div>
+  <div class="sk-wave-rect"></div>
+</div>
+ ```
+
+### Wandering Cubes
+
+```html
+<div class="sk-wandering-cubes">
+  <div class="sk-wandering-cubes-cube"></div>
+  <div class="sk-wandering-cubes-cube"></div>
+</div>
+```
+
+### Pulse
+
+```html
+<div class="sk-pulse"></div>
+```
+
+### Chasing Dots (not chase)
+
+```html
+<div class="sk-chasing-dots">
+  <div class="sk-chasing-dots-dot"></div>
+  <div class="sk-chasing-dots-dot"></div>
+</div>
+```
+
+### Three Bounce
+
+```html
+<div class="sk-three-bounce">
+  <div class="sk-three-bounce-circle"></div>
+  <div class="sk-three-bounce-circle"></div>
+  <div class="sk-three-bounce-circle"></div>
+</div>
+```
+
+### Circles
+
+```html
+<div class="sk-circles">
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+  <div class="sk-circles-circle"></div>
+</div>
+```
+
+### Grid
+
+```html
+<div class="sk-grid">
+  <div class="sk-grid-cube"></div>
+  <div class="sk-grid-cube"></div>
+  <div class="sk-grid-cube"></div>
+  <div class="sk-grid-cube"></div>
+  <div class="sk-grid-cube"></div>
+  <div class="sk-grid-cube"></div>
+  <div class="sk-grid-cube"></div>
+  <div class="sk-grid-cube"></div>
+  <div class="sk-grid-cube"></div>
+</div>
+```
+
+### Circles Fade
+
+```html
+<div class="sk-circles-fade">
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+  <div class="sk-circles-fade-circle"></div>
+</div>
+```
+
+### Fold
+
+```html
+<div class="sk-fold">
+  <div class="sk-fold-cube"></div>
+  <div class="sk-fold-cube"></div>
+  <div class="sk-fold-cube"></div>
+  <div class="sk-fold-cube"></div>
+</div>
+```
+
+### Chase
+
+```html
+<div class="sk-chase">
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+</div>
+```
 
 ## Web browser compatibility
 

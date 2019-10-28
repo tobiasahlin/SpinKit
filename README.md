@@ -54,12 +54,12 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
 <div class="sk-pulse"></div>
 ```
 
-### Chasing Dots (not chase)
+### Swing
 
 ```html
-<div class="sk-chasing-dots">
-  <div class="sk-chasing-dots-dot"></div>
-  <div class="sk-chasing-dots-dot"></div>
+<div class="sk-swing">
+  <div class="sk-swing-dot"></div>
+  <div class="sk-swing-dot"></div>
 </div>
 ```
 

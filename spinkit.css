@@ -231,7 +231,8 @@
  */
 .sk-three-bounce {
   width: calc(var(--sk-size) * 1.5);
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sk-three-bounce-circle {
@@ -239,7 +240,6 @@
   height: calc(var(--sk-size) / 3);
   background-color: var(--sk-color);
   border-radius: 100%;
-  display: inline-block;
   animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
 }
 

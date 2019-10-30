@@ -1,3 +1,7 @@
+# 2.0.1
+
+* Fixed: Chase spinner's HTML snippet now has the correct number of children
+
 # 2.0.0
 
 * New: Added examples.html, with an overview of all spinners

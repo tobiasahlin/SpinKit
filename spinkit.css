@@ -573,3 +573,49 @@
     transform: rotate(-360deg); 
   }
 }
+
+
+/*  Shards
+
+      <div class="sk-shards">
+        <div class="sk-shards-up sk-shards-top"></div>
+        <div class="sk-shards-up"></div>
+        <div class="sk-shards-down"></div>
+        <div class="sk-shards-up"></div>
+      </div>
+ */
+.sk-shards {
+  width: var(--sk-size);
+  height: var(--sk-size);
+  position: relative; 
+  /* Shards positions
+   *   1 
+   * 2 3 4
+   */
+}
+.sk-shards-up {
+  border-left: calc(var(--sk-size)/2) solid transparent;
+  border-right: calc(var(--sk-size)/2) solid transparent;
+  border-bottom: calc(var(--sk-size)/2) solid var(--sk-color);
+  float: left;
+  animation: sk-shards 1.3s infinite ease-in-out; 
+}
+.sk-shards-down {
+  border-left: calc(var(--sk-size)/2) solid transparent;
+  border-right: calc(var(--sk-size)/2) solid transparent;
+  border-top: calc(var(--sk-size)/2) solid var(--sk-color);
+  float: left;
+  animation: sk-shards 1.3s infinite ease-in-out; 
+}
+.sk-shards-up:nth-child(1)   { margin-bottom: calc(var(--sk-size)/10); animation-delay: 0.2s; }
+.sk-shards-up:nth-child(2)   { margin-left:   calc(-1.2 * var(--sk-size)/2); animation-delay: 0.0s; }
+.sk-shards-down:nth-child(3) { margin:        calc(-1 * var(--sk-size)/2) 0; animation-delay: 0.1s; }
+.sk-shards-up:nth-child(4)   { margin-left:   calc(1.2 * var(--sk-size)/2);margin-top: calc(-1 * var(--sk-size)/2); animation-delay: 0.3s; }
+
+@keyframes sk-shards {
+  0%, 70%, 100% {
+    transform: scale3D(1, 1, 1); 
+  } 35% {
+    transform: scale3D(0, 0, 1); 
+  } 
+}

@@ -166,6 +166,17 @@ Given that you have included `spinkit.min.css` in your project, these snippets w
 </div>
 ```
 
+### Shards
+
+```html
+<div class="sk-shards">
+  <div class="sk-shards-up sk-shards-top"></div>
+  <div class="sk-shards-up"></div>
+  <div class="sk-shards-down"></div>
+  <div class="sk-shards-up"></div>
+</div>
+```
+
 ## Web browser compatibility
 
 SpinKit uses CSS animations and variables:

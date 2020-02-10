@@ -10,6 +10,7 @@
     "ui"
   ],
   "scripts": {
+    "build": "postcss spinkit.css > spinkit.min.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/tobiasahlin/SpinKit/issues"
   },
-  "homepage": "https://github.com/tobiasahlin/SpinKit"
+  "homepage": "https://github.com/tobiasahlin/SpinKit",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^6.1.3"
+  }
 }

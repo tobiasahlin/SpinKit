@@ -2,6 +2,7 @@
 :root {
   --sk-size: 40px;
   --sk-color: #333;
+  --sk-hex-scale: (0.0096153846153846 * var(--sk-size));
 }
 
 
@@ -571,5 +572,101 @@
     transform: translateX(0) translateY(var(--sk-wander-distance)) rotate(-270deg) scale(0.6);
   } 100% {
     transform: rotate(-360deg); 
+  }
+}
+
+/*  Hexagon
+
+      <div class="sk-hexagon">
+        <div class="sk-hex-parent">
+          <div class="sk-hex-child"></div>
+          <div class="sk-hex-child"></div>
+          <div class="sk-hex-child"></div>
+        </div>
+      </div>
+ */
+.sk-hexagon {
+  height: var(--sk-size);
+  overflow: hidden;
+  position: relative;
+  width: var(--sk-size);
+}
+
+.sk-hex-parent {
+  left: calc(27 * var(--sk-hex-scale));
+  position: relative;
+  top: calc(16 * var(--sk-hex-scale));
+}
+
+.sk-hex-child {
+  animation: sk-hexagonAnimation 2s infinite cubic-bezier(.19, 1.6, .4, 1);
+  background-color: var(--sk-color);
+  display: block;
+  height: calc(26 * var(--sk-hex-scale));
+  opacity: 0;
+  position: absolute;
+  transform: scale(0);
+  transform-origin: center center;
+  width: calc(48 * var(--sk-hex-scale));
+}
+
+.sk-hex-child::before,
+.sk-hex-child::after {
+  border-left: calc(24 * var(--sk-hex-scale)) solid transparent;
+  border-right: calc(24 * var(--sk-hex-scale)) solid transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+.sk-hex-child::before {
+  border-bottom: calc(13 * var(--sk-hex-scale)) solid var(--sk-color);
+  top: calc(-13 * var(--sk-hex-scale));
+}
+
+.sk-hex-child::after {
+  border-top: calc(13 * var(--sk-hex-scale)) solid var(--sk-color);
+  bottom: calc(-13 * var(--sk-hex-scale));
+}
+
+.sk-hex-child:nth-child(2),
+.sk-hex-child:nth-child(3) {
+  top: calc(45 * var(--sk-hex-scale));
+}
+
+.sk-hex-child:nth-child(1) {
+  animation-delay: .1s;
+}
+
+.sk-hex-child:nth-child(2) {
+  animation-delay: 0s;
+  left: calc(-27 * var(--sk-hex-scale));
+}
+
+.sk-hex-child:nth-child(3) {
+  animation-delay: .2s;
+  left: calc(27 * var(--sk-hex-scale));
+}
+
+@keyframes sk-hexagonAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateZ(0);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0) translateZ(0);
   }
 }

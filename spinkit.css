@@ -149,7 +149,7 @@
   height: var(--sk-size);
   display: flex;
   justify-content: space-between;
-}
+} 
 
 .sk-wave-rect {
   background-color: var(--sk-color);
@@ -573,3 +573,45 @@
     transform: rotate(-360deg); 
   }
 }
+
+@keyframes sk-ball {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.45,0,0.9,0.55)
+  }
+  0% {
+    transform: translate(0,0)
+  }
+  50% {
+    transform: translate(0,92px);
+    animation-timing-function: cubic-bezier(0,0.45,0.55,0.9);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+.sk-ball-circle {
+  position: absolute;
+  width: 55.2px;
+  height: 55.2px;
+  border-radius: 50%;
+  background: black;
+  left: 64.4px;
+  top: 18.400000000000002px;
+  animation: sk-ball 0.9803921568627451s linear infinite;
+}
+.sk-ball-container {
+  width: 184px;
+  height: 184px;
+  display: inline-block;
+  overflow: hidden;
+}
+.sk-ball {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.sk-ball-circle { box-sizing: content-box; }

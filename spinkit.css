@@ -149,7 +149,7 @@
   height: var(--sk-size);
   display: flex;
   justify-content: space-between;
-}
+} 
 
 .sk-wave-rect {
   background-color: var(--sk-color);
